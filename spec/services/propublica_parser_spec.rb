@@ -50,7 +50,7 @@ describe 'Propublica parser' do
     expect(test_senator.dob).to eq("1940-07-03")
     expect(test_senator.gender).to eq("M")
     expect(test_senator.party).to eq("R")
-    expect(test_senator.leadership_role).to be_empty
+    expect(test_senator.leadership_role).to be_nil
     expect(test_senator.twitter_account).to eq("SenAlexander")
     expect(test_senator.facebook_account).to eq("senatorlamaralexander")
     expect(test_senator.govtrack_id).to eq(300002)
@@ -69,5 +69,7 @@ describe 'Propublica parser' do
     expect(test_senator.missed_votes_percentage).to eq(18.62)
     expect(test_senator.votes_with_percentage).to eq(96.27)
     expect(test_senator.votes_without_party_percentage).to eq(3.73)
+
+    expect(Senator.count).to eq(100)
   end
 end
