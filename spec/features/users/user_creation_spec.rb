@@ -27,12 +27,12 @@ describe "User" do
 
     user = create(:user)
 
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
     visit root_path
 
-    click_button "Logout"
+    click_on "Logout"
 
-    expect(page).to have_content("Register")
-    expect(page).to have_content("Login")
-    expect(page).to_not have_content("Dashboard")
+    expect(current_path).to eq(root_path)
   end
 end
