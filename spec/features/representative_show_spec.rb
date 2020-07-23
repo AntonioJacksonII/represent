@@ -33,7 +33,9 @@ describe 'Representative Show Page' do
     expect(page).to have_css('.rep-votes_without_party_percentage')
     expect(page).to have_css('.rep-congress_id')
     expect(page).to have_css('.side-nav')
-
+    expect(page).to have_css('.twitter-feed')
+    expect(page).to have_css('.twitter-news')
+    expect(page).to have_button('Compare Positions')
   end
 
   it 'displays representative information' do
@@ -68,5 +70,8 @@ describe 'Representative Show Page' do
     expect(page).to have_css('.sen-senate_class')
     expect(page).to have_css('.sen-state_rank')
     expect(page).to have_css('.side-nav')
+    expect(page).to have_css('.twitter-feed')
+    expect(page).to have_css('.twitter-news')
+    expect(page).to have_button('Compare Positions')
   end
 end
