@@ -28,8 +28,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="/dashboard">Dashboard</a>
           </li>
-          <% end %>
-          <% if !current_user %>
+          <% else %>
           <li class="nav-item">
             <a class="nav-link" href="/register">Register</a>
           </li>
@@ -44,56 +43,56 @@
             Select State
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">AL</a>
-            <a class="dropdown-item" href="#">AK</a>
-            <a class="dropdown-item" href="#">AZ</a>
-            <a class="dropdown-item" href="#">AR</a>
-            <a class="dropdown-item" href="#">CA</a>
-            <a class="dropdown-item" href="#">CO</a>
-            <a class="dropdown-item" href="#">CT</a>
-            <a class="dropdown-item" href="#">DE</a>
-            <a class="dropdown-item" href="#">FL</a>
-            <a class="dropdown-item" href="#">GA</a>
-            <a class="dropdown-item" href="#">HI</a>
-            <a class="dropdown-item" href="#">ID</a>
-            <a class="dropdown-item" href="#">IL</a>
-            <a class="dropdown-item" href="#">IN</a>
-            <a class="dropdown-item" href="#">IA</a>
-            <a class="dropdown-item" href="#">KS</a>
-            <a class="dropdown-item" href="#">KY</a>
-            <a class="dropdown-item" href="#">LA</a>
-            <a class="dropdown-item" href="#">ME</a>
-            <a class="dropdown-item" href="#">MD</a>
-            <a class="dropdown-item" href="#">MA</a>
-            <a class="dropdown-item" href="#">MI</a>
-            <a class="dropdown-item" href="#">MN</a>
-            <a class="dropdown-item" href="#">MS</a>
-            <a class="dropdown-item" href="#">MO</a>
-            <a class="dropdown-item" href="#">MT</a>
-            <a class="dropdown-item" href="#">NE</a>
-            <a class="dropdown-item" href="#">NV</a>
-            <a class="dropdown-item" href="#">NH</a>
-            <a class="dropdown-item" href="#">NJ</a>
-            <a class="dropdown-item" href="#">NM</a>
-            <a class="dropdown-item" href="#">NY</a>
-            <a class="dropdown-item" href="#">NC</a>
-            <a class="dropdown-item" href="#">ND</a>
-            <a class="dropdown-item" href="#">OH</a>
-            <a class="dropdown-item" href="#">OK</a>
-            <a class="dropdown-item" href="#">OR</a>
-            <a class="dropdown-item" href="#">PA</a>
-            <a class="dropdown-item" href="#">RI</a>
-            <a class="dropdown-item" href="#">SC</a>
-            <a class="dropdown-item" href="#">SD</a>
-            <a class="dropdown-item" href="#">TN</a>
-            <a class="dropdown-item" href="#">TX</a>
-            <a class="dropdown-item" href="#">UT</a>
-            <a class="dropdown-item" href="#">VT</a>
-            <a class="dropdown-item" href="#">VA</a>
-            <a class="dropdown-item" href="#">WA</a>
-            <a class="dropdown-item" href="#">WV</a>
-            <a class="dropdown-item" href="#">WI</a>
-            <a class="dropdown-item" href="#">WY</a>
+            <a class="dropdown-item" href="#">Alabama</a>
+            <a class="dropdown-item" href="#">Alaska</a>
+            <a class="dropdown-item" href="#">Arizona</a>
+            <a class="dropdown-item" href="#">Arkansas</a>
+            <a class="dropdown-item" href="#">California</a>
+            <a class="dropdown-item" href="#">Colorado</a>
+            <a class="dropdown-item" href="#">Connecticut</a>
+            <a class="dropdown-item" href="#">Delaware</a>
+            <a class="dropdown-item" href="#">Florida</a>
+            <a class="dropdown-item" href="#">Georgia</a>
+            <a class="dropdown-item" href="#">Hawaii</a>
+            <a class="dropdown-item" href="#">Idaho</a>
+            <a class="dropdown-item" href="#">Illinois</a>
+            <a class="dropdown-item" href="#">Indiana</a>
+            <a class="dropdown-item" href="#">Iowa</a>
+            <a class="dropdown-item" href="#">Kansas</a>
+            <a class="dropdown-item" href="#">Kentucky</a>
+            <a class="dropdown-item" href="#">Louisiana</a>
+            <a class="dropdown-item" href="#">Maine</a>
+            <a class="dropdown-item" href="#">Maryland</a>
+            <a class="dropdown-item" href="#">Massachusetts</a>
+            <a class="dropdown-item" href="#">Michigan</a>
+            <a class="dropdown-item" href="#">Minnesota</a>
+            <a class="dropdown-item" href="#">Mississippi</a>
+            <a class="dropdown-item" href="#">Missouri</a>
+            <a class="dropdown-item" href="#">Montana</a>
+            <a class="dropdown-item" href="#">Nebraska</a>
+            <a class="dropdown-item" href="#">Nevada</a>
+            <a class="dropdown-item" href="#">New Hampshire</a>
+            <a class="dropdown-item" href="#">New Jersey</a>
+            <a class="dropdown-item" href="#">New Mexico</a>
+            <a class="dropdown-item" href="#">New York</a>
+            <a class="dropdown-item" href="#">North Carolina</a>
+            <a class="dropdown-item" href="#">North Dakota</a>
+            <a class="dropdown-item" href="#">Ohio</a>
+            <a class="dropdown-item" href="#">Oklahoma</a>
+            <a class="dropdown-item" href="#">Oregon</a>
+            <a class="dropdown-item" href="#">Pennsylvania</a>
+            <a class="dropdown-item" href="#">Rhode Island</a>
+            <a class="dropdown-item" href="#">South Carolina</a>
+            <a class="dropdown-item" href="#">South Dakota</a>
+            <a class="dropdown-item" href="#">Tennessee</a>
+            <a class="dropdown-item" href="#">Texas</a>
+            <a class="dropdown-item" href="#">Utah</a>
+            <a class="dropdown-item" href="#">Vermont</a>
+            <a class="dropdown-item" href="#">Virginia</a>
+            <a class="dropdown-item" href="#">Washington</a>
+            <a class="dropdown-item" href="#">West Virginia</a>
+            <a class="dropdown-item" href="#">Wisconsin</a>
+            <a class="dropdown-item" href="#">Wyoming</a>
           </div>
         </container>
         <form class="form-inline my-2 my-lg-0">
