@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe 'Representative Show Page' do
   it 'displays representative information' do
-    rep = Representative.first
+    rep = HouseMember.first
 
-    visit "/representatives/#{rep.id}"
+    visit "/house_members/#{rep.id}"
 
     expect(page).to have_css('.rep-info')
     expect(page).to have_css('.rep-image')
