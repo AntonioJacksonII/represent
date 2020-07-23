@@ -2,8 +2,33 @@ require 'rails_helper'
 
 describe 'Representative Show Page' do
   it 'displays representative information' do
-    rep = HouseMember.first
-
+    rep = HouseMember.create(
+      first_name: 'Alexandria',
+      last_name: 'Ocasio-Cortez',
+      dob: '1989-10-13',
+      gender: 'F',
+      party: 'D',
+      leadership_role: nil,
+      facebook_account: nil,
+      twitter_account: 'RepAOC',
+      govtrack_id: 412804,
+      url: 'https://ocasio-cortez.house.gov',
+      contact_form: nil,
+      cook_pvi: 'D+29',
+      dw_nominate: nil,
+      total_votes: 857,
+      missed_votes: 5,
+      last_updated: '2020-07-22 21:00:30 -0400',
+      office: '229 Cannon House Office Building',
+      phone: '202-225-3965',
+      state: 'NY',
+      district: 14,
+      missed_votes_percentage: 0.58,
+      votes_with_percentage: 94.82,
+      congress_id: 'O000172',
+      votes_without_party_percentage: 5.06,
+      at_large: false
+    )
     visit "/house_members/#{rep.id}"
 
     expect(page).to have_css('.rep-info')
@@ -38,7 +63,7 @@ describe 'Representative Show Page' do
     expect(page).to have_button('Compare Positions')
   end
 
-  it 'displays representative information' do
+  xit 'displays representative information' do
     senator = Senator.first
 
     visit "/senators/#{senator.id}"
