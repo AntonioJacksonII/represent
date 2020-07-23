@@ -40,9 +40,6 @@ describe 'Representative Show Page' do
       expect(page).to have_css('.rep-votes_without_party_percentage')
       expect(page).to have_css('.rep-congress_id')
     end
-    expect(page).to have_css('#side-nav')
-    expect(page).to have_css('.twitter-feed')
-    expect(page).to have_css('.twitter-news')
     expect(page).to have_button('Compare Positions')
   end
 
