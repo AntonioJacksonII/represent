@@ -16,7 +16,6 @@ describe 'Representative Show Page' do
       within ('.rep-name') do
         expect(page).to have_content('Alexandria Ocasio-Cortez')
       end
-      save_and_open_page
       expect(page).to have_css('.rep-dob')
       expect(page).to have_css('.rep-gender')
       expect(page).to have_css('.rep-party')
