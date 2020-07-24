@@ -8,9 +8,6 @@
   <body>
     <section class='rep-info'>
     <div class="row align-items-center my-5">
-      <div class="col-lg-5">
-        <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
-      </div>
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
@@ -68,6 +65,10 @@
         <% if @rep.votes_without_party_percentage %>
           <br class='rep-votes_without_party_percentage'>Votes Against Party Percentage: <%= @rep.votes_without_party_percentage %> %
         <% end %>
+      </div>
+      <div class="col-lg-5">
+        <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
+        <br>
         <br>
         <a class="btn btn-primary" href="">Compare Positions</a>
       </div>
