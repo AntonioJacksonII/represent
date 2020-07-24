@@ -34,7 +34,7 @@ RSpec.describe "Representatives Index Page" do
       expect(page).to have_content("South Carolina")
 
     end 
-    it 'it displays the names of all house members from that state' do 
+    xit 'it displays the names of all house members from that state' do 
       visit '/representatives/CO'
 
       expect(page).to have_css('.member', count: 7)
@@ -46,7 +46,7 @@ RSpec.describe "Representatives Index Page" do
       end
     end 
 
-    it 'it displays the names of all senate members from that state' do 
+    xit 'it displays the names of all senate members from that state' do 
       visit '/representatives/CO'
 
       expect(page).to have_css('.senator', count: 2)
