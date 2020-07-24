@@ -72,4 +72,19 @@ describe 'Propublica parser' do
 
     expect(Senator.count).to eq(100)
   end
+
+  it 'can parse a bill' do
+    json_response = File.read('spec/fixtures/bill.json')
+    parser = PropublicaParser.new(json_response)
+
+    test_bill = parser.parse_bill(0)
+
+    expect(test_bill.bill_id).to eq('hr6395-116')
+    expect(test_bill.summary_short).to include("This bill authorizes FY2021 appropriations and sets forth policies for Department of Defense (DOD) programs")
+    expect(test_bill.congress_url).to eq("https://www.congress.gov/bill/116th-congress/house-bill/6395")
+    expect(test_bill.short_title).to eq("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
+    expect(test_bill.primary_subject).to eq("Armed Forces and National Security")
+    expect(test_bill.offset).to eq(0)
+    expect(test_bill.passage_roll_call).to eq(152)
+  end
 end
