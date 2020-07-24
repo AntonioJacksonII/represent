@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.from_omniauth(auth_hash)
+    user.save
     session[:user_id] = user.id
     redirect_to root_path
   end 
