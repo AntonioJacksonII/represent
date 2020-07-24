@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/representatives/:state_abbreviation', to: 'representatives#index'
+
+  # get '/house_members/:id'
+  # get '/senators/:id'
 end
