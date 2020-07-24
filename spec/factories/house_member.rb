@@ -11,7 +11,7 @@ FactoryBot.define do
     sequence(:facebook_account) {|n| "RepMember#{n}" }
     govtrack_id { Faker::Number.number(digits: 6) }
     sequence(:url) {|n| "https://member#{n}.house.gov" }
-    contact_form { nil }
+    sequence(:contact_form) {|n| "http://www.member#{n}.house.gov/public/index.cfm?p=Email" }
     sequence(:cook_pvi) {|n| "D + #{n}" }
     dw_nominate { Faker::Number.decimal(l_digits: 0, r_digits: 2) }
     total_votes { Faker::Number.number(digits: 3) }
