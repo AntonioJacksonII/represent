@@ -2,10 +2,10 @@ FactoryBot.define do
   factory :house_member do
     sequence(:first_name) {|n| "Member #{n}" }
     sequence(:last_name) {|n| "Member #{n}" }
-    sequence(:congress_id) {|n| "Member #{n}" }
+    sequence(:congress_id) {|n| "A00010#{n}" }
     sequence(:dob) {|n| "1955-09-#{n}" }
-    gender { "MF" }
-    party { "DR" }
+    gender { "M" }
+    party { "D" }
     leadership_role { nil }
     sequence(:twitter_account) {|n| "@member#{n}" }
     sequence(:facebook_account) {|n| "RepMember#{n}" }
