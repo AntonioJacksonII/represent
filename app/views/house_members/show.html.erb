@@ -39,7 +39,7 @@
           <br class='rep-contact'><%= link_to "Contact #{@rep.first_name} #{@rep.last_name}", @rep.url %>
         <% end %>
         <% if @rep.facebook_account %>
-          <br class='rep-facebook'>Facebook: <%= link_to @rep.facebook_account, "http://www.twitter.com/#{@rep.facebook_account}" %>
+          <br class='rep-facebook'>Facebook: <%= link_to @rep.facebook_account, "http://www.facebook.com/#{@rep.facebook_account}" %>
         <% end %>
         <% if @rep.twitter_account %>
           <br class='rep-twitter'>Twitter: <%= link_to @rep.twitter_account, "http://www.twitter.com/#{@rep.twitter_account}" %>
