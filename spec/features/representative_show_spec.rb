@@ -11,7 +11,7 @@ describe 'Representative Show Page' do
 
     expect(page).to have_css('.rep-info')
     within('.rep-info') do
-      expect(page).to have_css('.rep-image')
+      expect(page).to have_css('#rep-image')
       expect(page).to have_css('.rep-name')
       within ('.rep-name') do
         expect(page).to have_content('Alexandria Ocasio-Cortez')
@@ -40,7 +40,7 @@ describe 'Representative Show Page' do
       expect(page).to have_css('.rep-votes_without_party_percentage')
       expect(page).to have_css('.rep-congress_id')
     end
-    expect(page).to have_button('Compare Positions')
+    expect(page).to have_link('Compare Positions')
   end
 
   xit 'displays representative information' do

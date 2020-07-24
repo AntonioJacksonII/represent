@@ -2,142 +2,78 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Representative Show Page</title>
-
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <title>Representative Show Page</title>
 </head>
 
-<body>
-
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <div class='wrapper'>
-
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div id='content'>
-          <section class='rep-info'>
-            <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/225x275/#{@rep.congress_id}.jpg?raw=true", class:'rep-image') %>
-            <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
-              <p class='rep-dob'>Date of Birth: <%= @rep.dob %></p>
-              <p class='rep-gender'>Gender: <%= @rep.gender %></p>
-              <p class='rep-party'>Party: <%= @rep.party %></p>
-              <% if @rep.leadership_role %>
-                <p class='rep-leadership'>Leadership Role: <%= @rep.leadership_role %></p>
-              <% end %>
-              <p class='rep-state'>State: <%= @rep.state %></p>
-              <p class='rep-district'>District: <%= @rep.district %></p>
-              <% if @rep.cook_pvi %>
-                <p class='rep-cook_pvi'>District's Cook PVI: <%= @rep.cook_pvi %></p>
-              <% end %>
-              <p class='rep-at_large'>At-Large District: <%= @rep.at_large %></p>
-              <% if @rep.dw_nominate %>
-                <p class='rep-dw_nominate'>DW NOMINATE Score: <%= @rep.dw_nominate %></p>
-              <% end %>
-              <% if @rep.office %>
-                <p class='rep-office'>D.C. Office: <%= @rep.office %></p>
-              <% end %>
-              <% if @rep.phone %>
-                <p class='rep-phone'>Office Phone: <%= @rep.phone %></p>
-              <% end %>
-              <% if @rep.url %>
-                <p class='rep-url'>Official Website: <%= link_to nil, @rep.url %></p>
-              <% end %>
-              <% if @rep.contact_form %>
-                <p class='rep-contact'><%= link_to "Contact #{@rep.first_name} #{@rep.last_name}", @rep.url %></p>
-              <% end %>
-              <% if @rep.facebook_account %>
-              <p class='rep-facebook'>Facebook: <%= link_to @rep.facebook_account, "http://www.twitter.com/#{@rep.facebook_account}" %></p>
-              <% end %>
-              <% if @rep.twitter_account %>
-                <p class='rep-twitter'>Twitter: <%= link_to @rep.twitter_account, "http://www.twitter.com/#{@rep.twitter_account}" %></p>
-              <% end %>
-              <% if @rep.govtrack_id %>
-                <p class='rep-govtrack'>Govtrack ID: <%= @rep.govtrack_id %></p>
-              <% end %>
-              <% if @rep.congress_id %>
-                <p class='rep-congress_id'>Congressional Member ID: <%= @rep.congress_id %></p>
-              <% end %>
-              <% if @rep.total_votes %>
-                <p class='rep-total_votes'>Total Votes: <%= @rep.total_votes %></p>
-              <% end %>
-              <% if @rep.missed_votes %>
-                <p class='rep-missed_votes'>Missed Votes: <%= @rep.missed_votes %></p>
-              <% end %>
-              <% if @rep.missed_votes_percentage %>
-                <p class='rep-missed_votes_percentage'>Missed Votes Percentage: <%= @rep.missed_votes_percentage %></p>
-              <% end %>
-              <% if @rep.votes_with_percentage %>
-                <p class='rep-votes_with_percentage'>Votes with Party Percentage: <%= @rep.votes_with_percentage %></p>
-              <% end %>
-              <% if @rep.votes_without_party_percentage %>
-                <p class='rep-votes_without_party_percentage'>Votes Against Party Percentage: <%= @rep.votes_without_party_percentage %></p>
-              <% end %>
-          </section>
-        </div>
-
+  <body>
+    <section class='rep-info'>
+    <div class="row align-items-center my-5">
+      <div class="col-lg-5">
+        <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
+        <br class='rep-dob'>Date of Birth: <%= @rep.dob %>
+        <br class='rep-gender'>Gender: <%= @rep.gender %>
+        <br class='rep-party'>Party: <%= @rep.party %>
+        <% if @rep.leadership_role %>
+          <br class='rep-leadership'>Leadership Role: <%= @rep.leadership_role %>
+        <% end %>
+        <br class='rep-state'>State: <%= @rep.state %>
+        <br class='rep-district'>District: <%= @rep.district %>
+        <% if @rep.cook_pvi %>
+          <br class='rep-cook_pvi'>District's Cook PVI: <%= @rep.cook_pvi %>
+        <% end %>
+          <br class='rep-at_large'>At-Large District: <%= @rep.at_large %>
+        <% if @rep.dw_nominate %>
+          <br class='rep-dw_nominate'>DW NOMINATE Score: <%= @rep.dw_nominate %>
+        <% end %>
+        <% if @rep.office %>
+          <br class='rep-office'>D.C. Office: <%= @rep.office %>
+        <% end %>
+        <% if @rep.phone %>
+          <br class='rep-phone'>Office Phone: <%= @rep.phone %>
+        <% end %>
+        <% if @rep.url %>
+          <br class='rep-url'>Official Website: <%= link_to nil, @rep.url %>
+        <% end %>
+        <% if @rep.contact_form %>
+          <br class='rep-contact'><%= link_to "Contact #{@rep.first_name} #{@rep.last_name}", @rep.url %>
+        <% end %>
+        <% if @rep.facebook_account %>
+          <br class='rep-facebook'>Facebook: <%= link_to @rep.facebook_account, "http://www.twitter.com/#{@rep.facebook_account}" %>
+        <% end %>
+        <% if @rep.twitter_account %>
+          <br class='rep-twitter'>Twitter: <%= link_to @rep.twitter_account, "http://www.twitter.com/#{@rep.twitter_account}" %>
+        <% end %>
+        <% if @rep.govtrack_id %>
+          <br class='rep-govtrack'>Govtrack ID: <%= @rep.govtrack_id %>
+        <% end %>
+        <% if @rep.congress_id %>
+          <br class='rep-congress_id'>Congressional Member ID: <%= @rep.congress_id %>
+        <% end %>
+        <% if @rep.total_votes %>
+          <br class='rep-total_votes'>Total Votes: <%= @rep.total_votes %>
+        <% end %>
+        <% if @rep.missed_votes %>
+          <br class='rep-missed_votes'>Missed Votes: <%= @rep.missed_votes %>
+        <% end %>
+        <% if @rep.missed_votes_percentage %>
+          <br class='rep-missed_votes_percentage'>Missed Votes Percentage: <%= @rep.missed_votes_percentage %> %
+        <% end %>
+        <% if @rep.votes_with_percentage %>
+          <br class='rep-votes_with_percentage'>Votes with Party Percentage: <%= @rep.votes_with_percentage %> %
+        <% end %>
+        <% if @rep.votes_without_party_percentage %>
+          <br class='rep-votes_without_party_percentage'>Votes Against Party Percentage: <%= @rep.votes_without_party_percentage %> %
+        <% end %>
+        <br>
+        <a class="btn btn-primary" href="">Compare Positions</a>
+      </div>
+      <!-- /.col-md-4 -->
     </div>
+    </section>
 </body>
 
 </html>
