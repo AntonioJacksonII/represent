@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'Representative Show Page' do
-  it 'displays representative information' do
+describe 'Representative Show Pages' do
+  it 'displays house member information' do
     json_response = File.read('spec/fixtures/house_representatives.json')
     parser = PropublicaParser.new(json_response)
     parser.parse_house_members
@@ -42,40 +42,44 @@ describe 'Representative Show Page' do
     expect(page).to have_link('Compare Positions')
   end
 
-  xit 'displays representative information' do
-    senator = Senator.first
+  it 'displays senator information' do
+    json_response = File.read('spec/fixtures/senate.json')
+    parser = PropublicaParser.new(json_response)
+    parser.parse_senators
+    bennet = Senator.where(first_name: 'Michael', last_name: 'Bennet').first
 
-    visit "/senators/#{senator.id}"
+    visit "/senators/#{bennet.id}"
 
     expect(page).to have_css('.sen-info')
-    expect(page).to have_css('.sen-image')
-    expect(page).to have_css('.sen-name')
-    expect(page).to have_css('.sen-dob')
-    expect(page).to have_css('.sen-gender')
-    expect(page).to have_css('.sen-party')
-    expect(page).to have_css('.sen-leadership')
-    expect(page).to have_css('.sen-facebook')
-    expect(page).to have_css('.sen-twitter')
-    expect(page).to have_css('.sen-govtrack')
-    expect(page).to have_css('.sen-url')
-    expect(page).to have_css('.sen-contact')
-    expect(page).to have_css('.sen-dw_nominate')
-    expect(page).to have_css('.sen-next_election')
-    expect(page).to have_css('.sen-total_votes')
-    expect(page).to have_css('.sen-missed_votes')
-    expect(page).to have_css('.sen-last_updated')
-    expect(page).to have_css('.sen-office')
-    expect(page).to have_css('.sen-phone')
-    expect(page).to have_css('.sen-state')
-    expect(page).to have_css('.sen-missed_votes_percentage')
-    expect(page).to have_css('.sen-votes_with_percentage')
-    expect(page).to have_css('.sen-votes_without_party_percentage')
-    expect(page).to have_css('.sen-congress_id')
-    expect(page).to have_css('.sen-senate_class')
-    expect(page).to have_css('.sen-state_rank')
-    expect(page).to have_css('.side-nav')
-    expect(page).to have_css('.twitter-feed')
-    expect(page).to have_css('.twitter-news')
-    expect(page).to have_button('Compare Positions')
+    within('.sen-info') do
+      expect(page).to have_css('#sen-image')
+      expect(page).to have_css('.sen-name')
+      within ('.sen-name') do
+        expect(page).to have_content('Michael Bennet')
+      end
+      expect(page).to have_css('.sen-dob')
+      expect(page).to have_css('.sen-gender')
+      expect(page).to have_css('.sen-party')
+      expect(page).to_not have_css('.sen-leadership')
+      expect(page).to have_css('.sen-facebook')
+      expect(page).to have_css('.sen-twitter')
+      expect(page).to have_css('.sen-govtrack')
+      expect(page).to have_css('.sen-url')
+      expect(page).to have_css('.sen-contact')
+      expect(page).to have_css('.sen-dw_nominate')
+      expect(page).to have_css('.sen-next_election')
+      expect(page).to have_css('.sen-total_votes')
+      expect(page).to have_css('.sen-missed_votes')
+      expect(page).to have_css('.sen-office')
+      expect(page).to have_css('.sen-phone')
+      expect(page).to have_css('.sen-state')
+      expect(page).to have_css('.sen-missed_votes_percentage')
+      expect(page).to have_css('.sen-votes_with_percentage')
+      expect(page).to have_css('.sen-votes_without_party_percentage')
+      expect(page).to have_css('.sen-congress_id')
+      expect(page).to have_css('.sen-senate_class')
+      expect(page).to have_css('.sen-state_rank')
+      expect(page).to have_link('Compare Positions')
+    end
   end
 end

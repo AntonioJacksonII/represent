@@ -1,7 +1,13 @@
 class HouseMembersController < ApplicationController
 
   def show
-    id = params[:id]
+    id = house_member_params[:id]
     @rep = HouseMember.find(id)
+  end
+
+  private
+
+  def house_member_params
+    params.permit(:id)
   end
 end
