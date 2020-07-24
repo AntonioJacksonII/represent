@@ -4,15 +4,15 @@ RSpec.describe "Representatives Index Page" do
   describe "Issue-18 As a visitor, when I select a state from the dropdown menu" do
     before(:each) do
       @member1 = create(:house_member, state: "CO")
-      @member2 = create(:house_member, state: "CO")
+      @member2 = create(:house_member, state: "FL")
       @member3 = create(:house_member, state: "CO")
       @member4 = create(:house_member, state: "CO")
-      @member5 = create(:house_member, state: "CO")
+      @member5 = create(:house_member, state: "CA")
       @member6 = create(:house_member, state: "CO")
       @member7 = create(:house_member, state: "CO")
       @member8 = create(:house_member, state: "CA")
-      @member9 = create(:house_member, state: "TX")
-      @member10 = create(:house_member, state: "AL")
+      @member9 = create(:house_member, state: "CO")
+      @member10 = create(:house_member, state: "CO")
 
       @senator1 = create(:senator, state: "CO")
       @senator2 = create(:senator, state: "CO")
@@ -20,6 +20,20 @@ RSpec.describe "Representatives Index Page" do
       @senator4 = create(:senator, state: "CT")
     end
 
+    it 'it displays the name of the state in the header' do 
+      visit '/representatives/CO'
+
+      expect(page).to have_content("Colorado")
+
+      visit '/representatives/MN'
+
+      expect(page).to have_content("Minnesota")
+
+      visit '/representatives/SC'
+
+      expect(page).to have_content("South Carolina")
+
+    end 
     it 'it displays the names of all house members from that state' do 
       visit '/representatives/CO'
 
@@ -46,7 +60,6 @@ RSpec.describe "Representatives Index Page" do
     end 
   end
 end
-
 
 # As a visitor or user, when I visit the representatives index page 
 
