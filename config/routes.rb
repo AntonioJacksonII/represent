@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/auth/:provider/callback', to: 'sessions#create'
-
   get '/logout', to: 'sessions#destroy'
+
   get '/representatives/:state_abbreviation', to: 'representatives#index'
 end
