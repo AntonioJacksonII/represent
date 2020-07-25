@@ -1,1 +1,21 @@
 <h1>Representatives from <%= @state %></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <% @members.each do |member| %>
+      <section class="member">
+        <p class="name"><%= member.full_name %></p><br>
+      </section>
+      <% end %>
+    </div>
+
+    <div class="col">
+      <% @senators.each do |senator| %>
+      <section class="senator">
+        <p class="name"><%= senator.full_name %></p><br>
+      </section>
+      <% end %>
+    </div>
+  </div>
+</div>
