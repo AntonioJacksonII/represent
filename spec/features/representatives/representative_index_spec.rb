@@ -34,19 +34,19 @@ RSpec.describe "Representatives Index Page" do
       expect(page).to have_content("South Carolina")
 
     end 
-    xit 'it displays the names of all house members from that state' do 
+    it 'it displays the names of all house members from that state' do 
       visit '/representatives/CO'
 
       expect(page).to have_css('.member', count: 7)
 
       within(first('.member')) do
         within('.name') do
-          expect(page).to have_content("#{@member1.first_name} #{@member1.last_name}")
+          expect(page).to have_content("#{@member1.full_name}")
         end
       end
     end 
 
-    xit 'it displays the names of all senate members from that state' do 
+    it 'it displays the names of all senate members from that state' do 
       visit '/representatives/CO'
 
       expect(page).to have_css('.senator', count: 2)
@@ -60,11 +60,3 @@ RSpec.describe "Representatives Index Page" do
     end 
   end
 end
-
-# As a visitor or user, when I visit the representatives index page 
-
-# and select a state from the dropdown menu
-
-# All of the house members and senators of the selected state are displayed 
-
-#in two separate columns on the page
