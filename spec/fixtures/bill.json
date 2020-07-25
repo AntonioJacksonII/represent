@@ -1,0 +1,783 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2020 Pro Publica Inc. All Rights Reserved.",
+  "results": [
+    {
+      "bill_id": "hr6395-116",
+      "bill_slug": "hr6395",
+      "congress": "116",
+      "bill": "H.R.6395",
+      "bill_type": "hr",
+      "number": "H.R.6395",
+      "bill_uri": "https://api.propublica.org/congress/v1/116/bills/hr6395.json",
+      "title": "To authorize appropriations for fiscal year 2021 for military activities of the Department of Defense and for military construction, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
+      "short_title": "William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021",
+      "sponsor_title": "Rep.",
+      "sponsor": "Adam Smith",
+      "sponsor_id": "S000510",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/S000510.json",
+      "sponsor_party": "D",
+      "sponsor_state": "WA",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/116/hr6395",
+      "introduced_date": "2020-03-26",
+      "active": true,
+      "last_vote": "2020-07-21",
+      "house_passage": "2020-07-21",
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 1,
+      "cosponsors_by_party": {
+        "R": 1
+      },
+      "withdrawn_cosponsors": 0,
+      "primary_subject": "Armed Forces and National Security",
+      "committees": "House Armed Services Committee",
+      "committee_codes": [],
+      "subcommittee_codes": [],
+      "latest_major_action_date": "2020-07-21",
+      "latest_major_action": "The title of the measure was amended. Agreed to without objection.",
+      "house_passage_vote": "2020-07-21",
+      "senate_passage_vote": null,
+      "summary": "William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021 This bill authorizes FY2021 appropriations and sets forth policies for Department of Defense (DOD) programs and activities, including military personnel strengths. It does not provide budget authority, which is provided in subsequent appropriations legislation. The bill authorizes appropriations to DOD for  Procurement, including aircraft, weapons and tracked combat vehicles, shipbuilding and conversion, and missiles; Research, Development, Test, and Evaluation; Operation and Maintenance; Working Capital Funds; Chemical Agents and Munitions Destruction; Drug Interdiction and Counter-Drug Activities; the Defense Inspector General; the National Defense Sealift Fund; the Defense Health Program; the Armed Forces Retirement Home; the Space Force; Overseas Contingency Operations; and Military Construction.  The bill also authorizes the FY2021 personnel strengths for active duty and reserve forces and sets forth policies regarding  military personnel; acquisition policy and management; international programs; National Guard and Reserve Force facilities; compensation and other personnel benefits; health care; matters relating to COVID-19 (i.e., coronavirus disease 2019); DOD organization and management; civilian personnel matters; matters relating to foreign nations; and strategic programs, cyber, and intelligence matters.  The bill authorizes appropriations for base realignment and closure activities, and maritime matters. The bill authorizes appropriations and sets forth policies for Department of Energy national security programs, including the National Nuclear Security Administration and the Defense Nuclear Facilities Safety Board. The bill also sets forth policies regarding certain federal activities related to artificial intelligence, including implementation by the President of a National Artificial Intelligence Initiative to support research and development, education, and training programs. ",
+      "summary_short": "William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021 This bill authorizes FY2021 appropriations and sets forth policies for Department of Defense (DOD) programs and activities, including military personnel strengths. It does not provide budget authority, which is provided in subsequent appropriations legislation. The bill authorizes appropriations to DOD for  Procurement, including aircraft, weapons and tracked combat vehicles, shipbuilding and conversion, and m...",
+      "cbo_estimate_url": null,
+      "versions": [
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Reported in House",
+          "title": "RH",
+          "url": "",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/rh"
+        },
+        {
+          "status": "Introduced in House",
+          "title": "IH",
+          "url": "https://www.govinfo.gov/content/pkg/BILLS-116hr6395ih/xml/BILLS-116hr6395ih.xml",
+          "congressdotgov_url": "https://www.congress.gov/bill/116th-congress/house-bill/6395/text/ih"
+        }
+      ],
+      "actions": [
+        {
+          "id": 65,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "The title of the measure was amended. Agreed to without objection."
+        },
+        {
+          "id": 64,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "The Clerk was authorized to correct section numbers, punctuation, and cross references, and to make other necessary technical and conforming corrections in the engrossment of H.R. 6395."
+        },
+        {
+          "id": 63,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "Motion to reconsider laid on the table Agreed to without objection."
+        },
+        {
+          "id": 62,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "On passage Passed by the Yeas and Nays: 295 - 125 (Roll no. 152)."
+        },
+        {
+          "id": 61,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "On motion to recommit with instructions Failed by the Yeas and Nays: 201 - 219 (Roll no. 151)."
+        },
+        {
+          "id": 60,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "The previous question on the motion to recommit with instructions was ordered without objection."
+        },
+        {
+          "id": 59,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "DEBATE - The House proceeded with 10 minutes of debate on the Green (TN) motion to recommit with instructions pending the reservation of a point of order. The instructions contained in the motion seek to require the bill to be reported back to the House with an amendment to at the end of title XVII, add a new subtitle entitled 'Defend COVID Research From Hackers Act'. Subsequently, the point of order was withdrawn."
+        },
+        {
+          "id": 58,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "Mr. Green (TN) moved to recommit with instructions to the Committee on Armed Services."
+        },
+        {
+          "id": 57,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "The previous question was ordered pursuant to the rule."
+        },
+        {
+          "id": 56,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "Without objection, a motion to reconsider was laid upon the table"
+        },
+        {
+          "id": 55,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "Considered as unfinished business."
+        },
+        {
+          "id": 54,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-21",
+          "description": "Pursuant to clause 1(c) of Rule XIX, the House resumed consideration of H.R. 6395."
+        },
+        {
+          "id": 53,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "Pursuant to clause 1(c) of Rule XIX, further proceedings on H.R. 6395 were postponed."
+        },
+        {
+          "id": 52,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "Without objection, a motion to reconsider was laid upon the table"
+        },
+        {
+          "id": 51,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 30 minutes of debate on the Smith (WA) amendment en bloc No. 2."
+        },
+        {
+          "id": 50,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Panetta amendment No. 167."
+        },
+        {
+          "id": 49,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Takano amendment No. 29, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Ms. Foxx (NC) demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 48,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Takano amendment No. 29."
+        },
+        {
+          "id": 47,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "Without objection, a motion to reconsider was laid upon the table."
+        },
+        {
+          "id": 46,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Houlahan amendment No. 19."
+        },
+        {
+          "id": 45,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Adams amendment No. 17."
+        },
+        {
+          "id": 44,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Gallego amendment No. 13."
+        },
+        {
+          "id": 43,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "UNFINISHED BUSINESS - The Chair announced that the unfinished business was the question on adoption of the Escobar amendment which had been debated earlier and on which further proceedings had been postponed."
+        },
+        {
+          "id": 42,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "Considered as unfinished business."
+        },
+        {
+          "id": 41,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - Pursuant to clause 1(c) of Rule XIX, further proceedings on H.R. 6395 were postponed."
+        },
+        {
+          "id": 40,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Smith (WA) amendment en bloc No. 1, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Massie demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 39,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 30 minutes of debate on the Smith (WA) amendment en bloc No. 1."
+        },
+        {
+          "id": 38,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Dean amendment No. 11, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Luetkemeyer demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 37,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Dean amendment No. 11."
+        },
+        {
+          "id": 36,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Pocan amendment No. 9, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Thornberry demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 35,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Pocan amendment No. 9."
+        },
+        {
+          "id": 34,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Neguse amendment No. 8, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Gosar demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 33,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Neguse amendment No. 8."
+        },
+        {
+          "id": 32,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the DeGette amendment No. 7, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Lamborn demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 31,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the DeGette amendment No. 7."
+        },
+        {
+          "id": 30,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Jayapal amendment No. 6, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Thornberry demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 29,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Jayapal amendment No. 6."
+        },
+        {
+          "id": 28,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Omar amendment No. 5, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Thornberry demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 27,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Omar amendment No. 5."
+        },
+        {
+          "id": 26,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the McAdams amendment No. 4, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Thornberry demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 25,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the McAdams amendment No. 4."
+        },
+        {
+          "id": 24,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "POSTPONED PROCEEDINGS - At the conclusion of debate on the Escobar amendment No. 3, the Chair put the question on adoption of the amendment, and by voice vote, announced that the ayes had prevailed. Mr. Lamborn demanded the yeas and nays and the Chair postponed further proceedings on the amendment until a time to be announced."
+        },
+        {
+          "id": 23,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - Pursuant to the provisions of H. Res. 1053, the House proceeded with 10 minutes of debate on the Escobar amendment No. 3."
+        },
+        {
+          "id": 22,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "DEBATE - The House proceeded with one hour of debate on H.R. 6395."
+        },
+        {
+          "id": 21,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "Rule provides for consideration of H.R. 6395, H.R. 7027, H.R. 7327 and H.R. 1957. Provides for the consideration of H.R. 6395, H.R. 7027, H.R. 7327, and the Senate Amendments to H.R. 1957. Rule also provides that H.Res. 967, as amended by H.Res. 1017, is further amended by inserting a new date."
+        },
+        {
+          "id": 20,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "Considered under the provisions of rule H. Res. 1053."
+        },
+        {
+          "id": 19,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-20",
+          "description": "Rules Committee Resolution H. Res. 1053 Reported to House. Rule provides for consideration of H.R. 6395, H.R. 7027, H.R. 7327 and H.R. 1957. Provides for the consideration of H.R. 6395, H.R. 7027, H.R. 7327, and the Senate Amendments to H.R. 1957. Rule also provides that H.Res. 967, as amended by H.Res. 1017, is further amended by inserting a new date."
+        },
+        {
+          "id": 18,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-07-16",
+          "description": "Supplemental report filed by the Committee on Armed Services, H. Rept. 116-442, Part II."
+        },
+        {
+          "id": 17,
+          "chamber": "House",
+          "action_type": "Floor",
+          "datetime": "2020-07-16",
+          "description": "The Chair announced that the Committee on Armed Services was authorized to file a supplemental report on the bill H.R. 6395. Agreed to without objection."
+        },
+        {
+          "id": 16,
+          "chamber": "House",
+          "action_type": "Calendars",
+          "datetime": "2020-07-09",
+          "description": "Placed on the Union Calendar, Calendar No. 354."
+        },
+        {
+          "id": 15,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-07-09",
+          "description": "Reported (Amended) by the Committee on Armed Services. H. Rept. 116-442."
+        },
+        {
+          "id": 14,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-07-01",
+          "description": "Ordered to be Reported (Amended) by the Yeas and Nays: 56 - 0."
+        },
+        {
+          "id": 13,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-07-01",
+          "description": "Committee Consideration and Mark-up Session Held."
+        },
+        {
+          "id": 12,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-06-23",
+          "description": "Forwarded by Subcommittee to Full Committee by Voice Vote ."
+        },
+        {
+          "id": 11,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-06-23",
+          "description": "Subcommittee Consideration and Mark-up Session Held."
+        },
+        {
+          "id": 10,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-06-23",
+          "description": "Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote ."
+        },
+        {
+          "id": 9,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-06-22",
+          "description": "Forwarded by Subcommittee to Full Committee by Voice Vote ."
+        },
+        {
+          "id": 8,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-06-22",
+          "description": "Subcommittee Consideration and Mark-up Session Held."
+        },
+        {
+          "id": 7,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-03-27",
+          "description": "Referred to the Subcommittee on Tactical Air and Land Forces."
+        },
+        {
+          "id": 6,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-03-27",
+          "description": "Referred to the Subcommittee on Strategic Forces."
+        },
+        {
+          "id": 5,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-03-27",
+          "description": "Referred to the Subcommittee on Seapower and Projection Forces."
+        },
+        {
+          "id": 4,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-03-27",
+          "description": "Referred to the Subcommittee on Readiness."
+        },
+        {
+          "id": 3,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-03-27",
+          "description": "Referred to the Subcommittee on Military Personnel."
+        },
+        {
+          "id": 2,
+          "chamber": "House",
+          "action_type": "Committee",
+          "datetime": "2020-03-27",
+          "description": "Referred to the Subcommittee on Intelligence and Emerging Threats and Capabilities."
+        },
+        {
+          "id": 1,
+          "chamber": "House",
+          "action_type": "IntroReferral",
+          "datetime": "2020-03-26",
+          "description": "Referred to the House Committee on Armed Services."
+        }
+      ],
+      "presidential_statements": [
+        {
+          "date": "",
+          "position": "",
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2020/07/SAP_HR-6395.pdf",
+          "veto_threat": "",
+          "would_sign": "false"
+        }
+      ],
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "13:42:00",
+          "roll_call": "152",
+          "question": "On Passage",
+          "result": "Passed",
+          "total_yes": 295,
+          "total_no": 125,
+          "total_not_voting": 11,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/152.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "13:04:00",
+          "roll_call": "151",
+          "question": "On Motion to Recommit with Instructions",
+          "result": "Failed",
+          "total_yes": 201,
+          "total_no": 219,
+          "total_not_voting": 11,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/151.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "11:58:00",
+          "roll_call": "150",
+          "question": "On Agreeing to the Amendment",
+          "result": "Agreed to",
+          "total_yes": 232,
+          "total_no": 184,
+          "total_not_voting": 15,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/150.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "11:02:00",
+          "roll_call": "149",
+          "question": "On Agreeing to the Amendment",
+          "result": "Agreed to",
+          "total_yes": 217,
+          "total_no": 198,
+          "total_not_voting": 16,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/149.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "10:16:00",
+          "roll_call": "148",
+          "question": "On Agreeing to the Amendment",
+          "result": "Failed",
+          "total_yes": 93,
+          "total_no": 324,
+          "total_not_voting": 14,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/148.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "09:31:00",
+          "roll_call": "147",
+          "question": "On Agreeing to the Amendment",
+          "result": "Agreed to",
+          "total_yes": 234,
+          "total_no": 181,
+          "total_not_voting": 16,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/147.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "08:45:00",
+          "roll_call": "146",
+          "question": "On Agreeing to the Amendment",
+          "result": "Agreed to",
+          "total_yes": 234,
+          "total_no": 179,
+          "total_not_voting": 18,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/146.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "08:00:00",
+          "roll_call": "145",
+          "question": "On Agreeing to the Amendment",
+          "result": "Failed",
+          "total_yes": 173,
+          "total_no": 241,
+          "total_not_voting": 17,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/145.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-21",
+          "time": "07:19:00",
+          "roll_call": "144",
+          "question": "On Agreeing to the Amendment",
+          "result": "Failed",
+          "total_yes": 129,
+          "total_no": 284,
+          "total_not_voting": 18,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/144.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-20",
+          "time": "19:08:00",
+          "roll_call": "143",
+          "question": "On Agreeing to the Amendment",
+          "result": "Agreed to",
+          "total_yes": 336,
+          "total_no": 71,
+          "total_not_voting": 23,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/143.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-20",
+          "time": "18:33:00",
+          "roll_call": "142",
+          "question": "On Agreeing to the Amendment",
+          "result": "Agreed to",
+          "total_yes": 227,
+          "total_no": 179,
+          "total_not_voting": 24,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/142.json"
+        },
+        {
+          "chamber": "House",
+          "date": "2020-07-20",
+          "time": "17:54:00",
+          "roll_call": "141",
+          "question": "On Agreeing to the Amendment",
+          "result": "Agreed to",
+          "total_yes": 215,
+          "total_no": 190,
+          "total_not_voting": 25,
+          "api_url": "https://api.propublica.org/congress/v1/116/house/sessions/2/votes/141.json"
+        }
+      ]
+    }
+  ]
+}
