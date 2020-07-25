@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   def create
     user = User.from_omniauth(auth_hash)
     user.save
