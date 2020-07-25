@@ -1,19 +1,28 @@
-<h1>Representatives from <%= @state %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <h1 class="text-center">Representatives from <%= @state %></h1>
+    </div>
+  </div>
+</div>
+<br><br><br>
 
 <div class="container">
   <div class="row">
     <div class="col">
+      <h3 class='text-center'>House Members</h3><br>
       <% @members.each do |member| %>
       <section class="member">
-        <p class="name"><%= member.full_name %></p><br>
+        <p class="name text-center"><%= member.full_name %></p><br>
       </section>
       <% end %>
     </div>
 
     <div class="col">
+      <h3 class='text-center'>Senators</h3><br>
       <% @senators.each do |senator| %>
       <section class="senator">
-        <p class="name"><%= senator.full_name %></p><br>
+        <p class="name text-center"><%= senator.full_name %></p><br>
       </section>
       <% end %>
     </div>
