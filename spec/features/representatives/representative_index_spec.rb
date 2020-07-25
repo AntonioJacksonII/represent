@@ -23,8 +23,6 @@ RSpec.describe "Representatives Index Page" do
     it 'it displays the name of the state in the header' do 
       visit '/representatives/CO'
 
-      binding.pry
-
       expect(page).to have_content("Colorado")
 
       visit '/representatives/MN'
