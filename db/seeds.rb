@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'factory_bot_rails'
 
-50.times do
+300.times do
   FactoryBot.create :house_member
 end
 
-20.times do
+100.times do
   FactoryBot.create :senator
 end
 
