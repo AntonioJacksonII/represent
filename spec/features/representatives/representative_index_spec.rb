@@ -22,15 +22,12 @@ RSpec.describe "Representatives Index Page" do
 
     it 'it displays the name of the state in the header' do 
       visit '/representatives/CO'
-
       expect(page).to have_content("Colorado")
 
       visit '/representatives/MN'
-
       expect(page).to have_content("Minnesota")
 
       visit '/representatives/SC'
-
       expect(page).to have_content("South Carolina")
 
     end 
@@ -41,6 +38,7 @@ RSpec.describe "Representatives Index Page" do
 
       within(first('.member')) do
         expect(page).to have_css(".name")
+        expect(page).to have_css(".rep-image")
       end
     end 
 
@@ -51,6 +49,7 @@ RSpec.describe "Representatives Index Page" do
 
       within(first('.senator')) do
           expect(page).to have_css(".name")
+          expect(page).to have_css(".rep-image")
       end
 
     end 
