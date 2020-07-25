@@ -13,7 +13,7 @@
       <h3 class='text-center'>House Members</h3><br>
       <% @members.each do |member| %>
         <div class="card member" style="width: 12rem;">
-          <img class="card-img-top" src="https://theunitedstates.io/images/congress/225x275/<%= member.congress_id %>.jpg" alt="Card image cap">
+          <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= member.congress_id %>.jpg" alt="Card image cap">
           <div class="card-body">
             <h6 class="card-title name"><%= member.full_name %>
             </h6>
@@ -27,7 +27,7 @@
       <h3 class='text-center'>Senators</h3><br>
       <% @senators.each do |senator| %>
         <div class="card senator" style="width: 12rem;">
-          <img class="card-img-top" src="https://theunitedstates.io/images/congress/225x275/<%= senator.congress_id %>.jpg" alt="Card image cap">
+          <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= senator.congress_id %>.jpg" alt="Card image cap">
           <div class="card-body">
             <p class="card-text name"><%= senator.full_name %>
             </p>
