@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20200723235753) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -110,8 +111,6 @@ ActiveRecord::Schema.define(version: 20200723235753) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "name"
-    t.string "access_token"
-    t.string "refresh_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
