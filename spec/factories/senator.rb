@@ -1,17 +1,17 @@
 FactoryBot.define do
   factory :senator do
-    sequence(:first_name) {|n| "Member #{n}" }
-    sequence(:last_name) {|n| "Member #{n}" }
+    first_name { Faker::Name.first_name }
+    last_name { Faker::Name.last_name }
     sequence(:congress_id) {|n| "A00010#{n}" }
     sequence(:dob) {|n| "1955-09-#{n}" }
-    gender { "M" }
+    gender { Faker::Gender.short_binary_type.upcase }
     party { "D" }
     leadership_role { nil }
-    sequence(:twitter_account) {|n| "@member#{n}" }
-    sequence(:facebook_account) {|n| "RepMember#{n}" }
+    sequence(:twitter_account) {|n| "@senator#{n}" }
+    sequence(:facebook_account) {|n| "RepSenator#{n}" }
     govtrack_id { Faker::Number.number(digits: 6) }
-    sequence(:url) {|n| "https://member#{n}.house.gov" }
-    sequence(:contact_form) {|n| "http://www.member#{n}.senate.gov/public/index.cfm?p=Email" }
+    sequence(:url) {|n| "https://senator#{n}.senate.gov" }
+    sequence(:contact_form) {|n| "http://www.senator#{n}.senate.gov/public/index.cfm?p=Email" }
     dw_nominate { Faker::Number.decimal(l_digits: 0, r_digits: 2) }
     next_election { 2020 }
     total_votes { Faker::Number.number(digits: 3) }
