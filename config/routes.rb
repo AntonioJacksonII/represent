@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get '/representatives/:state_abbreviation', to: 'representatives#index'
   post '/senators/:id/favorites', to: 'senator_favorites#create'
   post '/house_members/:id/favorites', to: 'house_members_favorites#create'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 end
