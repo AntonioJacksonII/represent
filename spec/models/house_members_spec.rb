@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe HouseMember, type: :model do
   describe 'class methods' do
     before(:each) do
-      @member1 = create(:house_member, state: "CO")
-      @member2 = create(:house_member, state: "AL")
-      @member3 = create(:house_member, state: "CO")
-      @member4 = create(:house_member, state: "TX")
+      @member1 = create(:house_member, state: "CO", last_name: "A")
+      @member2 = create(:house_member, state: "AL", last_name: 'B')
+      @member3 = create(:house_member, state: "CO", last_name: 'C')
+      @member4 = create(:house_member, state: "TX", last_name: 'D')
     end
 
     it 'by_state' do
