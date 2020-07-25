@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20200724001427) do
     t.integer "offset"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "passage_roll_call"
   end
 
   create_table "house_favorites", force: :cascade do |t|
