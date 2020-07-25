@@ -1,0 +1,3 @@
+class SenatorFavoritesController < ApplicationController
+
+end

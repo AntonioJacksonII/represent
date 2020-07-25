@@ -78,7 +78,6 @@
     <a href="https://github.com/arpariseau">Alex Pariseau</a>
 </div>
 <script>
-  import * as representatives from './app/assets/javascripts/search/representatives.js';
   $( function() {
      var availableTags = [
        "Martha",
@@ -89,14 +88,11 @@
        "Rostam",
        "Antonio"
      ];
-     var options = {
-       url: "javascripts/search/representatives.js"
-     }
-     $( "#search_by_name" ).autocomplete({
-       source: REPRESENTATIVES
-     });
-   } );
-$("#search_by_name").easyAutocomplete(options);
+   $( "#search_by_name" ).autocomplete({
+     source: availableTags
+   });
+  } );
+// $("#search_by_name").easyAutocomplete(availableTags);
   function selectOnClick(){
     var selected = document.getElementById("dropdownid").value;
     window.location = "/representatives/" + selected

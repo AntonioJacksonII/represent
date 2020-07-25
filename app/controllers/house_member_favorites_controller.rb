@@ -1,0 +1,3 @@
+class HouseMemberFavoritesController < ApplicationController
+
+end

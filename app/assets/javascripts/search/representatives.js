@@ -1,4 +1,4 @@
-export const REPRESENTATIVES = [
+const REPRESENTATIVES = {
   "name": "Don Young",
   "name": "Bradley Byrne",
   "name": "Martha Roby",
@@ -533,4 +533,4 @@ export const REPRESENTATIVES = [
   "name": "Shelley Capito",
   "name": "John Barrasso",
   "name": "Michael Enzi"
-]
+}
