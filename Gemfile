@@ -33,6 +33,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'jquery-rails'
 gem 'fast_jsonapi'
+gem 'omniauth-google-oauth2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
