@@ -11,6 +11,7 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class='sen-name'><%= @senator.first_name %> <%= @senator.last_name %></h1>
+        <%= button_to "Add to Favorites" %>
         <br class='sen-dob'>Date of Birth: <%= @senator.dob %>
         <br class='sen-gender'>Gender: <%= @senator.gender %>
         <br class='sen-party'>Party: <%= @senator.party %>

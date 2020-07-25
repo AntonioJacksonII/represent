@@ -11,6 +11,7 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
+        <%= button_to "Add to Favorites" %>
         <br class='rep-dob'>Date of Birth: <%= @rep.dob %>
         <br class='rep-gender'>Gender: <%= @rep.gender %>
         <br class='rep-party'>Party: <%= @rep.party %>
