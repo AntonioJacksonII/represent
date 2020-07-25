@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/representatives/:state_abbreviation', to: 'representatives#index'
+
+  get '/dashboard', to: 'dashboard#show'
 end
