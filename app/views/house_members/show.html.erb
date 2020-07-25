@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Representative Show Page</title>
+</head>
+
+  <body>
+    <section class='rep-info'>
+    <div class="row align-items-center my-5">
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
+        <%= button_to "Add to Favorites" %>
+        <br class='rep-dob'>Date of Birth: <%= @rep.dob %>
+        <br class='rep-gender'>Gender: <%= @rep.gender %>
+        <br class='rep-party'>Party: <%= @rep.party %>
+        <% if @rep.leadership_role %>
+          <br class='rep-leadership'>Leadership Role: <%= @rep.leadership_role %>
+        <% end %>
+        <br class='rep-state'>State: <%= @rep.state %>
+        <br class='rep-district'>District: <%= @rep.district %>
+        <% if @rep.cook_pvi %>
+          <br class='rep-cook_pvi'>District's Cook PVI: <%= @rep.cook_pvi %>
+        <% end %>
+          <br class='rep-at_large'>At-Large District: <%= @rep.at_large %>
+        <% if @rep.dw_nominate %>
+          <br class='rep-dw_nominate'>DW NOMINATE Score: <%= @rep.dw_nominate %>
+        <% end %>
+        <% if @rep.office %>
+          <br class='rep-office'>D.C. Office: <%= @rep.office %>
+        <% end %>
+        <% if @rep.phone %>
+          <br class='rep-phone'>Office Phone: <%= @rep.phone %>
+        <% end %>
+        <% if @rep.url %>
+          <br class='rep-url'>Official Website: <%= link_to nil, @rep.url %>
+        <% end %>
+        <% if @rep.contact_form %>
+          <br class='rep-contact'><%= link_to "Contact #{@rep.first_name} #{@rep.last_name}", @rep.url %>
+        <% end %>
+        <% if @rep.facebook_account %>
+          <br class='rep-facebook'>Facebook: <%= link_to @rep.facebook_account, "http://www.facebook.com/#{@rep.facebook_account}" %>
+        <% end %>
+        <% if @rep.twitter_account %>
+          <br class='rep-twitter'>Twitter: <%= link_to @rep.twitter_account, "http://www.twitter.com/#{@rep.twitter_account}" %>
+        <% end %>
+        <% if @rep.govtrack_id %>
+          <br class='rep-govtrack'>Govtrack ID: <%= @rep.govtrack_id %>
+        <% end %>
+        <% if @rep.congress_id %>
+          <br class='rep-congress_id'>Congressional Member ID: <%= @rep.congress_id %>
+        <% end %>
+        <% if @rep.total_votes %>
+          <br class='rep-total_votes'>Total Votes: <%= @rep.total_votes %>
+        <% end %>
+        <% if @rep.missed_votes %>
+          <br class='rep-missed_votes'>Missed Votes: <%= @rep.missed_votes %>
+        <% end %>
+        <% if @rep.missed_votes_percentage %>
+          <br class='rep-missed_votes_percentage'>Missed Votes Percentage: <%= @rep.missed_votes_percentage %> %
+        <% end %>
+        <% if @rep.votes_with_percentage %>
+          <br class='rep-votes_with_percentage'>Votes with Party Percentage: <%= @rep.votes_with_percentage %> %
+        <% end %>
+        <% if @rep.votes_without_party_percentage %>
+          <br class='rep-votes_without_party_percentage'>Votes Against Party Percentage: <%= @rep.votes_without_party_percentage %> %
+        <% end %>
+      </div>
+      <div class="col-lg-5">
+        <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="">Compare Positions</a>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    </section>
+</body>
+
+</html>
