@@ -1,7 +1,9 @@
 class HouseMember < ApplicationRecord
 
-  def self.by_state(state_abbrev)
-    where(state: "#{state_abbrev}")
+  def self.by_state(state_abbrev, order = 'asc', limit = 400)
+    self.where(state: "#{state_abbrev}")
+        .order(last_name: "#{order}")
+        .limit(limit)
   end 
 
   def full_name
