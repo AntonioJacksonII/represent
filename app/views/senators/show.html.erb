@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Senator Show Page</title>
+</head>
+
+  <body>
+    <section class='sen-info'>
+    <div class="row align-items-center my-5">
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1 class='sen-name'><%= @senator.first_name %> <%= @senator.last_name %></h1>
+        <%= button_to "Add to Favorites" %>
+        <br class='sen-dob'>Date of Birth: <%= @senator.dob %>
+        <br class='sen-gender'>Gender: <%= @senator.gender %>
+        <br class='sen-party'>Party: <%= @senator.party %>
+        <% if @senator.leadership_role %>
+          <br class='sen-leadership'>Leadership Role: <%= @senator.leadership_role %>
+        <% end %>
+        <br class='sen-state'>State: <%= @senator.state %>
+        <br class='sen-senate_class'>Senate Class: <%= @senator.senate_class %>
+        <br class='sen-state_rank'>State Rank: <%= @senator.state_rank %>
+        <br class='sen-next_election'>Next Election: <%= @senator.next_election %>
+        <% if @senator.dw_nominate %>
+          <br class='sen-dw_nominate'>DW NOMINATE Score: <%= @senator.dw_nominate %>
+        <% end %>
+        <% if @senator.office %>
+          <br class='sen-office'>D.C. Office: <%= @senator.office %>
+        <% end %>
+        <% if @senator.phone %>
+          <br class='sen-phone'>Office Phone: <%= @senator.phone %>
+        <% end %>
+        <% if @senator.url %>
+          <br class='sen-url'>Official Website: <%= link_to nil, @senator.url %>
+        <% end %>
+        <% if @senator.contact_form %>
+          <br class='sen-contact'><%= link_to "Contact #{@senator.first_name} #{@senator.last_name}", @senator.contact_form %>
+        <% end %>
+        <% if @senator.facebook_account %>
+          <br class='sen-facebook'>Facebook: <%= link_to @senator.facebook_account, "http://www.facebook.com/#{@senator.facebook_account}" %>
+        <% end %>
+        <% if @senator.twitter_account %>
+          <br class='sen-twitter'>Twitter: <%= link_to @senator.twitter_account, "http://www.twitter.com/#{@senator.twitter_account}" %>
+        <% end %>
+        <% if @senator.govtrack_id %>
+          <br class='sen-govtrack'>Govtrack ID: <%= @senator.govtrack_id %>
+        <% end %>
+        <% if @senator.congress_id %>
+          <br class='sen-congress_id'>Congressional Member ID: <%= @senator.congress_id %>
+        <% end %>
+        <% if @senator.total_votes %>
+          <br class='sen-total_votes'>Total Votes: <%= @senator.total_votes %>
+        <% end %>
+        <% if @senator.missed_votes %>
+          <br class='sen-missed_votes'>Missed Votes: <%= @senator.missed_votes %>
+        <% end %>
+        <% if @senator.missed_votes_percentage %>
+          <br class='sen-missed_votes_percentage'>Missed Votes Percentage: <%= @senator.missed_votes_percentage %> %
+        <% end %>
+        <% if @senator.votes_with_percentage %>
+          <br class='sen-votes_with_percentage'>Votes with Party Percentage: <%= @senator.votes_with_percentage %> %
+        <% end %>
+        <% if @senator.votes_without_party_percentage %>
+          <br class='sen-votes_without_party_percentage'>Votes Against Party Percentage: <%= @senator.votes_without_party_percentage %> %
+        <% end %>
+      </div>
+      <div class="col-lg-5">
+        <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@senator.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'sen-image') %>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="">Compare Positions</a>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    </section>
+</body>
+
+</html>

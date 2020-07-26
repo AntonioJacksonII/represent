@@ -24,6 +24,13 @@ class PropublicaParser
     end
   end
 
+  def parse_bill(offset)
+    bill = @response[:results].first
+    bill_info = clean_bill_attributes(bill)
+    bill_info[:offset] = offset
+    Bill.create(bill_info)
+  end
+
   private
 
   def clean_rep_attributes(rep_hash)
@@ -49,6 +56,17 @@ class PropublicaParser
     clean_hash[:votes_with_percentage] = clean_hash.delete(:votes_with_party_pct)
     clean_hash[:votes_without_party_percentage] = clean_hash.delete(:votes_against_party_pct)
     clean_hash
+  end
+
+  def clean_bill_attributes(bill_hash)
+    votes = bill_hash[:votes]
+    passage_vote = votes.find { |vote| vote[:question] == "On Passage" }
+    bill_hash[:passage_roll_call] = passage_vote[:roll_call]
+    needed_attr = [:bill_id, :summary_short, :short_title, :congressdotgov_url,
+                   :primary_subject, :passage_roll_call]
+    bill_hash.delete_if {|key, value| !needed_attr.include?(key)}
+    bill_hash[:congress_url] = bill_hash.delete(:congressdotgov_url)
+    bill_hash
   end
 
   def delete_unneeded_rep_attr(rep_hash)

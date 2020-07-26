@@ -1,4 +1,7 @@
 class RepresentativesController < ApplicationController
   def index
-  end
+    @members = HouseMember.by_state(params[:state_abbreviation])
+    @senators = Senator.by_state(params[:state_abbreviation])
+    @state = ::States[params[:state_abbreviation]]
+  end 
 end
