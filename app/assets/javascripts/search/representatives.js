@@ -537,7 +537,6 @@ $( function() {
 ]
 
  $( "#search_by_name" ).autocomplete({
-   maxShowItems: 5,
    source: REPRESENTATIVES
  });
 } );
