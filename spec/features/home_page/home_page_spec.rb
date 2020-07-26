@@ -8,9 +8,20 @@ RSpec.describe "As a visitor, when i visit the home page" do
     expect(page).to have_content("Search a representative by name:")
   end
 
-  it "reroutes the user to the representatives state index page" do
+  xit "reroutes the user to the representatives state index page" do
     visit "/"
-    select("Alaska")
+
+    find('#dropdownid').click
+    expect(page).to have_content("Alaska")
+
+    click_on "Alaska"
+
+    expect(current_path).to eq("/representatives/AK")
   end
 
+  it "can search representatives with autocomplete" do
+
+    visit "/"
+    has_field?("Search")
+  end
 end
