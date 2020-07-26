@@ -11,7 +11,13 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
-        <%= button_to "Add to Favorites" %>
+        <% if current_user && current_user.house_members.include?(@rep)%>
+          <%= button_to "Remove from Favorites", "/house_members/#{@rep.id}/favorites", method: :delete %>
+        <% elsif current_user && !current_user.house_members.include?(@rep)%>
+          <%= button_to "Add to Favorites" , "/house_members/#{@rep.id}/favorites", method: :post%>
+        <% else %>
+           <p>Click on Register to favorite</p>
+        <% end %>
         <br class='rep-dob'>Date of Birth: <%= @rep.dob %>
         <br class='rep-gender'>Gender: <%= @rep.gender %>
         <br class='rep-party'>Party: <%= @rep.party %>
