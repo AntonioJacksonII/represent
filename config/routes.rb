@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get '/representatives/:state_abbreviation', to: 'representatives#index'
   post '/senators/:id/favorites', to: 'senator_favorites#create'
+  delete '/senators/:id/favorites', to: 'senator_favorites#destroy'
+  delete '/house_members/:id/favorites', to: 'house_members_favorites#destroy'
   post '/house_members/:id/favorites', to: 'house_members_favorites#create'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   get '/representatives/:state_abbreviation', to: 'representatives#index'
-
   get '/dashboard', to: 'dashboard#show'
 end
