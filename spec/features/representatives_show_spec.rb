@@ -16,7 +16,6 @@ describe 'Representative Show Pages' do
       within ('.rep-name') do
         expect(page).to have_content('Alexandria Ocasio-Cortez')
       end
-      expect(page).to have_button('Add to Favorites')
       expect(page).to have_css('.rep-dob')
       expect(page).to have_css('.rep-gender')
       expect(page).to have_css('.rep-party')
@@ -58,7 +57,6 @@ describe 'Representative Show Pages' do
       within ('.sen-name') do
         expect(page).to have_content('Michael Bennet')
       end
-      expect(page).to have_button('Add to Favorites')
       expect(page).to have_css('.sen-dob')
       expect(page).to have_css('.sen-gender')
       expect(page).to have_css('.sen-party')
