@@ -5,8 +5,20 @@
   <title>Senator Show Page</title>
 </head>
 
+<div class="sidenav">
+  <p>Other Representatives in <%= @senator.state %></p>
+  <p>Senators</p>
+  <% @other_senators.each do |senator| %>
+    <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
+  <% end %>
+  <p>House Members</p>
+  <% @representatives.each do |rep| %>
+    <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
+  <% end %>
+</div>
+
   <body>
-    <section class='sen-info'>
+    <section class='sen-info' style="margin-left:225px;">
     <div class="row align-items-center my-5">
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
