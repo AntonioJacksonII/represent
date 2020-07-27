@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 describe 'Representative Show Pages' do
-  it 'displays house member information' do
-    json_response = File.read('spec/fixtures/house_representatives.json')
-    parser = PropublicaParser.new(json_response)
+  it 'displays house member information', :vcr do
+    parser = PropublicaParser.new
     parser.parse_house_members
     aoc = HouseMember.where(first_name: 'Alexandria', last_name: 'Ocasio-Cortez').first
 
@@ -16,6 +15,7 @@ describe 'Representative Show Pages' do
       within ('.rep-name') do
         expect(page).to have_content('Alexandria Ocasio-Cortez')
       end
+      # expect(page).to have_button('Add to Favorites')
       expect(page).to have_css('.rep-dob')
       expect(page).to have_css('.rep-gender')
       expect(page).to have_css('.rep-party')
@@ -42,13 +42,13 @@ describe 'Representative Show Pages' do
     expect(page).to have_link('Compare Positions')
   end
 
-  it 'displays senator information' do
-    json_response = File.read('spec/fixtures/senate.json')
-    parser = PropublicaParser.new(json_response)
+  it 'displays senator information', :vcr do
+    parser = PropublicaParser.new
     parser.parse_senators
     bennet = Senator.where(first_name: 'Michael', last_name: 'Bennet').first
 
     visit "/senators/#{bennet.id}"
+    save_and_open_page
 
     expect(page).to have_css('.sen-info')
     within('.sen-info') do
@@ -57,6 +57,7 @@ describe 'Representative Show Pages' do
       within ('.sen-name') do
         expect(page).to have_content('Michael Bennet')
       end
+      # expect(page).to have_button('Add to Favorites')
       expect(page).to have_css('.sen-dob')
       expect(page).to have_css('.sen-gender')
       expect(page).to have_css('.sen-party')
@@ -81,20 +82,5 @@ describe 'Representative Show Pages' do
       expect(page).to have_css('.sen-state_rank')
       expect(page).to have_link('Compare Positions')
     end
-  end
-  it "has a side nav bar with other reps/senators in the same state" do
-    json_response = File.read('spec/fixtures/house_representatives.json')
-    parser = PropublicaParser.new(json_response)
-    senate_json_response = File.read('spec/fixtures/senate.json')
-    parser2 = PropublicaParser.new(senate_json_response)
-    parser.parse_house_members
-    parser2.parse_senators
-    aoc = HouseMember.where(first_name: 'Alexandria', last_name: 'Ocasio-Cortez').first
-    senator = Senator.find_by(first_name: "Kirsten", last_name: "Gillibrand")
-    visit "/house_members/#{aoc.id}"
-    has_link? ("Anthony Brindisi")
-    has_link? "Kirsten Gillibrand"
-    click_on "Kirsten Gillibrand"
-    expect(current_path).to eq("/senators/#{senator.id}")
   end
 end

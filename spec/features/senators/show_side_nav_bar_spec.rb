@@ -1,11 +1,9 @@
 require 'rails_helper'
 
 describe "Senator Show Pages" do
-  it "has a side nav bar with other reps/senators in the same state" do
-    json_response = File.read('spec/fixtures/house_representatives.json')
-    parser = PropublicaParser.new(json_response)
-    senate_json_response = File.read('spec/fixtures/senate.json')
-    parser2 = PropublicaParser.new(senate_json_response)
+  it "has a side nav bar with other reps/senators in the same state", :vcr do
+    parser = PropublicaParser.new
+    parser2 = PropublicaParser.new
     parser.parse_house_members
     parser2.parse_senators
     senator = Senator.find_by(first_name: "Kirsten", last_name: "Gillibrand")
