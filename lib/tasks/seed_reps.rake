@@ -9,7 +9,6 @@ namespace :seed_reps do
 
     puts 'Now deleting all HouseMember and Senator records'
     model_objects.each(&:destroy_all)
-
     puts 'Database is now reset'
     puts 'Loading new data'
 
