@@ -48,7 +48,6 @@ describe 'Representative Show Pages' do
     bennet = Senator.where(first_name: 'Michael', last_name: 'Bennet').first
 
     visit "/senators/#{bennet.id}"
-    save_and_open_page
 
     expect(page).to have_css('.sen-info')
     within('.sen-info') do

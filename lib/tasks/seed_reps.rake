@@ -1,4 +1,5 @@
 require './app/services/propublica_parser'
+
 namespace :seed_reps do
   desc 'import members and senators by JSON request'
   task load: :environment do

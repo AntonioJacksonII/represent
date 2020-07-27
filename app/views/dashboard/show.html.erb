@@ -3,11 +3,11 @@
 <div class="sidenav">
   <p>Favorites</p>
   <p>Representatives</p>
-  <% current_user.house_members.each do |member| %>
+  <% @house_favorites.each do |member| %>
     <a href="/house_members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a>
   <% end %>
   <p>Senators</p>
-  <% current_user.senators.each do |senator| %>
+  <% @senator_favorites.each do |senator| %>
     <a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a>
   <% end %>
 </div>
