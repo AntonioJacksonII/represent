@@ -20,7 +20,7 @@ describe "Logged in User" do
     SenatorFavorite.create(user_id: @user1.id, senator_id: @senator1.id)
     SenatorFavorite.create(user_id: @user1.id, senator_id: @senator2.id)
   end
-  it "User sees news articles from favorited represntatives on dashboard", :vcr do
+  xit "User sees news articles from favorited represntatives on dashboard", :vcr do
 
     visit dashboard_path
 
