@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/representatives/:state_abbreviation', to: 'representatives#index'
   get '/dashboard', to: 'dashboard#show'
+  get '/bills', to: 'bills#index'
+  get '/comparisons', to: 'comparisons#index'
 end

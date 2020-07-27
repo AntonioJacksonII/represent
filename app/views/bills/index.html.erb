@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <h1 class="text-center">Select the Bills You'd Like to Compare</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>Enter the bill number:</p>
+      <button class="btn btn-outline-success my-2 my-sm-0 submit-button" type="submit" style="float: right" onclick="sendParam();">Search</button>
+      <div style="overflow:hidden;padding-right: .5em;">
+        <input class="form-control search-value" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="text-center dropdown" style="margin-top:20px;"> OR </p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="dropdown text-center">
+        <button class="btn btn-primary dropdown-toggle btn-block topic" type="button" data-toggle="dropdown">Select Topic
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu btn-block scrollable">
+        <% @subjects.each do |subject| %>
+          <li class="hoverable"><%= subject %></li>
+        <% end %>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="text-center" style="margin-top:20px;"> AND </p>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>Get the most recent number of bills: </p>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="float: right" onclick="sendMultiParams();">Search</button>
+      <div style="overflow:hidden;padding-right: .5em;">
+        <input class="form-control num-bills" type="text" placeholder="Enter Number" aria-label="Search">
+      </div>
+    </div>
+  </div>
+</div>
