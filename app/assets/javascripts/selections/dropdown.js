@@ -22,8 +22,12 @@ function sendParam(){
   window.location = "/comparisons/?bill=" + selected;
 }
 
+// function sendMultiParams(){
+//   var topic = document.querySelector('.topic').value;
+//   var numOfBills= document.querySelector('.num-bills').value;
+//   window.location = "/comparisons/?topic=" + topic + "&num=" + numOfBills;
+// }
 function sendMultiParams(){
   var topic = document.querySelector('.topic').value;
-  var numOfBills= document.querySelector('.num-bills').value;
-  window.location = "/comparisons/?topic=" + topic + "&num=" + numOfBills;
+  window.location = "/comparisons/?topic=" + topic;
 }
