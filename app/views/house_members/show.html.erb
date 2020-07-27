@@ -4,14 +4,31 @@
 <head>
   <title>Representative Show Page</title>
 </head>
+<div class="sidenav">
+  <p>Other Representatives in <%= @rep.state %></p>
+  <p>House Members</p>
+  <% @other_reps.each do |rep| %>
+    <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
+  <% end %>
+  <p>Senators</p>
+  <% @senators.each do |senator| %>
+    <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
+  <% end %>
+</div>
 
-  <body>
+  <body style="margin-left:225px;">
     <section class='rep-info'>
     <div class="row align-items-center my-5">
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
-        <%= button_to "Add to Favorites" %>
+        <% if current_user && current_user.house_members.include?(@rep)%>
+          <%= button_to "Remove from Favorites", "/house_members/#{@rep.id}/favorites", method: :delete %>
+        <% elsif current_user && !current_user.house_members.include?(@rep)%>
+          <%= button_to "Add to Favorites" , "/house_members/#{@rep.id}/favorites", method: :post%>
+        <% else %>
+           <p>Click on Register to favorite</p>
+        <% end %>
         <br class='rep-dob'>Date of Birth: <%= @rep.dob %>
         <br class='rep-gender'>Gender: <%= @rep.gender %>
         <br class='rep-party'>Party: <%= @rep.party %>
