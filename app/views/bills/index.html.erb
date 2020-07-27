@@ -10,11 +10,9 @@
   <div class="row">
     <div class="col">
       <p>Enter the bill number:</p>
-      <form method="get" action="/bills">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="float: right">Search</button>
-      </form>
+      <button class="btn btn-outline-success my-2 my-sm-0 submit-button" type="submit" style="float: right" onclick="sendParam();">Search</button>
       <div style="overflow:hidden;padding-right: .5em;">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control search-value" type="text" placeholder="Search" aria-label="Search">
       </div>
     </div>
   </div>
@@ -43,11 +41,9 @@
   <div class="row">
     <div class="col">
       <p>Get the most recent number of bills: </p>
-      <form method="get" action="/bills">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="float: right">Search</button>
-      </form>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="float: right" onclick="sendMultiParams();">Search</button>
       <div style="overflow:hidden;padding-right: .5em;">
-        <input class="form-control" type="text" placeholder="Enter Number" aria-label="Search">
+        <input class="form-control num-bills" type="text" placeholder="Enter Number" aria-label="Search">
       </div>
     </div>
   </div>
