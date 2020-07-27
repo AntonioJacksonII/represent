@@ -35,3 +35,21 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.scrollable{
+  overflow-y:auto;
+  height: 150px;
+}
+
+.home-scroll{
+  overflow-y: auto;
+}
+
+.search-scroll{
+  overflow-y: auto;
+  position: fixed;
+}
+
+.hoverable:hover{
+  background-color: blue;
+  color:white;
+}
