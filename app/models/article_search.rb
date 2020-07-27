@@ -6,6 +6,6 @@ class ArticleSearch
   end 
 
   def service
-    RequestService.new
+    SinatraService.new
   end
 end
