@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 describe 'Representative Show Pages' do
-  it 'displays house member information' do
-    json_response = File.read('spec/fixtures/house_representatives.json')
-    parser = PropublicaParser.new(json_response)
+  it 'displays house member information', :vcr do
+    parser = PropublicaParser.new
     parser.parse_house_members
     aoc = HouseMember.where(first_name: 'Alexandria', last_name: 'Ocasio-Cortez').first
 
@@ -43,9 +42,8 @@ describe 'Representative Show Pages' do
     expect(page).to have_link('Compare Positions')
   end
 
-  it 'displays senator information' do
-    json_response = File.read('spec/fixtures/senate.json')
-    parser = PropublicaParser.new(json_response)
+  it 'displays senator information', :vcr do
+    parser = PropublicaParser.new
     parser.parse_senators
     bennet = Senator.where(first_name: 'Michael', last_name: 'Bennet').first
 
