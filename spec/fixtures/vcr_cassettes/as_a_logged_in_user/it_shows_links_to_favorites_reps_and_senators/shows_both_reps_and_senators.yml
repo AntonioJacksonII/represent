@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/articles?favorite_names=%22Nancy%20Pelosi,Mitt%20Romney%22&language=en&num_results=5&sort=popularity
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2226'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Mon, 27 Jul 2020 18:31:31 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJzb3VyY2UiOiJHaXptb2RvLmNvbSIsInRpdGxlIjoi4oCYV2UgSGF2ZSB0byBHZXQgVGhpcyBSaWdodOKAmTogNjAgSG91c2UgRGVtb2NyYXRzIENhbGwgZm9yIFNlY29uZCBDb3JvbmF2aXJ1cyBTdGltdWx1cyB0byBiZSBHcmVlbiIsImRlc2NyaXB0aW9uIjoiRGVtb2NyYXRzIGluIENvbmdyZXNzIGFyZSBjYWxsaW5nIG9uIEhvdXNlIFNwZWFrZXIgTmFuY3kgUGVsb3NpIGFuZCBNaW5vcml0eSBMZWFkZXIgS2V2aW4gTWNDYXJ0aHkgdG8gc3VwcG9ydCBhIGNvcm9uYXZpcnVzIHJlbGllZiBwYWNrYWdlIHRoYXTigJlsbCBicmluZyB0aGUgVS5TLiBjbG9zZXIgdG8gYSBjbGVhbiBlbmVyZ3kgZWNvbm9teS4gVGhlcmXigJlzIG5ldmVyIGJlZW4gYSBiZXR0ZXIgdGltZSB0aGFuIG5vdyB0byBtYWtlIHRoZSBsZWFwLlJlYWTigKYiLCJ1cmwiOiJodHRwczovL2VhcnRoZXIuZ2l6bW9kby5jb20vd2UtaGF2ZS10by1nZXQtdGhpcy1yaWdodC02MC1ob3VzZS1kZW1vY3JhdHMtY2FsbC1mby0xODQ0MjM1Njc0IiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0wMVQxOTozODowMFoifSx7InNvdXJjZSI6Ikdpem1vZG8uY29tIiwidGl0bGUiOiJUaGF0IFZpcmFsIFBob3RvIG9mIEVybmVzdCBXaXRoIEplZmZyZXkgRXBzdGVpbiBJcyBBY3R1YWxseSBGYWtlIiwiZGVzY3JpcHRpb24iOiJIYXZlIHlvdSBzZWVuIHRoYXQgcGhvdG8gb2YgYmVsb3ZlZCBhY3RvciBKaW0gVmFybmV5LCBmYW1vdXMgZm9yIHRoZSBFcm5lc3QgbW92aWUgZnJhbmNoaXNlLCBzdGFuZGluZyBuZXh0IHRvIGNvbnZpY3RlZCBwZWRvcGhpbGUgSmVmZnJleSBFcHN0ZWluPyBUaGUgcGhvdG8gaGFzIGJlZW4gZG9pbmcgdGhlIHJvdW5kcyBvbiBUd2l0dGVyIHRvZGF5LCBidXQgd2XigJlyZSBoZXJlIHRvIHRlbGwgeW91IEVybmVzdCBpc27igJl0IGNhbmNlbGVkLiBUaGUgaW1hZ+KApiIsInVybCI6Imh0dHBzOi8vZ2l6bW9kby5jb20vdGhhdC12aXJhbC1waG90by1vZi1lcm5lc3Qtd2l0aC1qZWZmcmV5LWVwc3RlaW4taXMtYWN0dS0xODQ0NDgwMTE4IiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0yM1QxNjoxMDowMFoifSx7InNvdXJjZSI6Ikdpem1vZG8uY29tIiwidGl0bGUiOiJIb3VzZSBEZW1vY3JhdHMnIENsaW1hdGUgUGxhbiBJcyBGaW5hbGx5IEhlcmUsIERvZXNuJ3QgVG90YWxseSBTdWNrIiwiZGVzY3JpcHRpb24iOiJEZW1vY3JhdHMgdW52ZWlsZWQgYSA1MDAtcGFnZSBwbGFuIHRvIGFkZHJlc3MgdGhlIGNsaW1hdGUgY3Jpc2lzIG9uIFR1ZXNkYXkgbW9ybmluZy4gSXRzIGdvYWxzIGluY2x1ZGUgcmVhY2hpbmcgMTAwJSBlbGVjdHJpYyB2ZWhpY2xlcyBieSAyMDM1LCBuZXQtemVybyBjYXJib24gZW1pc3Npb25zIGluIHRoZSBlbGVjdHJpY2l0eSBzZWN0b3IgYnkgMjA0MCwgYW5kIGluIGFsbCBzZWN0b3JzIGJ5IDIwNTAuIElmIGltcGxlbWVudGVkLCBpdCBzYXlzIGl04oCmIiwidXJsIjoiaHR0cHM6Ly9lYXJ0aGVyLmdpem1vZG8uY29tL2hvdXNlLWRlbW9jcmF0cy1jbGltYXRlLXBsYW4taXMtZmluYWxseS1oZXJlLWRvZXNudC10by0xODQ0MjA4ODg5IiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNi0zMFQxNDoyNTowMFoifSx7InNvdXJjZSI6IkJCQyBOZXdzIiwidGl0bGUiOiJDaXZpbCByaWdodHMgaWNvbiBhbmQgY29uZ3Jlc3NtYW4gSm9obiBMZXdpcyBkaWVzIGFnZWQgODAiLCJkZXNjcmlwdGlvbiI6Ikxld2lzLCB3aG8gd2FzIHRoZSBsYXN0IG9mIHRoZSBCaWcgU2l4IGNpdmlsIHJpZ2h0cyBsZWFkZXJzLCB3YXMgZGlhZ25vc2VkIHdpdGggY2FuY2VyIGluIERlY2VtYmVyLiIsInVybCI6Imh0dHBzOi8vd3d3LmJiYy5jby51ay9uZXdzL3dvcmxkLXVzLWNhbmFkYS01MzQ1NDE2OSIsInB1Ymxpc2hlZF9hdCI6IjIwMjAtMDctMThUMDQ6MzQ6MTdaIn0seyJzb3VyY2UiOiJCQkMgTmV3cyIsInRpdGxlIjoiQ29yb25hdmlydXM6ICdTd2lmdCBhbmQgZGFuZ2Vyb3VzIHR1cm4nIGluIFRleGFzIGNhc2VzLCBzYXlzIGdvdmVybm9yIiwiZGVzY3JpcHRpb24iOiJUaGUgc3RhdGUgZ292ZXJub3Igc2F5cyA1LDAwMCBwZW9wbGUgYXJlIGJlaW5nIGhvc3BpdGFsaXNlZCBkYWlseSBhcyBUZXhhbnMgYXJlIHVyZ2VkIHRvIHdlYXIgbWFza3MuIiwidXJsIjoiaHR0cHM6Ly93d3cuYmJjLmNvLnVrL25ld3Mvd29ybGQtdXMtY2FuYWRhLTUzMjE1NTAxIiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNi0yOFQyMjo1MzowM1oifV19
+  recorded_at: Mon, 27 Jul 2020 18:31:31 GMT
+recorded_with: VCR 6.0.0
