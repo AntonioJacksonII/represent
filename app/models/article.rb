@@ -8,4 +8,4 @@ class Article
     @url = article_info[:url]
     @published_at = article_info[:published_at]
   end
-end
+end 
