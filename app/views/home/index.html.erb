@@ -1,3 +1,4 @@
+
 <div class="h-100 align-items-center" style="margin-top:200px;">
   <container>
     <h1 class="row h-100 justify-content-center" style="margin-bottom:50px;">REPresent</h1>
@@ -13,7 +14,7 @@
   <div class="d-flex justify-content-center">
     <select style="margin-right:60px;" class="mdb-select md-form" id="dropdownid" onchange="selectOnClick();">
     <option>Choose a state</option>
-  		<option value="AK">Alaska</option>
+  		<option value="AK" id="AK">Alaska</option>
   		<option value="AL">Alabama</option>
   		<option value="AR">Arkansas</option>
   		<option value="AZ">Arizona</option>
@@ -67,7 +68,8 @@
   		<option value="WY">Wyoming</option>
     </select>
     <div id="search-data" >
-      <input style="margin-left: 60px;"type="text" placeholder="Search" aria-label="Search" id="search_by_name" onchange="repOnClick();">
+      <input style="margin-left: 60px;"type="text" placeholder="Search" aria-label="Search" id="search_by_name">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     </div>
   </div>
 </div>
@@ -77,10 +79,3 @@
     <a href="https://github.com/dborski">Derek Borski</a> |
     <a href="https://github.com/arpariseau">Alex Pariseau</a>
 </div>
-<script>
-$("#search_by_name").easyAutocomplete(options);
-  function selectOnClick(){
-    var selected = document.getElementById("dropdownid").value;
-    window.location = "/representatives/" + selected
-  }
-</script>
