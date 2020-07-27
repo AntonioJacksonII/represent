@@ -8,7 +8,7 @@ class RequestService
   end
 
   def get_articles(favorite_names, sort, language_abbrev, num_results)
-    params = { favorite_names: favorite_names, sort: sort, language: language_abbrev, num_results: num_results}
+    params = { favorite_names: "\"#{favorite_names}\"", sort: sort, language: language_abbrev, num_results: num_results}
 
     get_json('articles', params)
   end
