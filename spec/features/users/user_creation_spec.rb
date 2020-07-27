@@ -30,7 +30,7 @@ describe "User" do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit root_path
-
+    
     click_on "Logout"
 
     expect(current_path).to eq(root_path)

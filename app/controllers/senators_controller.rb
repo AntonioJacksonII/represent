@@ -2,6 +2,8 @@ class SenatorsController < ApplicationController
   def show
     id = senator_params[:id]
     @senator = Senator.find(id)
+    @other_senators = Senator.by_state(@senator.state)
+    @representatives = HouseMember.by_state(@senator.state)
   end
 
   private
