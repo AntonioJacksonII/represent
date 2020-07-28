@@ -1,5 +1,3 @@
-<!-- This is the placeholder user dashboard -->
-
 <div class="sidenav">
   <p>Favorites</p>
   <p>Representatives</p>
@@ -10,4 +8,31 @@
   <% @senator_favorites.each do |senator| %>
     <a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a>
   <% end %>
+</div>
+<section style="background:transparent" class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">News from Your Favorite Representatives</h1>
+  </div>
+</section>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <% @articles.each do |article| %>
+      <div class="col-md-4 cards">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <a target="_blank" href="<%= article.url %>" class="text-dark card-title">"<%= article.title %>"</a>
+            <br><br>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group card-link">
+              </div>
+              <small class="text-muted card-source"><%= article.source %></small>
+              <small class="text-muted card-published">Published: <%= article.published_at.to_time.strftime("%m-%d-%Y") %></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
 </div>
