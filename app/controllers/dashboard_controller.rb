@@ -7,7 +7,6 @@ class DashboardController < ApplicationController
     @articles = ArticleSearch.new.get_articles(all_favorites(@house_favorites, @senator_favorites), "relevance", "en", 6)
   end
   
-  
   private
   
   def all_favorites(members, senators)
