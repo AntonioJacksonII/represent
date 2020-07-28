@@ -9,22 +9,39 @@
 
 <div class="container">
   <div class="row">
-    <div class="representatives-scrollable">
-      <h3 class='text-left'>House Members</h3><br>
-      <% @members.each do |member| %>
-        <div class="card member" style="width: 12rem;">
-          <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= member.congress_id %>.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h6 class="card-title name"><%= member.full_name %>
-            </h6>
-            <a href="/house_members/<%= member.id %>" class="btn btn-outline-primary">Learn More</a>
-          </div>
-        </div><br>
-      <% end %>
+    <div class="col-sm-3">
+      <h3>House Members</h3><br>
+    </div>
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-4" style="margin-left:75px;">
+      <h3 class="text-right">Senators</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 text-center">
+      <div class="representatives-scrollable">
+        <% @members.each do |member| %>
+          <div class="card member" style="width: 12rem;">
+            <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= member.congress_id %>.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="card-title name"><%= member.full_name %>
+              </h6>
+              <a href="/house_members/<%= member.id %>" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div><br>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6">
+
     </div>
 
     <div class="col-3">
-      <h3 class='text-right' style="margin-right:100px;">Senators</h3><br>
       <% @senators.each do |senator| %>
         <div class="card senator" style="width: 12rem;">
           <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= senator.congress_id %>.jpg" alt="Card image cap">
