@@ -1,7 +1,8 @@
 class ComparisonsController < ApplicationController
 
   def index
-    @bill = Bill.where(bill_id: "hr6395-116").first
+    bill_id = params[:bill]
+    @bill = Bill.where(bill_id: bill_id).first
   end
 
 end
