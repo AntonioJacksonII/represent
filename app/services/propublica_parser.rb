@@ -14,6 +14,22 @@ class PropublicaParser
     end
   end
 
+  def update_representatives(representative)
+    if representative.first.class == HouseMember
+      reps_json = @service.get_house_members[:data]
+    else 
+      reps_json = @service.get_senators[:data]
+    end 
+
+    representative.all.each do |representative|
+      rep_data = reps_json.find.each { |rep| rep[:congress_id] == representative.congress_id }
+      rep_data[:last_updated] = rep_data[:last_updated].to_datetime
+      if rep_data.delete(:in_office)
+        representative.update(rep_data)
+      end
+    end 
+  end
+
   def parse_senators
     sens = @service.get_senators[:data]
     sens.each do |sen|

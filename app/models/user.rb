@@ -11,6 +11,25 @@ class User < ApplicationRecord
     where(email: auth.info.email).first_or_initialize do |user|
       user.name = auth.info.name
       user.email = auth.info.email
+<<<<<<< HEAD
     end
   end
+=======
+    end 
+  end 
+
+  def has_favorites?
+    senators != [] || house_members != []
+  end 
+
+  def compared_senators
+    senators.joins(:senator_favorites)
+            .where('senator_favorites.comparison_score IS NOT NULL' )
+  end 
+
+  def compared_house_members
+    house_members.joins(:house_favorites)
+                 .where('house_favorites.comparison_score IS NOT NULL' )
+  end 
+>>>>>>> master
 end
