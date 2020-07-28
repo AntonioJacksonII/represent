@@ -43,15 +43,15 @@
   <div class="row">
     <% @compared_reps.each do |representative| %>
     <div class="col-3">
-      <div class="card representative" style="width: 12rem;">
+      <div class="card representative compared-rep" style="width: 12rem;">
         <img class="card-img-top rep-image"
           src="https://theunitedstates.io/images/congress/225x275/<%= representative.congress_id %>.jpg" alt="Card image cap">
         <div class="card-body">
           <p class="card-text name"><%= representative.full_name %></p>
           <% if representative.class == Senator %>
-          <p class="card-text name">Score: <%= number_to_percentage(representative.senator_favorites.first.comparison_score, precision: 0) %></p>
+          <p class="card-text rep-score">Score: <%= number_to_percentage(representative.senator_favorites.first.comparison_score, precision: 0) %></p>
           <% else %>
-          <p class="card-text name">Score: <%= number_to_percentage(representative.house_favorites.first.comparison_score, precision: 0) %></p>
+          <p class="card-text rep-score">Score: <%= number_to_percentage(representative.house_favorites.first.comparison_score, precision: 0) %></p>
           <% end %>
           <a href="" class="btn btn-outline-primary disabled">Compare</a>
         </div>

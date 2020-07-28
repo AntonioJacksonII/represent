@@ -25,7 +25,7 @@ describe "Logged in User" do
 
     visit dashboard_path
 
-    expect(page).to have_css(".card", count: 6)
+    expect(page).to have_css(".cards", count: 6)
 
     within(first('.cards')) do
       expect(page).to have_css(".card-title")
@@ -43,6 +43,7 @@ describe "Logged in User" do
     within(first('.compared-rep')) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".rep-image")
+      expect(page).to have_css(".rep-score")
     end
   end
 end
