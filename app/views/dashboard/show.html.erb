@@ -1,3 +1,4 @@
+<% if current_user.has_favorites? %>
 <div class="sidenav">
   <p>Favorites</p>
   <p>Representatives</p>
@@ -21,7 +22,7 @@
       <div class="col-md-4 cards">
         <div class="card mb-4 shadow-sm">
           <div class="card-body">
-            <a target="_blank" href="<%= article.url %>" class="text-dark card-title">"<%= article.title %>"</a>
+            <a target="_blank" href="<%= article.url %>" class="text-dark card-title"><%= article.title %></a>
             <br><br>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group card-link">
@@ -36,3 +37,10 @@
     </div>
   </div>
 </div>
+<% else %>
+  <section style="background:transparent" class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Add some representatives to your favorites to see news about them and compare positions!</h1>
+  </div>
+</section>
+<% end %>
