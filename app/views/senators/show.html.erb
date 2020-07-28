@@ -6,19 +6,21 @@
 </head>
 
 <div class="sidenav">
-  <p>Other Representatives in <%= @senator.state %></p>
-  <p>Senators</p>
-  <% @other_senators.each do |senator| %>
-    <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
-  <% end %>
-  <p>House Members</p>
+  <p> Representatives in <%= @state %></p>
   <% @representatives.each do |rep| %>
     <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
   <% end %>
 </div>
 
+<div class="senate-sidenav">
+  <p>Senators in <%= @state %></p>
+  <% @other_senators.each do |senator| %>
+    <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
+  <% end %>
+</div>
+
   <body>
-    <section class='sen-info' style="margin-left:225px;">
+    <section class='sen-info' style="margin-left:225px;margin-top:100px;">
     <div class="row align-items-center my-5">
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
@@ -87,7 +89,7 @@
         <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@senator.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'sen-image') %>
         <br>
         <br>
-        <a class="btn btn-primary" href="/bills">Compare Positions</a>
+        <a class="btn btn-primary" href="/bills?<%= @senator.full_name %>">Compare Positions</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
