@@ -1,9 +1,5 @@
 class HouseMember < ApplicationRecord
   has_many :house_favorites, dependent: :destroy
-<<<<<<< HEAD
-=======
-
->>>>>>> master
   def self.by_state(state_abbrev, order = 'asc', limit = 400)
     self.where(state: "#{state_abbrev}")
         .order(last_name: "#{order}")
