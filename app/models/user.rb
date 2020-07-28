@@ -13,4 +13,8 @@ class User < ApplicationRecord
       user.email = auth.info.email
     end 
   end 
+
+  def has_favorites?
+    senators != [] || house_members != []
+  end 
 end

@@ -14,4 +14,19 @@ RSpec.describe User, type: :model do
     it {should validate_uniqueness_of :email}
   end
 
+  describe 'instance methods' do
+    before(:each) do
+      @user1 = create(:user)
+      @user2 = create(:user)
+      @member1 = create(:house_member)
+      @senator1 = create(:senator)
+
+      HouseFavorite.create(user_id: @user2.id, house_member_id: @member1.id)
+    end
+
+    it "has_favorites?" do
+      expect(@user1.has_favorites?).to eq(false)
+      expect(@user2.has_favorites?).to eq(true)
+    end
+  end
 end
