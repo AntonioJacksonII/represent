@@ -25,7 +25,7 @@ class PropublicaParser
       rep_data = reps_json.find.each { |rep| rep[:congress_id] == representative.congress_id }
       rep_data[:last_updated] = rep_data[:last_updated].to_datetime
       if rep_data.delete(:in_office)
-        representative.update_attributes(rep_data)
+        representative.update(rep_data)
       end
     end 
   end
