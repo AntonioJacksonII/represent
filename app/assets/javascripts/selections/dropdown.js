@@ -18,8 +18,15 @@ $(function(){
 });
 
 function sendParam(){
-  var selected = document.querySelector('.search-value').value;
-  window.location = "/comparisons/?bill=" + selected;
+  var selec = document.querySelector('.search-value').value;
+  var rep = document.querySelector('input[name="inlineDefaultRadiosExample"]:checked');
+  if (Number.isInteger(parseInt(selec)) === true && rep != null ){
+    var rep = document.querySelector('input[name="inlineDefaultRadiosExample"]:checked').value;
+    window.location = "/comparisons/?bill=" + rep + selec;
+  } else if (rep === null){
+    document.querySelector('.error-message').innerHTML = "Please choose House or Senate";
+  } else
+  document.querySelector('.error-message').innerHTML = "Search must be numbers only"
 }
 
 // function sendMultiParams(){
@@ -30,4 +37,9 @@ function sendParam(){
 function sendMultiParams(){
   var topic = document.querySelector('.topic').value;
   window.location = "/comparisons/?topic=" + topic;
+}
+
+function switchSpan(){
+  var rep = document.querySelector('input[name="inlineDefaultRadiosExample"]:checked').value;
+  document.querySelector('#spanned-text').innerHTML = rep
 }
