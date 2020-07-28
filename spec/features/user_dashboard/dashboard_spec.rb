@@ -20,11 +20,16 @@ describe "Logged in User" do
     SenatorFavorite.create(user_id: @user1.id, senator_id: @senator1.id)
     SenatorFavorite.create(user_id: @user1.id, senator_id: @senator2.id)
   end
-  xit "User sees news articles from favorited represntatives on dashboard", :vcr do
+  it "User sees news articles from favorited represntatives on dashboard", :vcr do
 
     visit dashboard_path
 
-    # expect(user.name).to eq("Tom Smith")
-    # expect(user.email).to eq("tom.smith@email.com")
+    expect(page).to have_css(".card", count: 6)
+
+    within(first('.cards')) do
+      expect(page).to have_css(".card-title")
+      expect(page).to have_css(".card-source")
+      expect(page).to have_css(".card-link")
+    end
   end
 end
