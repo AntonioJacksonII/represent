@@ -16,4 +16,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree ./search
+//= require_tree ./selections
 //* *= require_self
