@@ -1,4 +1,4 @@
-class ComparisonsController < ApplicationController
+class ComparisonController < ApplicationController
 
   def index
     bill_id = params[:bill]

@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get '/representatives/:state_abbreviation', to: 'representatives#index'
   get '/dashboard', to: 'dashboard#show'
   get '/bills', to: 'bills#index'
-  get '/comparisons', to: 'comparisons#index'
+  get '/comparison', to: 'comparison#index'
   post '/results/:congress_id', to: 'results#show'
 end

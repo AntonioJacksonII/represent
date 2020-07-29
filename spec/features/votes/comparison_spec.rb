@@ -7,7 +7,7 @@ RSpec.describe 'on the comparison page' do
     parser = PropublicaParser.new
     bill = parser.parse_bill(json_response, 0)
 
-    visit "/comparisons?bill=#{bill.bill_id}&id=#{aoc.congress_id}"
+    visit "/comparison?bill=#{bill.bill_id}&id=#{aoc.congress_id}"
 
     expect(page).to have_content('Compare Your Votes with Alexandria Ocasio-Cortez')
     expect(page).to have_content('For the bills below, select "YES" if you would vote for the bill or "NO" if you would vote against the bill.')
@@ -43,7 +43,7 @@ RSpec.describe 'on the comparison page' do
         updated_at: "Tue, 28 Jul 2020 19:37:05 UTC +00:00",
         passage_roll_call: 153)
 
-    visit "/comparisons?topic=Armed%20Forces%20and%20National%20Security&id=#{aoc.congress_id}"
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{aoc.congress_id}"
 
     expect(page).to have_content('Compare Your Votes with Alexandria Ocasio-Cortez')
     expect(page).to have_content('For the bills below, select "YES" if you would vote for the bill or "NO" if you would vote against the bill.')
