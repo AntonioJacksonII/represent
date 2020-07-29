@@ -14,5 +14,9 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show'
   get '/bills', to: 'bills#index'
   get '/comparison', to: 'comparison#index'
-  post '/results/:congress_id', to: 'results#show'
+
+  post '/results/:congress_id', to: 'results#create'
+  get '/results/:congress_id', to: 'results#show'
 end
+
+
