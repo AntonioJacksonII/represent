@@ -45,6 +45,8 @@
           <br class='rep-at_large'>At-Large District: <%= @rep.at_large %>
         <% if @rep.dw_nominate %>
           <br class='rep-dw_nominate'>DW NOMINATE Score: <%= @rep.dw_nominate %>
+          <span class="tooltip-data tool-format">?</span>
+          <div id="popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal they are - the closer they are to +1, the more conservative they are.</div>
         <% end %>
         <% if @rep.office %>
           <br class='rep-office'>D.C. Office: <%= @rep.office %>
@@ -90,7 +92,7 @@
         <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
         <br>
         <br>
-        <a class="btn btn-primary" href="/bills?member=<%= @rep.full_name %>&congress_id=<%= @rep.congress_id %>">Compare Positions</a>
+        <a class="btn btn-primary" href="/bills?name=<%= @rep.full_name %>&congress_id=<%= @rep.congress_id %>">Compare Positions</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
@@ -98,3 +100,12 @@
 </body>
 
 </html>
+<script>
+var e = document.querySelector('.tooltip-data');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+</script>
