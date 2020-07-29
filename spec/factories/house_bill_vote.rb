@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :house_bill_vote do
-    house_roll_call { 100 }
-    house_offset { 20 }
+    roll_call { 100 }
+    offset { 20 }
     bill
   end
 end
