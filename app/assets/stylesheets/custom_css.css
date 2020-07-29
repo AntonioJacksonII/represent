@@ -144,11 +144,8 @@
   margin-bottom:-2em;
   border: 1px solid blue;
 }
-
-.search_by_name{
-  max-height: 600px;
-  z-index:1000 !important;
-  height:25px;
-  overflow:auto;
-  position:relative;
+.ui-autocomplete{
+  overflow-y:auto !important;
+  max-height: 150px;
+  overflow-x:hidden;
 }
