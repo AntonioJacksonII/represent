@@ -23,7 +23,7 @@ function sendParam(){
   var rep = document.querySelector('input[name="inlineDefaultRadiosExample"]:checked');
   if (Number.isInteger(parseInt(selec)) === true && rep != null ){
     var rep = document.querySelector('input[name="inlineDefaultRadiosExample"]:checked').value;
-    window.location = "/comparisons/?bill=" + rep.toLowerCase().split('.').join("") + selec + "&congress_id=" + congress_id;
+    window.location = "/comparison/?bill=" + rep.toLowerCase().split('.').join("") + selec + "&id=" + congress_id;
   } else if (rep === null){
     document.querySelector('.error-message').innerHTML = "Please choose House or Senate";
   } else

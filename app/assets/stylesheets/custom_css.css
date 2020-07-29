@@ -5,7 +5,6 @@
   z-index: 1;
   top: 26%;
   left: 0;
-  background-color: white;
   overflow-x: hidden;
   padding-top: 5px;
   padding-left: 5px;
@@ -45,7 +44,6 @@
   z-index: 1;
   top: 7%;
   left: 0;
-  background-color: white;
   overflow-x: hidden;
   padding-top: 5px;
   padding-left: 5px;
@@ -144,13 +142,11 @@
   margin-bottom:-2em;
   border: 1px solid blue;
 }
-
-.search_by_name{
-  max-height: 600px;
-  z-index:1000 !important;
-  height:25px;
-  overflow:auto;
-  position:relative;
+.ui-autocomplete{
+  overflow-y:auto !important;
+  max-height: 150px;
+  overflow-x:hidden;
+  width: 50px;
 }
 #bills-table {
   border-collapse: collapse;
