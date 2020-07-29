@@ -14,7 +14,6 @@ class User < ApplicationRecord
     end
   end
 
-
   def has_favorites?
     senators != [] || house_members != []
   end
@@ -27,5 +26,5 @@ class User < ApplicationRecord
   def compared_house_members
     house_members.joins(:house_favorites)
                  .where('house_favorites.comparison_score IS NOT NULL' )
-  end 
+  end
 end
