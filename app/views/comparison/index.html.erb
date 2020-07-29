@@ -1,36 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-#bills-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#bills-table td, #bills th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#bills-table tr:nth-child(even){background-color: #f2f2f2;}
-
-#bills-table tr:hover {background-color: #ddd;}
-
-#bills-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
-}
-</style>
-</head>
 <body>
 
   <h1 align='center'>Compare Your Votes with <%= @rep.full_name %></h1>
   <br>
   <h4>For the bills below, select "YES" if you would vote for the bill or "NO" if you would vote against the bill.</h4>
-  <h5>Each bill title is a clickable link to the bill's official page on the Congress website, where you can find additional information and the full bill text.</h5>
+  <h5>Each bill title is a clickable links to the bill's official page on the Congress website, where you can find additional information and the full bill text.</h5>
   <br>
 <%= form_tag("/results/#{@rep.congress_id}", method: :post) do %>
 <table id="bills-table">
