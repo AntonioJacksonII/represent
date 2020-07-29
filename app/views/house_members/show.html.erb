@@ -5,18 +5,20 @@
   <title>Representative Show Page</title>
 </head>
 <div class="sidenav">
-  <p>Other Representatives in <%= @rep.state %></p>
-  <p>House Members</p>
+  <p>Representatives in <%= @state %></p>
   <% @other_reps.each do |rep| %>
     <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
   <% end %>
-  <p>Senators</p>
+</div>
+
+<div class="senate-sidenav">
+  <p>Senators in <%= @state %></p>
   <% @senators.each do |senator| %>
     <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
   <% end %>
 </div>
 
-  <body style="margin-left:225px;">
+  <body style="margin-left:225px;padding-top:25px;">
     <section class='rep-info'>
     <div class="row align-items-center my-5">
       <!-- /.col-lg-8 -->
@@ -88,7 +90,7 @@
         <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
         <br>
         <br>
-        <a class="btn btn-primary" href="/bills">Compare Positions</a>
+        <a class="btn btn-primary" href="/bills?member=<%= @rep.full_name %>&congress_id=<%= @rep.congress_id %>">Compare Positions</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
