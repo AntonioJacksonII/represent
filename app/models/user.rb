@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :house_favorites
+  has_many :house_favorites, dependent: :destroy
   has_many :house_members, through: :house_favorites
-  has_many :senator_favorites
+  has_many :senator_favorites, dependent: :destroy
   has_many :senators, through: :senator_favorites
   validates_presence_of :email
   validates_presence_of :name
@@ -11,20 +11,20 @@ class User < ApplicationRecord
     where(email: auth.info.email).first_or_initialize do |user|
       user.name = auth.info.name
       user.email = auth.info.email
-    end 
-  end 
+    end
+  end
 
   def has_favorites?
     senators != [] || house_members != []
-  end 
+  end
 
   def compared_senators
     senators.joins(:senator_favorites)
             .where('senator_favorites.comparison_score IS NOT NULL' )
-  end 
+  end
 
   def compared_house_members
     house_members.joins(:house_favorites)
                  .where('house_favorites.comparison_score IS NOT NULL' )
-  end 
+  end
 end

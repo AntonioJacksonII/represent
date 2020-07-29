@@ -27,12 +27,20 @@
           <li class="nav-item">
             <a class="nav-link" href="/logout">Logout</a>
           </li>
+          <li class="navbar-text font-weight-bold">
+            Welcome, <%= current_user.name %>
+          </li>
           <% else %>
           <li class="nav-item">
             <a class="nav-link" href="/auth/google_oauth2">Register/Login with Google</a>
           </li>
           <% end %>
         </ul>
+        <h3 style="margin-right:250px;">Your chosen representative is <%= @name %></h3>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2 search_by_name" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
         <div class="nav-item">
           <a class="nav-link"><img src="https://miro.medium.com/max/2470/0*o0-6o1W1DKmI5LbX.png" width='45' height='30'></a>
         </div>

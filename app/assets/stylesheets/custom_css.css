@@ -1,13 +1,14 @@
 .sidenav {
-  height: 100%;
+  height: 75%;
   width: 200px;
   position: fixed;
   z-index: 1;
-  top: 60px;
+  top: 26%;
   left: 0;
   background-color: white;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 
@@ -35,6 +36,46 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+.senate-sidenav {
+  height: 19%;
+  width: 200px;
+  position: fixed;
+  border-bottom: 2px solid black;
+  z-index: 1;
+  top: 7%;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+
+.senate-sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: blue;
+  display: block;
+}
+
+
+.senate-sidenav a:hover {
+  color: #3366ff;
+}
+
+
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .senate-sidenav {padding-top: 15px;}
+  .senate-sidenav a {font-size: 18px;}
+}
 .scrollable{
   overflow-y:auto;
   height: 150px;
@@ -56,8 +97,60 @@
 
 .representatives-scrollable{
   overflow-y:auto;
-  height:1500px;
+  height:725px;
   width:250px;
+  margin:auto;
+}
+.sized-button{
+  border-radius:4px;
+  border: 2px solid green;
+  background-color:white;
+  height:32px;
+  width:80px;
+}
+#small-select{
+  width:auto;
+  margin-left: auto;
+  margin-right:auto;
+}
+.error-message{
+  display: inline-block;
+  margin-top:-5px
+}
+.footer{
+  position:fixed;
+  height:80px;
+  bottom:0;
+  width: 100%;
+}
+
+.nav-scrollable{
+  overflow-y:auto;
+  height: 200px;
+}
+
+.tool-format{
+  background-color: white;
+  color:blue;
+  border: 1px solid blue;
+  padding: 0px 6px;
+  height:2px;
+  border-radius: 50%;
+}
+#popup{
+  display: none;
+  width:300px;
+  font-size:12px;
+  margin-bottom:-2em;
+  border: 1px solid blue;
+}
+
+.search_by_name{
+  max-height: 600px;
+  z-index:1000 !important;
+  height:25px;
+  overflow:auto;
+  position:relative;
 }
 #bills-table {
   border-collapse: collapse;
