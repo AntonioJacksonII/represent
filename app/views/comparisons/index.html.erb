@@ -50,10 +50,10 @@
   <% else %>
     <% @bills.each do |bill| %>
     <tr>
-      <td><h4><%= link_to(@bill.short_title, @bill.congress_url, target: 'new') %></h4>
-        <%= @bill.summary_short %></td>
-        <td><%= radio_button_tag @bill.bill_id, "yes" %> YES</td>
-        <td><%= radio_button_tag @bill.bill_id, "no" %> NO</td>
+      <td><h4><%= link_to(bill.short_title, bill.congress_url, target: 'new') %></h4>
+        <%= bill.summary_short %></td>
+        <td><%= radio_button_tag bill.bill_id, "yes" %> YES</td>
+        <td><%= radio_button_tag bill.bill_id, "no" %> NO</td>
       </tr>
       <% end %>
     <% end %>
