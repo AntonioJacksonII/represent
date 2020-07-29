@@ -18,7 +18,9 @@ RSpec.describe "as a logged in user" do
       visit "/dashboard"
       expect(page).to have_content("#{@senator1.first_name}")
       expect(page).to have_content("#{@senator1.last_name}")
-      click_on "#{@senator1.first_name}"
+      within(".sidenav") do
+        click_on "#{@senator1.first_name}"
+      end 
       expect(current_path).to eq("/senators/#{@senator1.id}")
     end
     it "shows both reps and senators", :vcr do
