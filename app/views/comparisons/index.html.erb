@@ -27,12 +27,12 @@
 </head>
 <body>
 
-  <h1 align='center'>Compare Your Votes with @representative.name</h1>
+  <h1 align='center'>Compare Your Votes with <%= @rep.full_name %></h1>
   <br>
   <h4>For the bills below, select "YES" if you would vote for the bill or "NO" if you would vote against the bill.</h4>
   <h5>Each bill title is a clickable links to the bill's official page on the Congress website, where you can find additional information and the full bill text.</h5>
   <br>
-<%= form_tag(results_path, method: :post) do %>
+<%= form_tag("/results/#{@rep.congress_id}", method: :post) do %>
 <table id="bills-table">
   <tr>
     <th id='bill-summary'><h4 id='bill-title'>Bill Title (link to full bill)</h4>
