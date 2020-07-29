@@ -59,3 +59,7 @@
   height:1500px;
   width:250px;
 }
+
+.smaller {
+  height:0px;
+}
