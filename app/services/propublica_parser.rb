@@ -40,9 +40,8 @@ class PropublicaParser
     end
   end
 
-  def parse_bill(offset)
-    #disabled for now, due to switching to Sinatra
-    bill = @response[:results].first
+  def parse_bill(json_response, offset)
+    bill = JSON.parse(json_response, symbolize_names: true)[:results].first
     bill_info = clean_bill_attributes(bill)
     bill_info[:offset] = offset
     Bill.create(bill_info)

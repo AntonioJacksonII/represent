@@ -149,3 +149,24 @@
   max-height: 150px;
   overflow-x:hidden;
 }
+#bills-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#bills-table td, #bills th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#bills-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#bills-table tr:hover {background-color: #ddd;}
+
+#bills-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
