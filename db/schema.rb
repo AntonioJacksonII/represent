@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200724001427) do
+ActiveRecord::Schema.define(version: 20200729205917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,17 @@ ActiveRecord::Schema.define(version: 20200724001427) do
     t.string "congress_url"
     t.text "short_title"
     t.string "primary_subject"
-    t.integer "offset"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "passage_roll_call"
+  end
+
+  create_table "house_bill_votes", force: :cascade do |t|
+    t.bigint "bill_id"
+    t.integer "offset"
+    t.integer "roll_call"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bill_id"], name: "index_house_bill_votes_on_bill_id"
   end
 
   create_table "house_favorites", force: :cascade do |t|
@@ -65,6 +72,15 @@ ActiveRecord::Schema.define(version: 20200724001427) do
     t.datetime "updated_at", null: false
     t.float "votes_without_party_percentage"
     t.boolean "at_large"
+  end
+
+  create_table "senate_bill_votes", force: :cascade do |t|
+    t.bigint "bill_id"
+    t.integer "offset"
+    t.integer "roll_call"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bill_id"], name: "index_senate_bill_votes_on_bill_id"
   end
 
   create_table "senator_favorites", force: :cascade do |t|
@@ -114,8 +130,10 @@ ActiveRecord::Schema.define(version: 20200724001427) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "house_bill_votes", "bills"
   add_foreign_key "house_favorites", "house_members"
   add_foreign_key "house_favorites", "users"
+  add_foreign_key "senate_bill_votes", "bills"
   add_foreign_key "senator_favorites", "senators"
   add_foreign_key "senator_favorites", "users"
 end

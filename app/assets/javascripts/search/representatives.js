@@ -545,5 +545,5 @@ const REPRESENTATIVES = [{"value":"h1", "label":"Ralph Abraham"},
        window.location = "/house_members/" + value.substr(1);
      } else
      window.location = "/senators/" + value.substr(1);
-   }
+   },
 })});
