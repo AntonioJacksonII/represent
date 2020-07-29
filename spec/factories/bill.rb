@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :bill do
+    bill_id { "hr1957-116" }
     summary_short { Faker::TvShows::DumbAndDumber.quote }
     sequence(:congress_url) { |n| "https://bill#{n}.house.gov" }
     short_title { Faker::GreekPhilosophers.quote }
