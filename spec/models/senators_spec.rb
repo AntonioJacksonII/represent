@@ -28,4 +28,21 @@ RSpec.describe Senator, type: :model do
       expect(@senator1.full_name).to eq("#{@senator1.first_name} #{@senator1.last_name}")
     end
   end
+
+  describe 'class methods' do
+    before(:each) do
+      @congress_id1 = "A000360"
+      @congress_id2 = "O000172"
+      @senator1 = create(:senator, state: "CO", congress_id: "A000360")
+      @senator2 = create(:senator, state: "ME")
+      @senator3 = create(:senator, state: "MN")
+      @senator4 = create(:senator, state: "CO")
+    end
+
+    it 'includes?' do
+
+      expect(Senator.includes?(@congress_id1)).to eq(true)
+      expect(Senator.includes?(@congress_id2)).to eq(false)
+    end
+  end
 end
