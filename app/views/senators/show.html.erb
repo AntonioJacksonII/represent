@@ -44,6 +44,8 @@
         <br class='sen-next_election'>Next Election: <%= @senator.next_election %>
         <% if @senator.dw_nominate %>
           <br class='sen-dw_nominate'>DW NOMINATE Score: <%= @senator.dw_nominate %>
+          <span class="tooltip-data tool-format">?</span>
+          <div id="popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal they are - the closer they are to +1, the more conservative they are.</div>
         <% end %>
         <% if @senator.office %>
           <br class='sen-office'>D.C. Office: <%= @senator.office %>
@@ -89,7 +91,7 @@
         <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@senator.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'sen-image') %>
         <br>
         <br>
-        <a class="btn btn-primary" href="/bills?<%= @senator.full_name %>">Compare Positions</a>
+        <a class="btn btn-primary" href="/bills?name=<%= @senator.full_name %>&congress_id=<%= @senator.congress_id %>">Compare Positions</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
@@ -97,3 +99,12 @@
 </body>
 
 </html>
+<script>
+var e = document.querySelector('.tooltip-data');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+</script>
