@@ -14,7 +14,7 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 .sidenav {
-  height: 75%;
+  height: 73%;
   width: 200px;
   position: fixed;
   z-index: 1;
@@ -24,8 +24,6 @@
   padding-top: 5px;
   padding-left: 5px;
 }
-
-
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -38,7 +36,7 @@
   position: fixed;
   border-bottom: 2px solid black;
   z-index: 1;
-  top: 7%;
+  top: 8%;
   left: 0;
   overflow-x: hidden;
   padding-top: 5px;
@@ -81,7 +79,7 @@
 
 .representatives-scrollable{
   overflow-y:auto;
-  height:725px;
+  height:780px;
   width:250px;
   margin:auto;
 }
@@ -157,16 +155,44 @@
 }
 .right-side-nav{
   margin-top:47px;
-  height:550px;
-  width:300px;
-  margin-left:80%;
+  height:575px;
+  width:285px;
+  margin-left:78.5%;
   position:fixed;
   overflow-y:auto;
 }
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
 
-.background-image{
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-attachment:local;
-  background-color:rgb(0,0,0);
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+#dashboard-senate-sidenav{
+  height: 25%;
+  width: 200px;
+  position: fixed;
+  border-bottom: 2px solid black;
+  z-index: 1;
+  top: 8%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 5px;
+  padding-left: 5px;
+  overflow-y: atuo;
+}
+#dashboard-rep-sidenav{
+  height: 50%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 34%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 5px;
+  padding-left: 5px;
+  overflow-y:auto;
 }
