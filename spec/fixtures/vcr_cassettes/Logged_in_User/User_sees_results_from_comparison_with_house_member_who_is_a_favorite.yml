@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4568/api/v1/member_votes?member_id=O000172&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '243'
+      X-Content-Type-Options:
+      - nosniff
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"data":{"172":"Yes","171":"Yes","170":"No","169":"Yes","168":"Yes","167":"Yes","166":"No","165":"No","164":"No","163":"Yes","162":"No","161":"No","160":"Yes","159":"No","158":"Yes","157":"Yes","156":"Yes","155":"Yes","154":"Yes","153":"Yes"}}'
+  recorded_at: Thu, 30 Jul 2020 20:19:47 GMT
+- request:
+    method: get
+    uri: http://localhost:4568/api/v1/member_votes?member_id=O000172&offset=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '244'
+      X-Content-Type-Options:
+      - nosniff
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"data":{"152":"No","151":"No","150":"Yes","149":"Yes","148":"Yes","147":"Yes","146":"Yes","145":"Yes","144":"Yes","143":"No","142":"Yes","141":"Yes","140":"Yes","139":"Yes","138":"Yes","137":"No","136":"Yes","135":"No","134":"No","133":"Yes"}}'
+  recorded_at: Thu, 30 Jul 2020 20:19:47 GMT
+- request:
+    method: get
+    uri: http://localhost:4568/api/v1/articles?favorite_names=%22Alexandria%20Ocasio-Cortez%22&language=en&num_results=6&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2733'
+      X-Content-Type-Options:
+      - nosniff
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJzb3VyY2UiOiJCQkMgTmV3cyIsInRpdGxlIjoiR295YSBGb29kczogSGlzcGFuaWMgYnJhbmQgZmFjZXMgYm95Y290dCBmb3IgcHJhaXNpbmcgVHJ1bXAiLCJkZXNjcmlwdGlvbiI6IkRlbW9jcmF0cyBpbmNsdWRpbmcgQWxleGFuZHJpYSBPY2FzaW8tQ29ydGV6IGhhdmUgdXJnZWQgY3VzdG9tZXJzIHRvIHN0b3AgYnV5aW5nIEdveWEgRm9vZHMgcHJvZHVjdHMuIiwidXJsIjoiaHR0cHM6Ly93d3cuYmJjLmNvLnVrL25ld3Mvd29ybGQtdXMtY2FuYWRhLTUzMzcxMzkyIiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0xMFQyMTowNzozM1oifSx7InNvdXJjZSI6IkNOTiIsInRpdGxlIjoiU2VlIEFPQydzIGVtb3Rpb25hbCByZXNwb25zZSB0byBHT1AgbGF3bWFrZXIiLCJkZXNjcmlwdGlvbiI6Ik5ldyBZb3JrIFJlcC4gQWxleGFuZHJpYSBPY2FzaW8tQ29ydGV6IGFuZCBGbG9yaWRhIFJlcC4gVGVkIFlvaG8gYWRkcmVzcyB0aGUgaGVhdGVkIGV4Y2hhbmdlIHRoZXkgaGFkIG9uIHRoZSBIb3VzZSBzdGVwcywgd2hlcmUgWW9obyBhbGxlZ2VkbHkgY2FsbGVkIGhlciBhIGYqKmtpbmcgYml0Y2guIiwidXJsIjoiaHR0cHM6Ly93d3cuY25uLmNvbS92aWRlb3MvcG9saXRpY3MvMjAyMC8wNy8yMy9hb2MteW9oby1ob3VzZS1zdGVwcy1jb25mcm9udGF0aW9uLW9yaWctbXNzLmNubiIsInB1Ymxpc2hlZF9hdCI6IjIwMjAtMDctMjNUMjE6MjA6MThaIn0seyJzb3VyY2UiOiJDTk4iLCJ0aXRsZSI6IlJlcC4gVGVkIFlvaG8gcmVzaWducyBmcm9tIGJvYXJkIG9mIENocmlzdGlhbiBvcmdhbml6YXRpb24gZm9sbG93aW5nIEFPQyBpbmNpZGVudCIsImRlc2NyaXB0aW9uIjoiRmxvcmlkYSBHT1AgUmVwLiBUZWQgWW9obyBoYXMgcmVzaWduZWQgZnJvbSB0aGUgYm9hcmQgb2YgYSBDaHJpc3RpYW4gb3JnYW5pemF0aW9uIHRoYXQgd29ya3MgdG8gZmlnaHQgaHVuZ2VyIGZvbGxvd2luZyBoaXMgdGVuc2UgZXhjaGFuZ2Ugd2l0aCBEZW1vY3JhdGljIFJlcC4gQWxleGFuZHJpYSBPY2FzaW8tQ29ydGV6IG9mIE5ldyBZb3JrLiIsInVybCI6Imh0dHBzOi8vd3d3LmNubi5jb20vMjAyMC8wNy8yNS9wb2xpdGljcy90ZWQteW9oby1yZXNpZ25zLWNocmlzdGlhbi1vcmdhbml6YXRpb24tYW9jL2luZGV4Lmh0bWwiLCJwdWJsaXNoZWRfYXQiOiIyMDIwLTA3LTI1VDIzOjI5OjE1WiJ9LHsic291cmNlIjoiQ05OIiwidGl0bGUiOiJBbmFseXNpczogVGhlIGFic29sdXRlbHkgcmVtYXJrYWJsZSBzb2NpYWwgbWVkaWEgcG93ZXIgb2YgQWxleGFuZHJpYSBPY2FzaW8tQ29ydGV6IiwiZGVzY3JpcHRpb24iOiJBdCAxMTowMiBhLm0uIEVhc3Rlcm4gdGltZSBvbiBUaHVyc2RheSwgQy1TUEFOIHNlbnQgb3V0IGEgdHdlZXQgd2l0aCBOZXcgWW9yayBEZW1vY3JhdGljIFJlcC4gQWxleGFuZHJpYSBPY2FzaW8tQ29ydGV6J3MgZnVsbCByZW1hcmtzIG9uIHRoZSBIb3VzZSBmbG9vciByZWdhcmRpbmcgYSBjb25mcm9udGF0aW9uIHdpdGggRmxvcmlkYSBSZXB1YmxpY2FuIFJlcC4gVGVkIFlvaG8gb24gTW9uZGF5LiIsInVybCI6Imh0dHBzOi8vd3d3LmNubi5jb20vMjAyMC8wNy8yNC9wb2xpdGljcy9hb2MtdGVkLXlvaG8tY3NwYW4vaW5kZXguaHRtbCIsInB1Ymxpc2hlZF9hdCI6IjIwMjAtMDctMjRUMTY6NDU6MzJaIn0seyJzb3VyY2UiOiJDTk4iLCJ0aXRsZSI6IlJlcG9ydGVyIHNheXMgR09QIGxhd21ha2VyIGNhbGxlZCBPY2FzaW8tQ29ydGV6IGEgZioqKmluZyBiKioqKiBhZnRlciBleGNoYW5nZSIsImRlc2NyaXB0aW9uIjoiUmVwLiBUZWQgWW9obyAoUi1GTCkgZ290IGludG8gYSBoZWF0ZWQgZXhjaGFuZ2Ugd2l0aCBSZXAuIEFsZXhhbmRyaWEgT2Nhc2lvLUNvcnRleiAoRC1OWSksIGN1cnNpbmcgYXMgaGUgd2Fsa2VkIGF3YXkgZnJvbSB0aGVpciBjb252ZXJzYXRpb24uIEFjY29yZGluZyB0byBhbiBhY2NvdW50IHB1Ymxpc2hlZCBpbiBUaGUgSGlsbCwgWW9obyBzYWlkIFwiZioqa2luZyBiaXRjaFwiIGFzIGhlIHdhbGtlZCBhd2F5LiBDTk4ncyBNYW51IFJhanUgcmVwb3J0cy4iLCJ1cmwiOiJodHRwczovL3d3dy5jbm4uY29tL3ZpZGVvcy9wb2xpdGljcy8yMDIwLzA3LzIxL2FsZXhhbmRyaWEtb2Nhc2lvLWNvcnRlei10ZWQteW9oby1jb25mcm9udGF0aW9uLXNvdC12cHgtbnIuY25uIiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0yMVQxOToxODozNVoifSx7InNvdXJjZSI6Ikdpem1vZG8uY29tIiwidGl0bGUiOiJBT0MgRmlsZXMgTWVhc3VyZSB0byBLaWxsIFUuUy4gTWlsaXRhcnkgVHdpdGNoIFN0cmVhbXMgYXMgQmF0dGxlIE92ZXIgUHJvdGVzdGVyIEJhbnMgSGVhdHMgVXAiLCJkZXNjcmlwdGlvbiI6IlUuUy4gUmVwcmVzZW50YXRpdmUgQWxleGFuZHJpYSBPY2FzaW8gQ29ydGV6IHBsYW5zIHRvIGZpbGUgYW4gYW1lbmRtZW50IHRoYXQgd291bGQgYmFyIGFueSBwYXJ0IG9mIHRoZSBVLlMuIG1pbGl0YXJ5IGZyb20gc3BlbmRpbmcgZmVkZXJhbCBmdW5kcyB0byBvcGVyYXRlIGFjY291bnRzIG9uIGFueSDigJx2aWRlbyBnYW1lLCBlc3BvcnRzLCBvciBsaXZlLXN0cmVhbWluZyBwbGF0Zm9ybSzigJ0gVmljZSByZXBvcnRlZCBvbiBXZWRuZXNkYXkuIEF0IHRoZSBz4oCmIiwidXJsIjoiaHR0cHM6Ly9naXptb2RvLmNvbS9hb2MtZmlsZXMtbWVhc3VyZS10by1raWxsLXUtcy1taWxpdGFyeS10d2l0Y2gtc3RyZWFtcy0xODQ0NDc1MTYxIiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0yM1QwMToyNTowMFoifV19
+  recorded_at: Thu, 30 Jul 2020 20:19:48 GMT
+recorded_with: VCR 6.0.0
