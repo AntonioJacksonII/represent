@@ -1,16 +1,16 @@
 <% if current_user.has_favorites? %>
-<div class="senate-sidenav">
+<div id="dashboard-senate-sidenav">
   <h4>Favorites</h4>
   <p>Senators</p>
   <% @senator_favorites.each do |senator| %>
-    <a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a>
+    <p><a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a></p>
   <% end %>
 </div>
 
-<div class="sidenav">
+<div id="dashboard-rep-sidenav">
   <p>Representatives</p>
   <% @house_favorites.each do |member| %>
-    <a href="/house_members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a>
+    <p><a href="/house_members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a></p>
   <% end %>
 </div>
 <section style="background:transparent;" class="jumbotron text-center">
