@@ -42,15 +42,6 @@ describe "Logged in User" do
 
     @senate_bill_vote1 = SenateBillVote.create!(roll_call: 140, offset: 0, bill: @bill_3)
     @senate_bill_vote2 = SenateBillVote.create!(roll_call: 121, offset: 20, bill: @bill_2)
-
-    
-    # We are passed in from the comparisions page a congress_id, each bill's ID and whether the user voted yes or no
-    # Need to identify whether the congress_id is a house or senate member
-    # Then we need to look up in the BillVotes table and get role call # and the offset
-    # Then we hit our member votes api and see how the member voted on each bill 
-    # One we have that information, compare that with how the user voted, then create a comparison score
-    # and then save the comparison score on the respective favorites table
-    
   end
   
   it "User sees results from comparison with house member", :vcr do
