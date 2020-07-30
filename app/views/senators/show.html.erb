@@ -5,14 +5,14 @@
   <title>Senator Show Page</title>
 </head>
 
-<div class="sidenav">
+<div class="sidenav" style="margin-top: 10px;">
   <p> Representatives in <%= @state %></p>
   <% @representatives.each do |rep| %>
     <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
   <% end %>
 </div>
 
-<div class="senate-sidenav">
+<div class="senate-sidenav" style="margin-top: 10px;">
   <p>Senators in <%= @state %></p>
   <% @other_senators.each do |senator| %>
     <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
@@ -28,6 +28,7 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class='sen-name'><%= @senator.first_name %> <%= @senator.last_name %></h1>
+        <h4 class='sen-state'><%= @senator.state_rank.capitalize + " Senator from " + ::States[@senator.state] %></h4>
         <% if current_user && current_user.senators.include?(@senator) %>
           <%= button_to "Remove from Favorites", "/senators/#{@senator.id}/favorites", method: :delete %>
         <% elsif current_user && !current_user.house_members.include?(@rep) %>
@@ -35,20 +36,18 @@
         <% else %>
           <p> Click on Register to favorites</p>
         <% end %>
-        <br class='sen-dob'>Date of Birth: <%= @senator.dob %>
+        <br class='sen-dob'>Date of Birth: <%= Date.parse(@senator.dob).strftime('%B %-d, %Y') %>
         <br class='sen-gender'>Gender: <%= @senator.gender %>
         <br class='sen-party'>Party: <%= @senator.party %>
         <% if @senator.leadership_role %>
           <br class='sen-leadership'>Leadership Role: <%= @senator.leadership_role %>
         <% end %>
-        <br class='sen-state'>State: <%= @senator.state %>
-        <br class='sen-senate_class'>Senate Class: <%= @senator.senate_class %>
-        <br class='sen-state_rank'>State Rank: <%= @senator.state_rank %>
+        <br class='sen-senate_class'>Senate Class: <%= @senator.senate_class.ordinalize %>
         <br class='sen-next_election'>Next Election: <%= @senator.next_election %>
         <% if @senator.dw_nominate %>
           <br class='sen-dw_nominate'>DW NOMINATE Score: <%= @senator.dw_nominate %>
           <span class="tooltip-data tool-format">?</span>
-          <div id="popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal they are - the closer they are to +1, the more conservative they are.</div>
+          <div id="popup">DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal their positions are - the closer they are to +1, the more conservative their positions are.</div>
         <% end %>
         <% if @senator.office %>
           <br class='sen-office'>D.C. Office: <%= @senator.office %>
@@ -68,12 +67,6 @@
         <% if @senator.twitter_account %>
           <br class='sen-twitter'>Twitter: <%= link_to @senator.twitter_account, "http://www.twitter.com/#{@senator.twitter_account}" %>
         <% end %>
-        <% if @senator.govtrack_id %>
-          <br class='sen-govtrack'>Govtrack ID: <%= @senator.govtrack_id %>
-        <% end %>
-        <% if @senator.congress_id %>
-          <br class='sen-congress_id'>Congressional Member ID: <%= @senator.congress_id %>
-        <% end %>
         <% if @senator.total_votes %>
           <br class='sen-total_votes'>Total Votes: <%= @senator.total_votes %>
         <% end %>
@@ -90,7 +83,7 @@
           <br class='sen-votes_without_party_percentage'>Votes Against Party Percentage: <%= @senator.votes_without_party_percentage %> %
         <% end %>
       </div>
-      <div class="col-lg-5">
+      <div class="col-lg-3">
         <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@senator.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'sen-image') %>
         <br>
         <br>

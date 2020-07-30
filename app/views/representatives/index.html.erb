@@ -31,6 +31,11 @@
             <div class="card-body">
               <h6 class="card-title name"><%= member.full_name %>
               </h6>
+              <p class='card-district'><% if member.at_large %>
+              At-Large District
+              <% else %>
+              <%= member.district.ordinalize %> District
+              <% end %></p>
               <a href="/house_members/<%= member.id %>" class="btn btn-outline-primary">Learn More</a>
             </div>
           </div><br>
@@ -41,13 +46,14 @@
 
     </div>
 
-    <div class="col-3">
+    <div class="col-3 text-center">
       <% @senators.each do |senator| %>
         <div class="card senator" style="width: 12rem;">
           <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= senator.congress_id %>.jpg" alt="Card image cap">
           <div class="card-body">
-            <p class="card-text name"><%= senator.full_name %>
-            </p>
+            <h6 class="card-text name"><%= senator.full_name %>
+            </h6>
+            <p><%= senator.state_rank.capitalize %> Senator</p>
             <a href="/senators/<%= senator.id %>" class="btn btn-outline-primary">Learn More</a>
           </div>
         </div><br>
