@@ -5,15 +5,14 @@
     <title>Represent</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= stylesheet_link_tag    'custom_css', media: 'all' %>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <%= javascript_include_tag 'application' %>
-    <style type='text/css' >body{background-color:rgb(0,0,0);background-image:url(http://www.zingerbugimages.com/backgrounds/white_marble_background_seamless.jpg);background-position:top left;background-repeat:repeat;background-attachment:fixed;}</style>
+    <style type='text/css' >body{background-color:rgb(0,0,0);background-image:url(https://mk0dcphotoguide69e7p.kinstacdn.com/wp-content/uploads/2017/04/us-capitol-building-at-night-panorama-10-copyright-havecamerawilltravel-com.jpg);background-position:top right;background-repeat:no-repeat;background-attachment:fixed;}</style>
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">REPresent</a>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brand" style="color:white;" href="/">REPresent</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,14 +22,14 @@
         <ul class="navbar-nav mr-auto">
           <% if current_user %>
           <li class="nav-item">
-            <a class="nav-link" href="/dashboard">Dashboard</a>
+            <a class="nav-link" style="color:white;" href="/dashboard">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/logout">Logout</a>
+            <a class="nav-link" style="color:white;" href="/logout">Logout</a>
           </li>
           <% else %>
           <li class="nav-item">
-            <a class="nav-link" href="/auth/google_oauth2">Register/Login with Google</a>
+            <a class="nav-link"style="color:white;" href="/auth/google_oauth2">Register/Login with Google</a>
           </li>
           <% end %>
         </ul>

@@ -17,7 +17,6 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url(custom_css.css);
 /* line 2, ../../.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/bootstrap-4.5.0/assets/stylesheets/bootstrap/_root.scss */
 :root {
   --blue: #007bff;
@@ -11783,4 +11782,231 @@ h3 {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+/* line 16, app/assets/stylesheets/application.scss */
+.sidenav {
+  height: 75%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 26%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+/* line 29, app/assets/stylesheets/application.scss */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: blue;
+  display: block;
+}
+
+/* line 38, app/assets/stylesheets/application.scss */
+.sidenav a:hover {
+  color: #3366ff;
+}
+
+/* line 43, app/assets/stylesheets/application.scss */
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  /* line 50, app/assets/stylesheets/application.scss */
+  .sidenav {
+    padding-top: 15px;
+  }
+  /* line 51, app/assets/stylesheets/application.scss */
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* line 54, app/assets/stylesheets/application.scss */
+.senate-sidenav {
+  height: 19%;
+  width: 200px;
+  position: fixed;
+  border-bottom: 2px solid black;
+  z-index: 1;
+  top: 7%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+/* line 68, app/assets/stylesheets/application.scss */
+.senate-sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: blue;
+  display: block;
+}
+
+/* line 77, app/assets/stylesheets/application.scss */
+.senate-sidenav a:hover {
+  color: #3366ff;
+}
+
+/* line 82, app/assets/stylesheets/application.scss */
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  /* line 89, app/assets/stylesheets/application.scss */
+  .senate-sidenav {
+    padding-top: 15px;
+  }
+  /* line 90, app/assets/stylesheets/application.scss */
+  .senate-sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* line 92, app/assets/stylesheets/application.scss */
+.scrollable {
+  overflow-y: auto;
+  height: 150px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+/* line 101, app/assets/stylesheets/application.scss */
+.home-scroll {
+  overflow-y: auto;
+}
+
+/* line 105, app/assets/stylesheets/application.scss */
+.search-scroll {
+  overflow-y: auto;
+  position: fixed;
+}
+
+/* line 110, app/assets/stylesheets/application.scss */
+.hoverable:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* line 115, app/assets/stylesheets/application.scss */
+.representatives-scrollable {
+  overflow-y: auto;
+  height: 725px;
+  width: 250px;
+  margin: auto;
+}
+
+/* line 121, app/assets/stylesheets/application.scss */
+.sized-button {
+  border-radius: 4px;
+  border: 2px solid green;
+  background-color: white;
+  height: 32px;
+  width: 80px;
+}
+
+/* line 128, app/assets/stylesheets/application.scss */
+#small-select {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 133, app/assets/stylesheets/application.scss */
+.error-message {
+  display: inline-block;
+  margin-top: -5px;
+}
+
+/* line 137, app/assets/stylesheets/application.scss */
+.footer {
+  position: fixed;
+  height: 80px;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 144, app/assets/stylesheets/application.scss */
+.nav-scrollable {
+  overflow-y: auto;
+  height: 200px;
+}
+
+/* line 149, app/assets/stylesheets/application.scss */
+.tool-format {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+  padding: 0px 6px;
+  height: 2px;
+  border-radius: 50%;
+}
+
+/* line 157, app/assets/stylesheets/application.scss */
+#popup {
+  display: none;
+  width: 300px;
+  font-size: 12px;
+  margin-bottom: -2em;
+  border: 1px solid blue;
+}
+
+/* line 164, app/assets/stylesheets/application.scss */
+.ui-autocomplete {
+  overflow-y: auto !important;
+  max-height: 150px;
+  overflow-x: hidden;
+  width: 50px;
+}
+
+/* line 170, app/assets/stylesheets/application.scss */
+#bills-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* line 175, app/assets/stylesheets/application.scss */
+#bills-table td, #bills th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* line 180, app/assets/stylesheets/application.scss */
+#bills-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* line 182, app/assets/stylesheets/application.scss */
+#bills-table tr:hover {
+  background-color: #ddd;
+}
+
+/* line 184, app/assets/stylesheets/application.scss */
+#bills-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* line 191, app/assets/stylesheets/application.scss */
+.right-side-nav {
+  margin-top: 47px;
+  height: 550px;
+  width: 300px;
+  margin-left: 80%;
+  position: fixed;
+  overflow-y: auto;
 }
