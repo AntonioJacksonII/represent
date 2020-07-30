@@ -9,8 +9,6 @@ describe "Logged in User" do
     @aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
     @lamar = Senator.create!(first_name: 'Lamar', last_name: 'Alexander', congress_id: "A000360")
 
-    HouseFavorite.create(house_member_id: @aoc.id, user_id: @user1.id)
-
     @bill_1 =   Bill.create!(
       bill_id: "hr6395-116",
       summary_short:
@@ -43,9 +41,8 @@ describe "Logged in User" do
     @house_bill_vote2 = create(:house_bill_vote, roll_call: 152, offset: 20, bill_id: @bill_2.id)
 
     @senate_bill_vote1 = SenateBillVote.create!(roll_call: 140, offset: 0, bill: @bill_3)
-    @senate_bill_vote1 = SenateBillVote.create!(roll_call: 121, offset: 20, bill: @bill_2)
+    @senate_bill_vote2 = SenateBillVote.create!(roll_call: 121, offset: 20, bill: @bill_2)
 
-    
     
     # We are passed in from the comparisions page a congress_id, each bill's ID and whether the user voted yes or no
     # Need to identify whether the congress_id is a house or senate member
@@ -106,6 +103,72 @@ describe "Logged in User" do
       expect(page).to have_content("Great American Outdoors Act")
     end
     save_and_open_page
+  end
+
+  it "User sees results from comparison with senator who is a favorite", :vcr do
+
+    SenatorFavorite.create(senator_id: @lamar.id, user_id: @user1.id)
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@lamar.congress_id}"
+    choose "#{@bill_3.bill_id}_yes"
+    choose "#{@bill_2.bill_id}_no"
+    click_button('Submit Your Votes and Get Your Comparison Score')
+
+    comparison_score = find(".comparison-score").text
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+
+    
+    expect(page).to have_css(".agreed-votes")
+    within('.agreed-votes') do
+      expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
+    end
+
+    expect(page).to have_css(".disagreed-votes")
+    within('.disagreed-votes') do
+      expect(page).to have_content("Great American Outdoors Act")
+    end
+    
+    visit dashboard_path
+    
+    within('.compared-rep') do
+      expect(page).to have_content(@lamar.full_name)
+      expect(page).to have_content("50%")
+    end
+  end
+
+  it "User sees results from comparison with house member who is a favorite", :vcr do
+
+    HouseFavorite.create!(house_member_id: @aoc.id, user_id: @user1.id)
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
+    choose "#{@bill_1.bill_id}_yes"
+    choose "#{@bill_2.bill_id}_yes"
+    click_button('Submit Your Votes and Get Your Comparison Score')
+
+    comparison_score = find(".comparison-score").text
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+
+    
+    expect(page).to have_css(".agreed-votes")
+    within('.agreed-votes') do
+      expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
+    end
+
+    expect(page).to have_css(".disagreed-votes")
+    within('.disagreed-votes') do
+      expect(page).to have_content("Great American Outdoors Act")
+    end
+    
+    visit dashboard_path
+
+    within('.compared-rep') do
+      expect(page).to have_content(@aoc.full_name)
+      expect(page).to have_content("50%")
+    end
   end
 
   xit "User has a prefabbed twitter response to send to representative" do
