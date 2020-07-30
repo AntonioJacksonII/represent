@@ -26,25 +26,6 @@
 }
 
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: blue;
-  display: block;
-}
-
-
-.sidenav a:hover {
-  color: #3366ff;
-}
-
-
-.main {
-  margin-left: 160px;
-  padding: 0px 10px;
-}
-
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -62,20 +43,6 @@
   overflow-x: hidden;
   padding-top: 5px;
   padding-left: 5px;
-}
-
-
-.senate-sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: blue;
-  display: block;
-}
-
-
-.senate-sidenav a:hover {
-  color: #3366ff;
 }
 
 
@@ -195,4 +162,11 @@
   margin-left:80%;
   position:fixed;
   overflow-y:auto;
+}
+
+.background-image{
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:local;
+  background-color:rgb(0,0,0);
 }
