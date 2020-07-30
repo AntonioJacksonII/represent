@@ -31,8 +31,9 @@ function sendParam(){
 }
 
 function sendMultiParams(){
+  var congress_id = document.querySelector('#hidden-congress').value;
   var topic = document.querySelector('.topic').value;
-  window.location = "/comparisons/?topic=" + topic;
+  window.location = "/comparison/?topic=" + topic + "&id=" + congress_id;
 }
 
 function switchSpan(){

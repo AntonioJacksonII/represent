@@ -1,21 +1,24 @@
 <% if current_user.has_favorites? %>
+<div class="senate-sidenav">
+  <h4>Favorites</h4>
+  <p>Senators</p>
+  <% @senator_favorites.each do |senator| %>
+    <a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a>
+  <% end %>
+</div>
+
 <div class="sidenav">
-  <p>Favorites</p>
   <p>Representatives</p>
   <% @house_favs.each do |member| %>
     <a href="/house_members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a>
   <% end %>
-  <p>Senators</p>
-  <% @senator_favs.each do |senator| %>
-    <a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a>
-  <% end %>
 </div>
-<section style="background:transparent" class="jumbotron text-center">
+<section style="background:transparent;" class="jumbotron text-center">
   <div class="container">
     <h2 class="jumbotron-heading smaller">News from Your Favorite Representatives</h2>
   </div>
 </section>
-<div class="album py-5 bg-light">
+<div>
   <div class="container">
     <div class="row">
       <% @articles.each do |article| %>

@@ -1,9 +1,10 @@
 class ResultsController < ApplicationController
 
   def show
-    
     @rep = Senator.find_by(congress_id: params[:congress_id]) || HouseMember.find_by(congress_id: params[:congress_id])
-    @comparison_score = params[:comparison_score]
+    @comparison_score = (params[:comparison_score].to_f * 100)
+    @matching_bills = params[:matching_bills]
+    @not_matching_bills = params[:not_matching_bills]
   end
 
   def create
@@ -23,6 +24,7 @@ class ResultsController < ApplicationController
 
       yes_roll_calls = {}
       yes_array.each do |bill_id|
+        # binding.pry
         yes_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.offset
       end 
 
@@ -69,7 +71,7 @@ class ResultsController < ApplicationController
 
       comparison_score = matching_array.length.to_f / (matching_array.length + not_matching_array.length).to_f
 
-      if current_user.senator_favorites.find_by(senator_id: senator.id)
+      if current_user && current_user.senator_favorites.find_by(senator_id: senator.id)
         favorite = current_user.senator_favorites.find_by(senator_id: senator.id)
         favorite.comparison_score = comparison_score
       end 
@@ -126,7 +128,7 @@ class ResultsController < ApplicationController
 
       comparison_score = matching_array.length.to_f / (matching_array.length + not_matching_array.length).to_f
 
-      if current_user.house_favorites.find_by(house_member_id: house_member.id)
+      if current_user && current_user.house_favorites.find_by(house_member_id: house_member.id)
         favorite = current_user.house_favorites.find_by(house_member_id: house_member.id)
         favorite.comparison_score = comparison_score
       end 

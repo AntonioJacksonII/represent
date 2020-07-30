@@ -73,12 +73,12 @@ describe "Logged in User" do
     expect(comparison_score).to_not be_empty
 
     expect(page).to have_css(".agreed-votes")
-    within('.agreed_votes') do
+    within('.agreed-votes') do
       expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
     end
 
     expect(page).to have_css(".disagreed-votes")
-    within('.disagreed_votes') do
+    within('.disagreed-votes') do
       expect(page).to have_content("Great American Outdoors Act")
     end
   end
@@ -90,21 +90,22 @@ describe "Logged in User" do
     choose "#{@bill_2.bill_id}_no"
     click_button('Submit Your Votes and Get Your Comparison Score')
 
-    comparison_score = css(".comparison-score").text
+    comparison_score = find(".comparison-score").text
 
     expect(page).to have_css(".comparison-score")
     expect(comparison_score).to_not be_empty
 
     
     expect(page).to have_css(".agreed-votes")
-    within('.agreed_votes') do
+    within('.agreed-votes') do
       expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
     end
 
     expect(page).to have_css(".disagreed-votes")
-    within('.disagreed_votes') do
+    within('.disagreed-votes') do
       expect(page).to have_content("Great American Outdoors Act")
     end
+    save_and_open_page
   end
 
   xit "User has a prefabbed twitter response to send to representative" do

@@ -4,18 +4,21 @@
 <head>
   <title>Representative Show Page</title>
 </head>
-<div class="sidenav">
+<div class="sidenav" style="margin-top: 10px;">
   <p>Representatives in <%= @state %></p>
   <% @other_reps.each do |rep| %>
     <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
   <% end %>
 </div>
 
-<div class="senate-sidenav">
+<div class="senate-sidenav" style="margin-top: 10px;">
   <p>Senators in <%= @state %></p>
   <% @senators.each do |senator| %>
     <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
   <% end %>
+</div>
+<div class="right-side-nav">
+  <a class="twitter-timeline" href="https://twitter.com/<%= @rep.twitter_account %>?ref_src=twsrc%5Etfw">Tweets by RepAOC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
   <body>
@@ -24,6 +27,11 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class='rep-name'><%= @rep.first_name %> <%= @rep.last_name %></h1>
+        <h4 class='rep-district'><%= "Representative from:" %><br/>
+          <%= ::States[@rep.state] + "'s " %>
+          <% if @rep.at_large %>At-Large District
+          <% else %><%= @rep.district.ordinalize + " District" %>
+          <% end %> </h4>
         <% if current_user && current_user.house_members.include?(@rep)%>
           <%= button_to "Remove from Favorites", "/house_members/#{@rep.id}/favorites", method: :delete %>
         <% elsif current_user && !current_user.house_members.include?(@rep)%>
@@ -31,22 +39,21 @@
         <% else %>
            <p>Click on Register to favorite</p>
         <% end %>
-        <br class='rep-dob'>Date of Birth: <%= @rep.dob %>
+        <br class='rep-dob'>Date of Birth: <%= Date.parse(@rep.dob).strftime('%B %-d, %Y') %>
         <br class='rep-gender'>Gender: <%= @rep.gender %>
         <br class='rep-party'>Party: <%= @rep.party %>
         <% if @rep.leadership_role %>
           <br class='rep-leadership'>Leadership Role: <%= @rep.leadership_role %>
         <% end %>
-        <br class='rep-state'>State: <%= @rep.state %>
-        <br class='rep-district'>District: <%= @rep.district %>
         <% if @rep.cook_pvi %>
           <br class='rep-cook_pvi'>District's Cook PVI: <%= @rep.cook_pvi %>
+          <span class="tooltip-data tool-format">?</span>
+          <div id="popup">The Cook PVI is a measure of a district's partisanship. An even district has roughly the same number of Democrats and Republicans. The higher the number D or R, the more Democratic or Republican the district is.</div>
         <% end %>
-          <br class='rep-at_large'>At-Large District: <%= @rep.at_large %>
         <% if @rep.dw_nominate %>
           <br class='rep-dw_nominate'>DW NOMINATE Score: <%= @rep.dw_nominate %>
           <span class="tooltip-data tool-format">?</span>
-          <div id="popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal they are - the closer they are to +1, the more conservative they are.</div>
+          <div id="popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal their positions are - the closer they are to +1, the more conservative their positions are.</div>
         <% end %>
         <% if @rep.office %>
           <br class='rep-office'>D.C. Office: <%= @rep.office %>
@@ -66,12 +73,6 @@
         <% if @rep.twitter_account %>
           <br class='rep-twitter'>Twitter: <%= link_to @rep.twitter_account, "http://www.twitter.com/#{@rep.twitter_account}" %>
         <% end %>
-        <% if @rep.govtrack_id %>
-          <br class='rep-govtrack'>Govtrack ID: <%= @rep.govtrack_id %>
-        <% end %>
-        <% if @rep.congress_id %>
-          <br class='rep-congress_id'>Congressional Member ID: <%= @rep.congress_id %>
-        <% end %>
         <% if @rep.total_votes %>
           <br class='rep-total_votes'>Total Votes: <%= @rep.total_votes %>
         <% end %>
@@ -88,7 +89,7 @@
           <br class='rep-votes_without_party_percentage'>Votes Against Party Percentage: <%= @rep.votes_without_party_percentage %> %
         <% end %>
       </div>
-      <div class="col-lg-5">
+      <div class="col-lg-3">
         <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
         <br>
         <br>

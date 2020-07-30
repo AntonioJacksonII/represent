@@ -14,7 +14,7 @@ RSpec.describe "As a visitor, when i visit the home page" do
     find('#dropdownid').click
     expect(page).to have_content("Alaska")
 
-    click_on "Alaska"
+    select "Alaska", from: 'dropdownid'
 
     expect(current_path).to eq("/representatives/AK")
   end

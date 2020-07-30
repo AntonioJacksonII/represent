@@ -1879,7 +1879,7 @@ function sendParam(){
 
 function sendMultiParams(){
   var topic = document.querySelector('.topic').value;
-  window.location = "/comparisons/?topic=" + topic;
+  window.location = "/comparison/?topic=" + topic;
 }
 
 function switchSpan(){
