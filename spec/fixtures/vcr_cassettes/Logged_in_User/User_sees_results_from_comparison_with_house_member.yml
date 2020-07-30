@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4568/api/v1/member_votes?member_id=O000172&offset=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '243'
+      X-Content-Type-Options:
+      - nosniff
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"data":{"172":"Yes","171":"Yes","170":"No","169":"Yes","168":"Yes","167":"Yes","166":"No","165":"No","164":"No","163":"Yes","162":"No","161":"No","160":"Yes","159":"No","158":"Yes","157":"Yes","156":"Yes","155":"Yes","154":"Yes","153":"Yes"}}'
+  recorded_at: Thu, 30 Jul 2020 03:47:35 GMT
+- request:
+    method: get
+    uri: http://localhost:4568/api/v1/member_votes?member_id=O000172&offset=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '244'
+      X-Content-Type-Options:
+      - nosniff
+      Connection:
+      - keep-alive
+      Server:
+      - thin 1.5.1 codename Straight Razor
+    body:
+      encoding: UTF-8
+      string: '{"data":{"152":"No","151":"No","150":"Yes","149":"Yes","148":"Yes","147":"Yes","146":"Yes","145":"Yes","144":"Yes","143":"No","142":"Yes","141":"Yes","140":"Yes","139":"Yes","138":"Yes","137":"No","136":"Yes","135":"No","134":"No","133":"Yes"}}'
+  recorded_at: Thu, 30 Jul 2020 03:47:35 GMT
+recorded_with: VCR 6.0.0
