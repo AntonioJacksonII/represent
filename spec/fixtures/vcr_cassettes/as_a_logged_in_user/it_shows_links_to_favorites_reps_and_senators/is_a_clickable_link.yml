@@ -2,6 +2,78 @@
 http_interactions:
 - request:
     method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 21:24:58 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Thu, 30 Jul 2020 21:24:58 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 21:24:59 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Thu, 30 Jul 2020 21:24:59 GMT
+- request:
+    method: get
     uri: http://floating-cliffs-29262.herokuapp.com/api/v1/articles?favorite_names=%22Mitt%20Romney%22&language=en&num_results=6&sort=relevance
     body:
       encoding: US-ASCII
@@ -29,12 +101,48 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Tue, 28 Jul 2020 17:32:43 GMT
+      - Thu, 30 Jul 2020 21:24:59 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJkYXRhIjpbeyJzb3VyY2UiOiJSZXV0ZXJzIiwidGl0bGUiOiJSb21uZXkgd2lsbCBvcHBvc2UgVHJ1bXAncyBwaWNrIFNoZWx0b24gZm9yIEZlZCBib2FyZDogcmVwb3J0IC0gUmV1dGVycyIsImRlc2NyaXB0aW9uIjoiVS5TLiBTZW5hdG9yIE1pdHQgUm9tbmV5IHdpbGwgb3Bwb3NlIHRoZSBub21pbmF0aW9uIG9mIGZvcm1lciBUcnVtcCBjYW1wYWlnbiBhZHZpc2VyIEp1ZHkgU2hlbHRvbiB0byB0aGUgRmVkZXJhbCBSZXNlcnZlIEJvYXJkLCBiZWNvbWluZyB0aGUgZmlyc3QgUmVwdWJsaWNhbiB0byBicmVhayByYW5rcyBvbiBVLlMuIFByZXNpZGVudCBEb25hbGQgVHJ1bXAncyBjb250cm92ZXJzaWFsIHBpY2sgZm9yIHRoZSBpbmZsdWVudGlhbCBlY29ub21pYyBwb2xpY+KApiIsInVybCI6Imh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2FydGljbGUvdXMtdXNhLWZlZC1zaGVsdG9uLWlkVVNLQ04yNE8yTjciLCJwdWJsaXNoZWRfYXQiOiIyMDIwLTA3LTIzVDE3OjQ1OjAwWiJ9LHsic291cmNlIjoiR2xvYmFsIE5ld3MiLCJ0aXRsZSI6IuKAmEhpc3RvcmljIGNvcnJ1cHRpb27igJk6IE1pdHQgUm9tbmV5IGJsYXN0cyBUcnVtcCBhZnRlciBSb2dlciBTdG9uZeKAmXMgY29tbXV0YXRpb24gLSBHbG9iYWxuZXdzLmNhIiwiZGVzY3JpcHRpb24iOiI8b2w+PGxpPuKAmEhpc3RvcmljIGNvcnJ1cHRpb27igJk6IE1pdHQgUm9tbmV5IGJsYXN0cyBUcnVtcCBhZnRlciBSb2dlciBTdG9uZeKAmXMgY29tbXV0YXRpb27CoMKgR2xvYmFsbmV3cy5jYVxyXG48L2xpPjxsaT5Sb2JlcnQgTXVlbGxlciBkZWZlbmRzIFJ1c3NpYSBwcm9iZSwgc2F5cyBSb2dlciBTdG9uZSAncmVtYWlucyBhIGNvbnZpY3RlZCBmZWxvbicgaW4gb3AtZWTCoMKgQ0JDLmNhXHJcbjwvbGk+PGxpPlRydW1wIGNvbW11dGVzIFJvZ2VyIFN0b25lJ3Mgc2VudGVuY2XigKYiLCJ1cmwiOiJodHRwOi8vZ2xvYmFsbmV3cy5jYS9uZXdzLzcxNjU4MzQvcm9nZXItc3RvbmUtdHJ1bXAtbWl0dC1yb21uZXkvIiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0xMVQxODoxODowMVoifSx7InNvdXJjZSI6IllhaG9vIEVudGVydGFpbm1lbnQiLCJ0aXRsZSI6IidXZSBhbHJlYWR5IGhhdmUgb25lIE1pdHQgUm9tbmV5JzogVHJ1bXAgSnIgYW5kIFJhbmQgUGF1bCBhbW9uZyBjb25zZXJ2YXRpdmVzIGNhbGxpbmcgZm9yIExpeiBDaGVuZXkgdG8gYmUgb3VzdGVkIiwiZGVzY3JpcHRpb24iOiJGaXJzdCBpdCB3YXMganVzdCBhIGhhbmRmdWwgY29uc2VydmF0aXZlIHJhYmJsZS1yb3VzZXJzIGNhbGxpbmcgb3V0IEhvdXNlIEdPUCBDb25mZXJlbmNlIENoYWlyd29tYW4gTGl6IENoZW5leSBvbiBUdWVzZGF5IGZvciBkZWZ5aW5nIERvbmFsZCBUcnVtcCBvbiB0aGUgY29yb25hdmlydXMgcGFuZGVtaWMsIGZvcmVpZ24gYWZmYWlycyBkZWNpc2lvbnMsIGFuZCBvdGhlciBtYXR0ZXJzLlRoZW4gU2VuYXRvciBSYW5kIFBhdWwgcGlsZWQgb24sIHJldHdl4oCmIiwidXJsIjoiaHR0cHM6Ly9uZXdzLnlhaG9vLmNvbS9hbHJlYWR5LW9uZS1taXR0LXJvbW5leS10cnVtcC0xNjU1NTU3OTMuaHRtbCIsInB1Ymxpc2hlZF9hdCI6IjIwMjAtMDctMjFUMTY6NTU6NTVaIn0seyJzb3VyY2UiOiJSZXV0ZXJzIiwidGl0bGUiOiJHZXJtYW4gc3RhdGVzIGFwcGVhbCB0byBVLlMuIENvbmdyZXNzIG5vdCB0byB3aXRoZHJhdyB0cm9vcHMgLSBSZXV0ZXJzIiwiZGVzY3JpcHRpb24iOiJUaGUgcHJlbWllcnMgb2YgZm91ciBHZXJtYW4gc3RhdGVzIGhhdmUgYXBwZWFsZWQgdG8gbWVtYmVycyBvZiB0aGUgVS5TLiBDb25ncmVzcyB0byBibG9jayBwbGFucyB0byB3aXRoZHJhdyBVLlMuIHRyb29wcyBmcm9tIEdlcm1hbnksIGFjY29yZGluZyB0byBsZXR0ZXJzIHNlZW4gYnkgUmV1dGVycyBvbiBTdW5kYXkuIiwidXJsIjoiaHR0cHM6Ly93d3cucmV1dGVycy5jb20vYXJ0aWNsZS91cy11c2EtZ2VybWFueS1taWxpdGFyeS1pZFVTS0NOMjRLME1aIiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0xOVQxNzoxNDowMFoifSx7InNvdXJjZSI6IllhaG9vIEVudGVydGFpbm1lbnQiLCJ0aXRsZSI6IlJvbW5leSBqb2lucyBEZW1vY3JhdHMnIGNyaXRpY2lzbSBvZiBUcnVtcCdzIFJvZ2VyIFN0b25lIGNvbW11dGF0aW9uIiwiZGVzY3JpcHRpb24iOiJSZXB1YmxpY2FuIFNlbi4gTWl0dCBSb21uZXkgYWNjdXNlcyB0aGUgcHJlc2lkZW50IG9mICdoaXN0b3JpYyBjb3JydXB0aW9uJzsgZm9ybWVyIEFjdGluZyBBdHRvcm5leSBHZW5lcmFsIE1hdHQgV2hpdGFrZXIgcmVhY3RzLiIsInVybCI6Imh0dHBzOi8vbmV3cy55YWhvby5jb20vcm9tbmV5LWpvaW5zLWRlbW9jcmF0cy1jcml0aWNpc20tdHJ1bXBzLTEyMTc0NDY0OC5odG1sIiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0xMlQxMjoxNzo0NFoifSx7InNvdXJjZSI6IlJldXRlcnMiLCJ0aXRsZSI6IlVQREFURSAxLVJvbW5leSB3aWxsIG9wcG9zZSBUcnVtcCdzIHBpY2sgU2hlbHRvbiBmb3IgRmVkIGJvYXJkIC0gcmVwb3J0IC0gUmV1dGVycyIsImRlc2NyaXB0aW9uIjoiVVBEQVRFIDEtUm9tbmV5IHdpbGwgb3Bwb3NlIFRydW1wJ3MgcGljayBTaGVsdG9uIGZvciBGZWQgYm9hcmQgLSByZXBvcnTCoMKgUmV1dGVycyIsInVybCI6Imh0dHBzOi8vd3d3LnJldXRlcnMuY29tL2FydGljbGUvdXNhLWZlZC1zaGVsdG9uLWlkVVNMMk4yRVUxR0wiLCJwdWJsaXNoZWRfYXQiOiIyMDIwLTA3LTIzVDE3OjM0OjAwWiJ9XX0=
-  recorded_at: Tue, 28 Jul 2020 17:32:43 GMT
+  recorded_at: Thu, 30 Jul 2020 21:24:59 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 21:24:59 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Thu, 30 Jul 2020 21:24:59 GMT
 recorded_with: VCR 6.0.0
