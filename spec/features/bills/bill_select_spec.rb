@@ -5,14 +5,15 @@ RSpec.describe "On the bill select page" do
     visit "/bills"
     has_field? "Search"
   end
-  xit "has a dropdown with topic selection" do
-    bill = Bill.create(bill_id: 1, offset: 2, primary_subject: "Armed Forces and National Security")
-    bill2 = Bill.create(bill_id: 2, offset: 2, primary_subject: "New Topic")
+  it "has a dropdown with topic selection" do
+    create(:bill, primary_subject: "Armed Forces and National Security")
+    create(:bill, primary_subject: "Public Lands and Natural Resources")
     visit "/bills"
-    binding.pry
-    click_on "Select Topic"
-    expect(page).to have_content("New Topic")
+
+    page.select("Armed Forces and National Security")
     expect(page).to have_content("Armed Forces and National Security")
+    page.select("Public Lands and Natural Resources")
+    expect(page).to have_content("Public Lands and Natural Resources")
   end
 
   it "has field to enter number of bills to compare" do
