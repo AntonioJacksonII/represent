@@ -17,6 +17,9 @@
     <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
   <% end %>
 </div>
+<div class="right-side-nav">
+  <a class="twitter-timeline" href="https://twitter.com/<%= @rep.twitter_account %>?ref_src=twsrc%5Etfw">Tweets by RepAOC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
   <body>
     <section class='rep-info' style="margin-left:225px;margin-top:25px;">
