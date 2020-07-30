@@ -43,7 +43,7 @@ describe "Logged in User" do
     @senate_bill_vote2 = SenateBillVote.create!(roll_call: 121, session: 2, bill: @bill_2)
   end
   
-  it "User sees results from comparison with house member" do
+  it "User sees results from comparison with house member", :vcr do
     
     visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
     choose "#{@bill_1.bill_id}_yes"
