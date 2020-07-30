@@ -19,6 +19,10 @@ class SinatraService
     get_json('/api/v1/bills')
   end
 
+  def get_image(congress_id)
+    conn.get("/api/v1/images?congress_id=#{congress_id}").env[:response_body]
+  end
+
   private
 
   def conn
@@ -30,5 +34,10 @@ class SinatraService
   def get_json(url, params = nil)
     response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
+  end
+  
+  def get_json_not_symbolized(url, params = nil)
+    response = conn.get(url, params)
+    JSON.parse(response.body)
   end
 end
