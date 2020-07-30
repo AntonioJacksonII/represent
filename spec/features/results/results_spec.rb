@@ -93,7 +93,6 @@ describe "Logged in User" do
     within('.disagreed-votes') do
       expect(page).to have_content("Great American Outdoors Act")
     end
-    save_and_open_page
   end
 
   it "User sees results from comparison with senator who is a favorite", :vcr do
