@@ -19,6 +19,10 @@ class SinatraService
     get_json('/api/v1/bills')
   end
 
+  def get_image(congress_id)
+    conn.get("/api/v1/images?congress_id=#{congress_id}").env[:response_body]
+  end
+
   private
 
   def conn
