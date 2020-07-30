@@ -17,7 +17,6 @@ describe "Logged in User" do
       short_title: "William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021",
       primary_subject: "Armed Forces and National Security"
     )
-
     @bill_2 =   Bill.create!(
       bill_id: "hr1957-116",
       summary_short:
@@ -37,14 +36,14 @@ describe "Logged in User" do
       primary_subject: "Armed Forces and National Security"
      )
 
-    @house_bill_vote1 = create(:house_bill_vote, roll_call: 153, offset: 0, bill_id: @bill_1.id)
-    @house_bill_vote2 = create(:house_bill_vote, roll_call: 152, offset: 20, bill_id: @bill_2.id)
+    @house_bill_vote1 = create(:house_bill_vote, roll_call: 153, session: 2, bill_id: @bill_1.id)
+    @house_bill_vote2 = create(:house_bill_vote, roll_call: 152, session: 2, bill_id: @bill_2.id)
 
-    @senate_bill_vote1 = SenateBillVote.create!(roll_call: 140, offset: 0, bill: @bill_3)
-    @senate_bill_vote2 = SenateBillVote.create!(roll_call: 121, offset: 20, bill: @bill_2)
+    @senate_bill_vote1 = SenateBillVote.create!(roll_call: 140, session: 2, bill: @bill_3)
+    @senate_bill_vote2 = SenateBillVote.create!(roll_call: 121, session: 2, bill: @bill_2)
   end
   
-  it "User sees results from comparison with house member", :vcr do
+  it "User sees results from comparison with house member" do
     
     visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
     choose "#{@bill_1.bill_id}_yes"
