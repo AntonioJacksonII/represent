@@ -7,14 +7,14 @@
 <div class="sidenav" style="margin-top: 10px;">
   <p>Representatives in <%= @state %></p>
   <% @other_reps.each do |rep| %>
-    <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
+    <p><%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %></p>
   <% end %>
 </div>
 
 <div class="senate-sidenav" style="margin-top: 10px;">
   <p>Senators in <%= @state %></p>
   <% @senators.each do |senator| %>
-    <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
+  <p><%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%></p>
   <% end %>
 </div>
 <div class="right-side-nav">
@@ -52,8 +52,8 @@
         <% end %>
         <% if @rep.dw_nominate %>
           <br class='rep-dw_nominate'>DW NOMINATE Score: <%= @rep.dw_nominate %>
-          <span class="tooltip-data tool-format">?</span>
-          <div id="popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal their positions are - the closer they are to +1, the more conservative their positions are.</div>
+          <span class="dw-data tool-format">?</span>
+          <div id="popup" class="dw-popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal their positions are - the closer they are to +1, the more conservative their positions are.</div>
         <% end %>
         <% if @rep.office %>
           <br class='rep-office'>D.C. Office: <%= @rep.office %>
@@ -90,7 +90,7 @@
         <% end %>
       </div>
       <div class="col-lg-3">
-        <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
+        <%= image_tag("https://github.com/unitedstates/images/blob/gh-pages/congress/450x550/#{@rep.congress_id}.jpg?raw=true", class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image', alt:"/images/image-not-found.png") %>
         <br>
         <br>
         <a class="btn btn-primary" href="/bills?name=<%= @rep.full_name %>&congress_id=<%= @rep.congress_id %>">Compare Positions</a>
@@ -108,5 +108,12 @@ e.onmouseover = function() {
 }
 e.onmouseout = function() {
   document.getElementById('popup').style.display = 'none';
+}
+var q = document.querySelector('.dw-data');
+q.onmouseover = function() {
+  document.querySelector('.dw-popup').style.display = 'block';
+}
+q.onmouseout = function() {
+  document.querySelector('.dw-popup').style.display = 'none';
 }
 </script>
