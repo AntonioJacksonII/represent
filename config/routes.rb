@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/comparison', to: 'comparison#index'
 
   post '/results/:congress_id', to: 'results#create'
-  get '/results/:congress_id', to: 'results#show'
+  get '/results/:congress_id', to: 'results#show', as: 'results'
 end
 
 
