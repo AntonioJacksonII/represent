@@ -4,23 +4,24 @@
 <head>
   <title>Representative Show Page</title>
 </head>
-<div class="sidenav" style="margin-top: 10px;">
+<div class="sidenav" style="margin-top: 15px;">
   <p>Representatives in <%= @state %></p>
   <% @other_reps.each do |rep| %>
-    <%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %>
+    <p><%= link_to "#{rep.first_name} #{rep.last_name}", house_member_path(rep.id) %></p>
   <% end %>
 </div>
 
-<div class="senate-sidenav" style="margin-top: 10px;">
+<div class="senate-sidenav">
   <p>Senators in <%= @state %></p>
   <% @senators.each do |senator| %>
-    <%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%>
+  <p><%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%></p>
   <% end %>
 </div>
+<% if @rep.twitter_account %>
 <div class="right-side-nav">
   <a class="twitter-timeline" href="https://twitter.com/<%= @rep.twitter_account %>?ref_src=twsrc%5Etfw">Tweets by RepAOC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-
+<% end %>
   <body>
     <section class='rep-info' style="margin-left:225px;margin-top:25px;">
     <div class="row align-items-center my-5">
@@ -52,8 +53,13 @@
         <% end %>
         <% if @rep.dw_nominate %>
           <br class='rep-dw_nominate'>DW NOMINATE Score: <%= @rep.dw_nominate %>
+<<<<<<< HEAD
+          <span class="dw-data tool-format">?</span>
+          <div id="popup" class="dw-popup">The DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal their positions are - the closer they are to +1, the more conservative their positions are.</div>
+=======
           <span class="tooltip-data tool-format">?</span>
           <div id="popup">DW-Nominate is a measure of a representative’s partisanship. The closer to -1 a representative is, the more liberal their positions are - the closer they are to +1, the more conservative their positions are.</div>
+>>>>>>> master
         <% end %>
         <% if @rep.office %>
           <br class='rep-office'>D.C. Office: <%= @rep.office %>
@@ -108,5 +114,12 @@ e.onmouseover = function() {
 }
 e.onmouseout = function() {
   document.getElementById('popup').style.display = 'none';
+}
+var q = document.querySelector('.dw-data');
+q.onmouseover = function() {
+  document.querySelector('.dw-popup').style.display = 'block';
+}
+q.onmouseout = function() {
+  document.querySelector('.dw-popup').style.display = 'none';
 }
 </script>

@@ -27,10 +27,16 @@ class ResultsController < ApplicationController
         yes_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.offset
       end 
 
+      ##change offset to session
+
+      ## need session column in house_bill votes and senate_bill_votes
+
       no_roll_calls = {}
       no_array.each do |bill_id|
         no_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.offset
       end
+
+      ##change offset to session
       
       yes_hash = {}
       yes_roll_calls.each do |roll_call, offset|

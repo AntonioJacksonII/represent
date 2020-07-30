@@ -1,5 +1,5 @@
 <% if current_user.has_favorites? %>
-<div class="senate-sidenav">
+<div id="dashboard-senate-sidenav">
   <h4>Favorites</h4>
   <p>Senators</p>
   <% @senator_favs.each do |senator| %>
@@ -7,7 +7,7 @@
   <% end %>
 </div>
 
-<div class="sidenav">
+<div id="dashboard-rep-sidenav">
   <p>Representatives</p>
   <% @house_favs.each do |member| %>
     <a href="/house_members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a>
