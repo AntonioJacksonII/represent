@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   post '/house_members/:id/favorites', to: 'house_members_favorites#create'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
-  get '/representatives/:state_abbreviation', to: 'representatives#index'
   get '/dashboard', to: 'dashboard#show'
   get '/bills', to: 'bills#index'
   get '/comparison', to: 'comparison#index'
