@@ -24,29 +24,24 @@ class ResultsController < ApplicationController
 
       yes_roll_calls = {}
       yes_array.each do |bill_id|
-        yes_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.offset
+        yes_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.session
       end 
-
-      ##change offset to session
-
-      ## need session column in house_bill votes and senate_bill_votes
 
       no_roll_calls = {}
       no_array.each do |bill_id|
-        no_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.offset
+        no_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.session
       end
 
-      ##change offset to session
-      
       yes_hash = {}
-      yes_roll_calls.each do |roll_call, offset|
-        yes_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], offset)["data"]["#{roll_call}"]
+      yes_roll_calls.each do |roll_call, session|
+        yes_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], roll_call, "senate", session)["data"]["#{roll_call}"]
       end 
-
+      
       no_hash = {}
-      no_roll_calls.each do |roll_call, offset|
-        no_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], offset)["data"]["#{roll_call}"]
+      no_roll_calls.each do |roll_call, session|
+        no_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], roll_call, "senate", session)["data"]["#{roll_call}"]
       end 
+   
       
       matching_array = []
       not_matching_array = []
@@ -88,23 +83,24 @@ class ResultsController < ApplicationController
       house_member = HouseMember.find_by(congress_id: params[:congress_id])
       yes_roll_calls = {}
       yes_array.each do |bill_id|
-        yes_roll_calls[Bill.find_by(bill_id: bill_id).house_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).house_bill_vote.offset
+        yes_roll_calls[Bill.find_by(bill_id: bill_id).house_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).house_bill_vote.session
       end 
 
       no_roll_calls = {}
       no_array.each do |bill_id|
-        no_roll_calls[Bill.find_by(bill_id: bill_id).house_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).house_bill_vote.offset
+        no_roll_calls[Bill.find_by(bill_id: bill_id).house_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).house_bill_vote.session
       end
       
       yes_hash = {}
-      yes_roll_calls.each do |roll_call, offset|
-        yes_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], offset)["data"]["#{roll_call}"]
+      yes_roll_calls.each do |roll_call, session|
+        yes_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], roll_call, "house", session)["data"]["#{roll_call}"]
       end 
 
       no_hash = {}
-      no_roll_calls.each do |roll_call, offset|
-        no_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], offset)["data"]["#{roll_call}"]
+      no_roll_calls.each do |roll_call, session|
+        no_hash["#{roll_call}"] = SinatraService.new.get_member_votes(results_params[:congress_id], roll_call, "house", session)["data"]["#{roll_call}"]
       end 
+
       
       matching_array = []
       not_matching_array = []
