@@ -34,66 +34,10 @@
           <% end %>
         </ul>
         <container class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Select State
-          </a>
-          <div class="dropdown-menu dropdown-menu-right nav-scrollable" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/representatives/AL">Alabama</a>
-            <a class="dropdown-item" href="/representatives/AK">Alaska</a>
-            <a class="dropdown-item" href="/representatives/AZ">Arizona</a>
-            <a class="dropdown-item" href="/representatives/AR">Arkansas</a>
-            <a class="dropdown-item" href="/representatives/CA">California</a>
-            <a class="dropdown-item" href="/representatives/CO">Colorado</a>
-            <a class="dropdown-item" href="/representatives/CT">Connecticut</a>
-            <a class="dropdown-item" href="/representatives/DE">Delaware</a>
-            <a class="dropdown-item" href="/representatives/FL">Florida</a>
-            <a class="dropdown-item" href="/representatives/GA">Georgia</a>
-            <a class="dropdown-item" href="/representatives/HI">Hawaii</a>
-            <a class="dropdown-item" href="/representatives/ID">Idaho</a>
-            <a class="dropdown-item" href="/representatives/IL">Illinois</a>
-            <a class="dropdown-item" href="/representatives/IN">Indiana</a>
-            <a class="dropdown-item" href="/representatives/IA">Iowa</a>
-            <a class="dropdown-item" href="/representatives/KS">Kansas</a>
-            <a class="dropdown-item" href="/representatives/KY">Kentucky</a>
-            <a class="dropdown-item" href="/representatives/LA">Louisiana</a>
-            <a class="dropdown-item" href="/representatives/ME">Maine</a>
-            <a class="dropdown-item" href="/representatives/MD">Maryland</a>
-            <a class="dropdown-item" href="/representatives/MA">Massachusetts</a>
-            <a class="dropdown-item" href="/representatives/MI">Michigan</a>
-            <a class="dropdown-item" href="/representatives/MN">Minnesota</a>
-            <a class="dropdown-item" href="/representatives/MS">Mississippi</a>
-            <a class="dropdown-item" href="/representatives/MO">Missouri</a>
-            <a class="dropdown-item" href="/representatives/MT">Montana</a>
-            <a class="dropdown-item" href="/representatives/NE">Nebraska</a>
-            <a class="dropdown-item" href="/representatives/NV">Nevada</a>
-            <a class="dropdown-item" href="/representatives/NH">New Hampshire</a>
-            <a class="dropdown-item" href="/representatives/NJ">New Jersey</a>
-            <a class="dropdown-item" href="/representatives/NM">New Mexico</a>
-            <a class="dropdown-item" href="/representatives/NY">New York</a>
-            <a class="dropdown-item" href="/representatives/NC">North Carolina</a>
-            <a class="dropdown-item" href="/representatives/ND">North Dakota</a>
-            <a class="dropdown-item" href="/representatives/OH">Ohio</a>
-            <a class="dropdown-item" href="/representatives/OK">Oklahoma</a>
-            <a class="dropdown-item" href="/representatives/OR">Oregon</a>
-            <a class="dropdown-item" href="/representatives/PA">Pennsylvania</a>
-            <a class="dropdown-item" href="/representatives/RI">Rhode Island</a>
-            <a class="dropdown-item" href="/representatives/SC">South Carolina</a>
-            <a class="dropdown-item" href="/representatives/SD">South Dakota</a>
-            <a class="dropdown-item" href="/representatives/TN">Tennessee</a>
-            <a class="dropdown-item" href="/representatives/TX">Texas</a>
-            <a class="dropdown-item" href="/representatives/UT">Utah</a>
-            <a class="dropdown-item" href="/representatives/VT">Vermont</a>
-            <a class="dropdown-item" href="/representatives/VA">Virginia</a>
-            <a class="dropdown-item" href="/representatives/WA">Washington</a>
-            <a class="dropdown-item" href="/representatives/WV">West Virginia</a>
-            <a class="dropdown-item" href="/representatives/WI">Wisconsin</a>
-            <a class="dropdown-item" href="/representatives/WY">Wyoming</a>
-          </div>
+          <%= render "/layouts/state_select" %>
         </container>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2 search_by_name" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <%= render "/layouts/search" %>
         </form>
         <div class="nav-item">
           <a class="nav-link"><img src="https://www.pngkit.com/png/full/979-9796569_english-plain-american-flag.png" width='45' height='30'></a>
