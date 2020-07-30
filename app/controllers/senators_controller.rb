@@ -6,7 +6,6 @@ class SenatorsController < ApplicationController
     @representatives = HouseMember.by_state(@senator.state)
     @state = ::States[@senator.state]
     @image = SinatraService.new.get_image(@senator.congress_id)
-    # binding.pry
   end
 
   private
