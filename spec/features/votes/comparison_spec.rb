@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'on the comparison page' do
-  it 'lists a specific bill selected by the visitor/user' do
+  xit 'lists a specific bill selected by the visitor/user' do
     aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
     json_response = File.read('spec/fixtures/bill.json')
     parser = PropublicaParser.new
@@ -26,7 +26,7 @@ RSpec.describe 'on the comparison page' do
     expect(current_path).to eq("/results/#{aoc.congress_id}")
   end
 
-  it 'lists bills selected by topic' do
+  xit 'lists bills selected by topic' do
     aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
     json_response = File.read('spec/fixtures/bill.json')
     parser = PropublicaParser.new
