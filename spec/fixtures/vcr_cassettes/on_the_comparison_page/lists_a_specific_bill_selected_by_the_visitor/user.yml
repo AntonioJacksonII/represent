@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/member_votes?chamber=house&member_id=O000172&roll_call=152&session=2
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/member_votes?chamber=house&member_id=O000172&roll_call=172&session=2
     body:
       encoding: US-ASCII
       string: ''
@@ -23,17 +23,17 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '21'
+      - '22'
       X-Content-Type-Options:
       - nosniff
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 30 Jul 2020 23:49:13 GMT
+      - Thu, 30 Jul 2020 23:53:00 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"152":"No"}}'
-  recorded_at: Thu, 30 Jul 2020 23:49:13 GMT
+      string: '{"data":{"172":"Yes"}}'
+  recorded_at: Thu, 30 Jul 2020 23:53:00 GMT
 recorded_with: VCR 6.0.0
