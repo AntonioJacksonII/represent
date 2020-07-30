@@ -9,6 +9,8 @@ describe "Logged in User" do
     @aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
     @lamar = Senator.create!(first_name: 'Lamar', last_name: 'Alexander', congress_id: "A000360")
 
+    HouseFavorite.create(house_member_id: @aoc.id, user_id: @user1.id)
+
     @bill_1 =   Bill.create!(
       bill_id: "hr6395-116",
       summary_short:
@@ -18,7 +20,6 @@ describe "Logged in User" do
       primary_subject: "Armed Forces and National Security"
     )
 
-    
     @bill_2 =   Bill.create!(
       bill_id: "hr1957-116",
       summary_short:
@@ -37,15 +38,6 @@ describe "Logged in User" do
       short_title: "William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021",
       primary_subject: "Armed Forces and National Security"
      )
-
-    # @bill_4 =   Bill.create!(
-    #   bill_id: "hr1957-116",
-    #   summary_short:
-    #   "To authorize appropriations for fiscal year 2021 for military activities of the Department of Defense and for military construction, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
-    #   congress_url: "https://www.congress.gov/bill/116th-congress/house-bill/6395",
-    #   short_title: "William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021",
-    #   primary_subject: "Armed Forces and National Security"
-    #  )
 
     @house_bill_vote1 = create(:house_bill_vote, roll_call: 153, offset: 0, bill_id: @bill_1.id)
     @house_bill_vote2 = create(:house_bill_vote, roll_call: 152, offset: 20, bill_id: @bill_2.id)
@@ -70,6 +62,25 @@ describe "Logged in User" do
     choose "#{@bill_1.bill_id}_yes"
     choose "#{@bill_2.bill_id}_yes"
     click_button('Submit Your Votes and Get Your Comparison Score')
+
+    comparison_score = find(".comparison-score").text
+
+    within('.comparison-score') do
+      expect(page).to have_content(@aoc.full_name)
+    end
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+
+    expect(page).to have_css(".agreed-votes")
+    within('.agreed_votes') do
+      expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
+    end
+
+    expect(page).to have_css(".disagreed-votes")
+    within('.disagreed_votes') do
+      expect(page).to have_content("Great American Outdoors Act")
+    end
   end
 
   it "User sees results from comparison with senator", :vcr do
@@ -78,6 +89,22 @@ describe "Logged in User" do
     choose "#{@bill_3.bill_id}_yes"
     choose "#{@bill_2.bill_id}_no"
     click_button('Submit Your Votes and Get Your Comparison Score')
+
+    comparison_score = css(".comparison-score").text
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+
+    
+    expect(page).to have_css(".agreed-votes")
+    within('.agreed_votes') do
+      expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
+    end
+
+    expect(page).to have_css(".disagreed-votes")
+    within('.disagreed_votes') do
+      expect(page).to have_content("Great American Outdoors Act")
+    end
   end
 
   xit "User has a prefabbed twitter response to send to representative" do

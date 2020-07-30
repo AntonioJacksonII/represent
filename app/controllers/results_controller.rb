@@ -1,7 +1,9 @@
 class ResultsController < ApplicationController
 
   def show
-    binding.pry
+    
+    @rep = Senator.find_by(congress_id: params[:congress_id]) || HouseMember.find_by(congress_id: params[:congress_id])
+    @comparison_score = params[:comparison_score]
   end
 
   def create
@@ -17,6 +19,8 @@ class ResultsController < ApplicationController
     end 
 
     if Senator.includes?(params[:congress_id])
+      senator = Senator.find_by(congress_id: params[:congress_id])
+
       yes_roll_calls = {}
       yes_array.each do |bill_id|
         yes_roll_calls[Bill.find_by(bill_id: bill_id).senate_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).senate_bill_vote.offset
@@ -64,10 +68,16 @@ class ResultsController < ApplicationController
       end 
 
       comparison_score = matching_array.length.to_f / (matching_array.length + not_matching_array.length).to_f
+
+      if current_user.senator_favorites.find_by(senator_id: senator.id)
+        favorite = current_user.senator_favorites.find_by(senator_id: senator.id)
+        favorite.comparison_score = comparison_score
+      end 
       
       redirect_to results_path(params[:congress_id], comparison_score: comparison_score, matching_bills: matching_bills, not_matching_bills: not_matching_bills)
 
     elsif HouseMember.includes?(params[:congress_id])
+      house_member = HouseMember.find_by(congress_id: params[:congress_id])
       yes_roll_calls = {}
       yes_array.each do |bill_id|
         yes_roll_calls[Bill.find_by(bill_id: bill_id).house_bill_vote.roll_call] = Bill.find_by(bill_id: bill_id).house_bill_vote.offset
@@ -115,6 +125,11 @@ class ResultsController < ApplicationController
       end 
 
       comparison_score = matching_array.length.to_f / (matching_array.length + not_matching_array.length).to_f
+
+      if current_user.house_favorites.find_by(house_member_id: house_member.id)
+        favorite = current_user.house_favorites.find_by(house_member_id: house_member.id)
+        favorite.comparison_score = comparison_score
+      end 
       
       redirect_to results_path(params[:congress_id], comparison_score: comparison_score, matching_bills: matching_bills, not_matching_bills: not_matching_bills)
     else
