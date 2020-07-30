@@ -19,10 +19,22 @@ class SinatraService
     get_json('/api/v1/bills')
   end
 
+  def get_member_votes(member_id, offset)
+    params = { member_id: member_id, offset: offset}
+
+    get_json_not_symbolized('/api/v1/member_votes', params)
+  end
+
   private
 
+  # def conn
+  #   Faraday.new(url: "http://floating-cliffs-29262.herokuapp.com") do |f|
+  #     f.adapter Faraday.default_adapter
+  #   end
+  # end
+
   def conn
-    Faraday.new(url: "http://floating-cliffs-29262.herokuapp.com") do |f|
+    Faraday.new(url: "http://localhost:4568") do |f|
       f.adapter Faraday.default_adapter
     end
   end
@@ -30,5 +42,10 @@ class SinatraService
   def get_json(url, params = nil)
     response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_json_not_symbolized(url, params = nil)
+    response = conn.get(url, params)
+    JSON.parse(response.body)
   end
 end

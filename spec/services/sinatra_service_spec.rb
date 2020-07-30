@@ -62,4 +62,15 @@ describe 'Sinatra Request API Service' do
     expect(senators[:data].first).to have_key(:votes_with_percentage)
     expect(senators[:data].first).to have_key(:votes_without_party_percentage)
   end
+
+  it 'gets all member votes', :vcr do
+    member_id = "O000172"
+    offset = 20 
+
+    member_votes = SinatraService.new.get_member_votes(member_id, offset)
+
+    expect(member_votes["data"]).to be_a(Hash)
+    expect(member_votes["data"]).to have_key("152")
+    expect(member_votes["data"]).to have_key("139")
+  end
 end
