@@ -80,13 +80,13 @@ describe 'Propublica parser' do
     expect(test_bill.congress_url).to eq("https://www.congress.gov/bill/116th-congress/senate-bill/47")
     expect(test_bill.short_title).to eq("John D. Dingell, Jr. Conservation, Management, and Recreation Act")
     expect(test_bill.primary_subject).to eq("Public Lands and Natural Resources")
-    expect(test_bill.house_bill_vote.offset).to eq(760)
+    expect(test_bill.house_bill_vote.session).to eq(1)
     expect(test_bill.house_bill_vote.roll_call).to eq(95)
-    expect(test_bill.senate_bill_vote.offset).to eq(540)
+    expect(test_bill.senate_bill_vote.session).to eq(1)
     expect(test_bill.senate_bill_vote.roll_call).to eq(22)
 
-    expect(Bill.count).to eq(166)
-    expect(HouseBillVote.count).to eq(157)
+    expect(Bill.count).to eq(168)
+    expect(HouseBillVote.count).to eq(159)
     expect(SenateBillVote.count).to eq(18)
   end
 end
