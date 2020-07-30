@@ -3,7 +3,7 @@ FactoryBot.define do
     first_name { Faker::Name.first_name }
     last_name { Faker::Name.last_name }
     sequence(:congress_id) {|n| "A00010#{n}" }
-    sequence(:dob) {|n| "1955-09-#{n}" }
+    dob {"1955-#{Faker::Number.between(from: 1, to: 12)}-#{Faker::Number.between(from: 1, to: 28)}" }
     gender { Faker::Gender.short_binary_type.upcase }
     party { "D" }
     leadership_role { nil }

@@ -22,7 +22,6 @@ describe 'Representative Show Pages' do
       expect(page).to_not have_css('.rep-leadership')
       expect(page).to_not have_css('.rep-facebook')
       expect(page).to have_css('.rep-twitter')
-      expect(page).to have_css('.rep-govtrack')
       expect(page).to have_css('.rep-url')
       expect(page).to_not have_css('.rep-contact')
       expect(page).to have_css('.rep-cook_pvi')
@@ -31,13 +30,10 @@ describe 'Representative Show Pages' do
       expect(page).to have_css('.rep-missed_votes')
       expect(page).to have_css('.rep-office')
       expect(page).to have_css('.rep-phone')
-      expect(page).to have_css('.rep-state')
       expect(page).to have_css('.rep-district')
-      expect(page).to have_css('.rep-at_large')
       expect(page).to have_css('.rep-missed_votes_percentage')
       expect(page).to have_css('.rep-votes_with_percentage')
       expect(page).to have_css('.rep-votes_without_party_percentage')
-      expect(page).to have_css('.rep-congress_id')
     end
     expect(page).to have_link('Compare Positions')
   end
@@ -63,7 +59,6 @@ describe 'Representative Show Pages' do
       expect(page).to_not have_css('.sen-leadership')
       expect(page).to have_css('.sen-facebook')
       expect(page).to have_css('.sen-twitter')
-      expect(page).to have_css('.sen-govtrack')
       expect(page).to have_css('.sen-url')
       expect(page).to have_css('.sen-contact')
       expect(page).to have_css('.sen-dw_nominate')
@@ -76,9 +71,6 @@ describe 'Representative Show Pages' do
       expect(page).to have_css('.sen-missed_votes_percentage')
       expect(page).to have_css('.sen-votes_with_percentage')
       expect(page).to have_css('.sen-votes_without_party_percentage')
-      expect(page).to have_css('.sen-congress_id')
-      expect(page).to have_css('.sen-senate_class')
-      expect(page).to have_css('.sen-state_rank')
       expect(page).to have_link('Compare Positions')
     end
   end

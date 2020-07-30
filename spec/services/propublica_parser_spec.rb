@@ -84,5 +84,9 @@ describe 'Propublica parser' do
     expect(test_bill.house_bill_vote.roll_call).to eq(95)
     expect(test_bill.senate_bill_vote.offset).to eq(540)
     expect(test_bill.senate_bill_vote.roll_call).to eq(22)
+
+    expect(Bill.count).to eq(166)
+    expect(HouseBillVote.count).to eq(157)
+    expect(SenateBillVote.count).to eq(18)
   end
 end
