@@ -2,7 +2,7 @@
 <div class="senate-sidenav">
   <h4>Favorites</h4>
   <p>Senators</p>
-  <% @senator_favorites.each do |senator| %>
+  <% @senator_favs.each do |senator| %>
     <a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a>
   <% end %>
 </div>

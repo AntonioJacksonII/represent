@@ -4,6 +4,6 @@ class Bill < ApplicationRecord
   has_one :senate_bill_vote, dependent: :destroy
 
   def self.topics
-    pluck(:primary_subject)
+    pluck(:primary_subject).uniq!
   end
 end
