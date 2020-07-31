@@ -31,6 +31,7 @@ RSpec.describe Senator, type: :model do
 
   describe 'class methods' do
     before(:each) do
+      @user1 = create(:user)
       @congress_id1 = "A000360"
       @congress_id2 = "O000172"
       @senator1 = create(:senator, state: "CO", congress_id: "A000360")
@@ -43,6 +44,13 @@ RSpec.describe Senator, type: :model do
 
       expect(Senator.includes?(@congress_id1)).to eq(true)
       expect(Senator.includes?(@congress_id2)).to eq(false)
+    end
+
+    it "can find favorites for a user" do
+      SenatorFavorite.create(user_id: @user1.id, senator_id: @senator1.id)
+      SenatorFavorite.create(user_id: @user1.id, senator_id: @senator2.id, comparison_score: 80)
+
+      expect(Senator.senator_favorite_for_user(@user1.id)).to eq([@senator2])
     end
   end
 end
