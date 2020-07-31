@@ -159,17 +159,4 @@ describe "Logged in User" do
       expect(page).to have_content("50%")
     end
   end
-
-  xit "User has a prefabbed twitter response to send to representative" do
-
-    visit dashboard_path
-
-    expect(page).to have_css(".cards", count: 6)
-
-    within(first('.cards')) do
-      expect(page).to have_css(".card-title")
-      expect(page).to have_css(".card-source")
-      expect(page).to have_css(".card-link")
-    end
-  end
 end
