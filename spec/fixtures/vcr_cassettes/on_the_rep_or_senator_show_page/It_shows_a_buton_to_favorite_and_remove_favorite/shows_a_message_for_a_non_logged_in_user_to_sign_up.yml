@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    uri: http://represent-sinatra.herokuapp.com/api/v1/images?congress_id=E000296
     body:
       encoding: US-ASCII
       string: ''
@@ -29,16 +29,16 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 30 Jul 2020 23:49:07 GMT
+      - Fri, 31 Jul 2020 03:49:31 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
-  recorded_at: Thu, 30 Jul 2020 23:49:07 GMT
+  recorded_at: Fri, 31 Jul 2020 03:49:31 GMT
 - request:
     method: get
-    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=A000374
+    uri: http://represent-sinatra.herokuapp.com/api/v1/images?congress_id=A000374
     body:
       encoding: US-ASCII
       string: ''
@@ -65,11 +65,11 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 30 Jul 2020 23:49:07 GMT
+      - Fri, 31 Jul 2020 03:49:31 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: https://theunitedstates.io/images/congress/450x550/A000374.jpg
-  recorded_at: Thu, 30 Jul 2020 23:49:08 GMT
+  recorded_at: Fri, 31 Jul 2020 03:49:31 GMT
 recorded_with: VCR 6.0.0

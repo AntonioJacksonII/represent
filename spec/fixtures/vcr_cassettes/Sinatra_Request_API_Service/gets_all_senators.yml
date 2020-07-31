@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/senators
+    uri: http://represent-sinatra.herokuapp.com/api/v1/senators
     body:
       encoding: US-ASCII
       string: ''
@@ -29,7 +29,7 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 30 Jul 2020 23:49:13 GMT
+      - Fri, 31 Jul 2020 03:49:40 GMT
       Via:
       - 1.1 vegur
     body:
@@ -150,5 +150,5 @@ http_interactions:
         17:02:05 -0400","office":"555 Dirksen Senate Office Building","phone":"202-224-6253","state":"MS","senate_class":"1","state_rank":"senior","dob":"1951-07-05","congress_id":"W000437","missed_votes_percentage":0.17,"votes_with_percentage":98.43,"votes_without_party_percentage":1.57},{"first_name":"Ron","last_name":"Wyden","gender":"M","party":"D","leadership_role":null,"twitter_account":"RonWyden","facebook_account":null,"govtrack_id":300100,"url":"https://www.wyden.senate.gov","contact_form":"https://www.wyden.senate.gov/contact/","in_office":true,"dw_nominate":-0.328,"next_election":"2022","total_votes":580,"missed_votes":10,"last_updated":"2020-07-30
         17:02:03 -0400","office":"221 Dirksen Senate Office Building","phone":"202-224-5244","state":"OR","senate_class":"3","state_rank":"senior","dob":"1949-05-03","congress_id":"W000779","missed_votes_percentage":1.72,"votes_with_percentage":85.48,"votes_without_party_percentage":14.52},{"first_name":"Todd","last_name":"Young","gender":"M","party":"R","leadership_role":null,"twitter_account":"SenToddYoung","facebook_account":"SenatorToddYoung","govtrack_id":412428,"url":"https://www.young.senate.gov","contact_form":"https://www.young.senate.gov/contact","in_office":true,"dw_nominate":0.474,"next_election":"2022","total_votes":580,"missed_votes":8,"last_updated":"2020-07-30
         17:02:04 -0400","office":"185 Dirksen Senate Office Building","phone":"202-224-5623","state":"IN","senate_class":"3","state_rank":"senior","dob":"1972-08-24","congress_id":"Y000064","missed_votes_percentage":1.38,"votes_with_percentage":94.19,"votes_without_party_percentage":5.81}]}'
-  recorded_at: Thu, 30 Jul 2020 23:49:13 GMT
+  recorded_at: Fri, 31 Jul 2020 03:49:40 GMT
 recorded_with: VCR 6.0.0
