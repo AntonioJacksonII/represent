@@ -1,0 +1,31 @@
+<div class="container" style="margin-top:100px;">
+  <div class="row">
+    <div class="col">
+    <h1 class="text-center comparison-score">Your Comparison Score With <%= @rep.full_name %> is <%= number_to_percentage(@comparison_score, precision: 0) %> </h1>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+<% if @matching_bills %>
+<div class="container">
+  <div class="row">
+    <div class="col-6 text-center agreed-votes">
+      <h2>Bills Where You Agreed</h2>
+      <% @matching_bills.each do |bill| %>
+        <p> <%= bill %></p>
+      <% end %>
+    </div>
+<% end %>
+<% if @not_matching_bills %>
+
+    <div class="col-6 text-center disagreed-votes">
+      <h2>Bills Where You Disagreed</h2>
+      <% @not_matching_bills.each do |bill| %>
+      <p> <%= bill %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>
+

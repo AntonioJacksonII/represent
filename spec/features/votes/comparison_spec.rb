@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'on the comparison page' do
-  it 'lists a specific bill selected by the visitor/user' do
+  it 'lists a specific bill selected by the visitor/user', :vcr do
     aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
+
     parser = PropublicaParser.new
     parser.parse_bills
 
@@ -27,13 +28,17 @@ RSpec.describe 'on the comparison page' do
     expect(current_path).to eq("/results/#{aoc.congress_id}")
   end
 
-  it 'lists bills selected by topic' do
+  it 'lists bills selected by topic', :vcr do
     aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
     parser = PropublicaParser.new
     parser.parse_bills
 
     bill_1 = Bill.last
     bill_2 = Bill.where(bill_id: "hr1957-116").first
+
+    house_bill_vote1 = create(:house_bill_vote, roll_call: 153, session: 2, bill_id: bill_1.id)
+    house_bill_vote2 = create(:house_bill_vote, roll_call: 153, session: 2, bill_id: bill_2.id)
+
 
     visit "/comparison?topic=Public%20Lands%20and%20Natural%20Resources&id=#{aoc.congress_id}"
 

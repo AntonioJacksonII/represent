@@ -23,6 +23,12 @@ class SinatraService
     conn.get("/api/v1/images?congress_id=#{congress_id}").env[:response_body]
   end
 
+  def get_member_votes(member_id, roll_call, chamber, session)
+    params = { member_id: member_id, roll_call: roll_call, chamber: chamber, session: session}
+
+    get_json_not_symbolized('/api/v1/member_votes', params)
+  end
+
   private
 
   def conn

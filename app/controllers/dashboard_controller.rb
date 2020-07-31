@@ -2,9 +2,9 @@ class DashboardController < ApplicationController
   layout "dashboard_layout"
 
   def show
-    @house_favorites = current_user.house_members
-    @senator_favorites = current_user.senators
-    @articles = ArticleSearch.new.get_articles(all_favorites(@house_favorites, @senator_favorites), "relevance", "en", 6)
+    @house_favs = current_user.house_members
+    @senator_favs = current_user.senators
+    @articles = ArticleSearch.new.get_articles(all_favorites(@house_favs, @senator_favs), "relevance", "en", 6)
     @compared_reps = current_user.compared_senators + current_user.compared_house_members
   end
   

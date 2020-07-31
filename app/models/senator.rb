@@ -9,4 +9,8 @@ class Senator < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def self.includes?(congress_id)
+    self.exists?(congress_id: "#{congress_id}")
+  end 
 end
