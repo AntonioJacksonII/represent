@@ -32,7 +32,7 @@ class SinatraService
   private
 
   def conn
-    Faraday.new(url: "http://floating-cliffs-29262.herokuapp.com") do |f|
+    Faraday.new(url: "http://represent-sinatra.herokuapp.com") do |f|
       f.adapter Faraday.default_adapter
     end
   end
@@ -41,7 +41,7 @@ class SinatraService
     response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
   end
-  
+
   def get_json_not_symbolized(url, params = nil)
     response = conn.get(url, params)
     JSON.parse(response.body)
