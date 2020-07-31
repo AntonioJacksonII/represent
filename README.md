@@ -87,7 +87,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* [**Antonio Jackson**] (https://github.com/AntonioJacksonII) - [**Rostam Mahabadi**] (https://github.com/Rostammahabadi) - [**Derek Borski**] (https://github.com/dborski) - [**Alex Pariseau**] (https://github.com/arpariseau)
+* **Antonio Jackson** (https://github.com/AntonioJacksonII) - **Rostam Mahabadi** (https://github.com/Rostammahabadi) - **Derek Borski** (https://github.com/dborski) - **Alex Pariseau** (https://github.com/arpariseau)
 
 
 ## License
