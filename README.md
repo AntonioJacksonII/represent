@@ -43,23 +43,13 @@ This should result in 100 Senator objects and 437 HouseMember objects matching t
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+To run the tests, simply execute:
 
 ```
-Give an example
+bundle exec rspec
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+There should be 66 passing tests.
 
 ## Built With
 
@@ -70,10 +60,6 @@ Give an example
 * **CSS**
 * **SCSS**
 * **HTML5**
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
