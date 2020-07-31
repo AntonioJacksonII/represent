@@ -31,21 +31,15 @@ If your rails version doesn't start with 5.1, please follow the link [here](http
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To seed the databases, run the following rake tasks:
 
 ```
-Give the example
+rake seed_reps:load
+rake seed_bills:load
 ```
 
-And repeat
+This should result in 100 Senator objects and 437 HouseMember objects matching the active members of the current 116th United States Congress, and 168 Bill objects that correspond to bills that have received recorded passage votes in either the US House of Representatives or the Senate.
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -83,4 +77,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Antonio Jackson** (https://github.com/AntonioJacksonII) - **Rostam Mahabadi** (https://github.com/Rostammahabadi) - **Derek Borski** (https://github.com/dborski) - **Alex Pariseau** (https://github.com/arpariseau)
+- **Antonio Jackson** (https://github.com/AntonioJacksonII) 
+- **Rostam Mahabadi** (https://github.com/Rostammahabadi) 
+- **Derek Borski** (https://github.com/dborski) 
+- **Alex Pariseau** (https://github.com/arpariseau)
