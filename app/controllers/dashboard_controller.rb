@@ -5,7 +5,7 @@ class DashboardController < ApplicationController
     @house_favs = current_user.house_members
     @senator_favs = current_user.senators
     @articles = ArticleSearch.new.get_articles(all_favorites(@house_favs, @senator_favs), "relevance", "en", 6)
-    @compared_reps = current_user.compared_senators(current_user.id) + current_user.compared_house_members(current_user.id)
+    @compared_reps = HouseMember.house_favorites_for_user(current_user.id) + Senator.senator_favorite_for_user(current_user.id)
   end
 
   private
