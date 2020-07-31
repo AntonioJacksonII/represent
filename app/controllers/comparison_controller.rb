@@ -21,7 +21,7 @@ class ComparisonController < ApplicationController
       @bill = bill
     elsif bill
       flash[:failure] = "This bill was not voted on by #{@rep.full_name}"
-      redirect_to bills_path
+      redirect_to "/bills?name=#{@rep.full_name}&congress_id=#{congress_id}"
     elsif all_bills && @rep.class == HouseMember
       @bills = all_bills.find_all do |bill|
         bill.house_bill_vote
