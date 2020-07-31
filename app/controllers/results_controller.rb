@@ -12,11 +12,11 @@ class ResultsController < ApplicationController
     user_votes = results_params.select { |bill_id, vote| vote == "yes" || vote == "no" }
     if Senator.includes?(input_congress_id)
       senator = Senator.find_by(congress_id: input_congress_id)
-      results = senator.compare_with_user(user_votes)
+      results = senator.compare_votes_with_user(user_votes)
       current_user.add_comparison_score(senator.id, 'senate', results) if current_user
     elsif HouseMember.includes?(input_congress_id)
       house_member = HouseMember.find_by(congress_id: input_congress_id)
-      results = house_member.compare_with_user(user_votes)
+      results = house_member.compare_votes_with_user(user_votes)
       current_user.add_comparison_score(house_member.id, "house", results) if current_user
     end
     redirect_to results_path(input_congress_id, results)
