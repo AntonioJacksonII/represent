@@ -17,4 +17,16 @@ class User < ApplicationRecord
   def has_favorites?
     senators != [] || house_members != []
   end
+
+  def add_comparison_score(member_id, type, results)
+    if type == 'house' && house_favorites.find_by(house_member_id: member_id)
+      favorite = house_favorites.find_by(house_member_id: member_id)
+      favorite.update(comparison_score: results[:comparison_score])
+      favorite.save
+    elsif type =='senate' && senator_favorites.find_by(senator_id: member_id)
+      favorite = senator_favorites.find_by(senator_id: member_id)
+      favorite.update(comparison_score: results[:comparison_score])
+      favorite.save
+    end
+  end
 end
