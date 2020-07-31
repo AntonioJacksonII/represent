@@ -65,12 +65,12 @@ describe 'Sinatra Request API Service' do
 
   it 'gets all member votes', :vcr do
     member_id = "O000172"
-    offset = 20 
+    roll_call = 152
+    chamber = "house"
+    session = 2
 
-    member_votes = SinatraService.new.get_member_votes(member_id, offset)
+    member_votes = SinatraService.new.get_member_votes(member_id, roll_call, chamber, session)
 
     expect(member_votes["data"]).to be_a(Hash)
-    expect(member_votes["data"]).to have_key("152")
-    expect(member_votes["data"]).to have_key("139")
   end
 end
