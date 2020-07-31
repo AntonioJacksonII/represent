@@ -37,12 +37,6 @@ class SinatraService
     end
   end
 
-  # def conn
-  #   Faraday.new(url: "http://localhost:4568") do |f|
-  #     f.adapter Faraday.default_adapter
-  #   end
-  # end
-
   def get_json(url, params = nil)
     response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
