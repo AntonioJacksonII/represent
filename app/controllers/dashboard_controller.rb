@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
     @senator_favs = current_user.senators
     @articles = ArticleSearch.new.get_articles(all_favorites(@house_favs, @senator_favs), "relevance", "en", 6)
     @compared_reps = HouseMember.house_favorites_for_user(current_user.id) + Senator.senator_favorite_for_user(current_user.id)
+    @service = SinatraService.new
   end
 
   private

@@ -48,7 +48,7 @@
     <div class="col-3">
       <div class="card representative compared-rep" style="width: 12rem;">
         <img class="card-img-top rep-image"
-          src="https://theunitedstates.io/images/congress/225x275/<%= representative.congress_id %>.jpg" alt="Card image cap">
+          src="<%= @service.get_image(representative.congress_id) %>" alt="Card image cap">
         <div class="card-body">
           <p class="card-text name"><%= representative.full_name %></p>
           <% if representative.class == Senator %>
