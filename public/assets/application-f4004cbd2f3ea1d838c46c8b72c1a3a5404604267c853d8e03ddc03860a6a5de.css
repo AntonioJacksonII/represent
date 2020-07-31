@@ -12018,3 +12018,13 @@ h3 {
   padding-left: 5px;
   overflow-y: auto;
 }
+
+/* line 199, app/assets/stylesheets/application.scss */
+.logo {
+  position: absolute;
+  top: -1.3em;
+  margin-top: 0;
+  width: 90px;
+  height: 100px;
+  margin-left: 15px;
+}

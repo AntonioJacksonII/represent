@@ -1,0 +1,327 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:22 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:22 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:22 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:22 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:23 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:23 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:23 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:23 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:23 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:23 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:24 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=A000374
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/A000374.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:24 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:24 GMT
+- request:
+    method: get
+    uri: http://floating-cliffs-29262.herokuapp.com/api/v1/images?congress_id=E000296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 01:47:24 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/E000296.jpg
+  recorded_at: Fri, 31 Jul 2020 01:47:24 GMT
+recorded_with: VCR 6.0.0

@@ -20,7 +20,7 @@ RSpec.describe "Representatives Index Page" do
       @senator4 = create(:senator, state: "CT", congress_id: "E000296")
     end
 
-    it 'it displays the name of the state in the header' do 
+    it 'it displays the name of the state in the header', :vcr do
       visit '/representatives/CO'
       expect(page).to have_content("Colorado")
 
@@ -30,8 +30,8 @@ RSpec.describe "Representatives Index Page" do
       visit '/representatives/SC'
       expect(page).to have_content("South Carolina")
 
-    end 
-    it 'it displays the names of all house members from that state' do 
+    end
+    it 'it displays the names of all house members from that state', :vcr do
       visit '/representatives/CO'
 
       expect(page).to have_css('.member', count: 7)
@@ -40,9 +40,9 @@ RSpec.describe "Representatives Index Page" do
         expect(page).to have_css(".name")
         expect(page).to have_css(".rep-image")
       end
-    end 
+    end
 
-    it 'it displays the names of all senate members from that state' do 
+    it 'it displays the names of all senate members from that state', :vcr do 
       visit '/representatives/CO'
 
       expect(page).to have_css('.senator', count: 2)
@@ -52,6 +52,6 @@ RSpec.describe "Representatives Index Page" do
           expect(page).to have_css(".rep-image")
       end
 
-    end 
+    end
   end
 end
