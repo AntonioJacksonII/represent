@@ -48,9 +48,9 @@ class PropublicaParser
       separated_info = separate_bills(bill_info)
       bill = Bill.create(separated_info[0])
       bill.create_house_bill_vote(separated_info[1]) unless
-        separated_info[1][:offset].nil?
+        separated_info[1][:roll_call].nil?
       bill.create_senate_bill_vote(separated_info[2]) unless
-        separated_info[2][:offset].nil?
+        separated_info[2][:roll_call].nil?
     end
   end
 
@@ -59,9 +59,9 @@ class PropublicaParser
   def separate_bills(bill_info)
     house_vote_info = {}
     senate_vote_info = {}
-    house_vote_info[:offset] = bill_info.delete(:house_offset)
+    house_vote_info[:session] = bill_info.delete(:house_session)
     house_vote_info[:roll_call] = bill_info.delete(:house_roll_call)
-    senate_vote_info[:offset] = bill_info.delete(:senate_offset)
+    senate_vote_info[:session] = bill_info.delete(:senate_session)
     senate_vote_info[:roll_call] = bill_info.delete(:senate_roll_call)
     [bill_info, house_vote_info, senate_vote_info]
   end

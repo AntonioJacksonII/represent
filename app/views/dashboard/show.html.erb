@@ -2,20 +2,20 @@
 <div id="dashboard-senate-sidenav">
   <h4>Favorites</h4>
   <p>Senators</p>
-  <% @senator_favorites.each do |senator| %>
-    <p><a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a></p>
+  <% @senator_favs.each do |senator| %>
+    <a href="/senators/<%= senator.id %>"><%= senator.first_name %> <%= senator.last_name %></a>
   <% end %>
 </div>
 
 <div id="dashboard-rep-sidenav">
   <p>Representatives</p>
-  <% @house_favorites.each do |member| %>
-    <p><a href="/house_members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a></p>
+  <% @house_favs.each do |member| %>
+    <a href="/house_members/<%= member.id %>"><%= member.first_name %> <%= member.last_name %></a>
   <% end %>
 </div>
 <section style="background:transparent;" class="jumbotron text-center">
   <div class="container">
-    <h1 class="jumbotron-heading">News from Your Favorite Representatives</h1>
+    <h2 class="jumbotron-heading smaller">News from Your Favorite Representatives</h2>
   </div>
 </section>
 <div>
@@ -41,7 +41,7 @@
   </div>
 </div>
 <br><br>
-<h3 class='text-center'>Compared Representatives</h3><br><br>
+<h2 class='text-center'>Compared Representatives</h2><br><br>
 <div class="container">
   <div class="row">
     <% @compared_reps.each do |representative| %>
