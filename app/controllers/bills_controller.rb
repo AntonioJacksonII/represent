@@ -4,5 +4,6 @@ class BillsController < ApplicationController
     @subjects = Bill.topics
     @name = params[:name]
     @congress_id = params[:congress_id]
+    @representative = HouseMember.find_by(congress_id: @congress_id) || Senator.find_by(congress_id: @congress_id)
   end
 end
