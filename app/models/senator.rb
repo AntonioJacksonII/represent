@@ -20,43 +20,34 @@ class Senator < ApplicationRecord
   end
 
   def compare_with_user(user_votes)
-    yes_hash = {}
-    no_hash = {}
+    @results = {}
+    @sorted_bills = {}
     user_votes.each do |bill_id, vote|
       bill = Bill.find_by(bill_id: bill_id)
       roll_call = bill.senate_bill_vote.roll_call
       session = bill.senate_bill_vote.session
-      if vote == 'yes'
-        yes_hash["#{bill_id}"] = SinatraService.new.get_member_votes(congress_id, roll_call, "senate", session)["data"]["#{roll_call}"]
-      elsif vote == 'no'
-        no_hash["#{bill_id}"] = SinatraService.new.get_member_votes(congress_id, roll_call, "senate", session)["data"]["#{roll_call}"]
+      if @results[vote].nil?
+        @results[vote] = [{bill_id => SinatraService.new.get_member_votes(congress_id, roll_call, "senate", session)["data"]["#{roll_call}"]}]
+      else
+        @results[vote] << {bill_id => SinatraService.new.get_member_votes(congress_id, roll_call, "senate", session)["data"]["#{roll_call}"]}
       end
     end
-
-    matching_bills = []
-    not_matching_bills = []
-
-    yes_hash.each do |bill_id, senator_vote|
-      bill_title = Bill.find_by(bill_id: bill_id).short_title
-      if senator_vote == 'Yes'
-        matching_bills << bill_title
-      elsif senator_vote == 'No'
-        not_matching_bills << bill_title
+    @results.each do |user_vote, senator_vote_info|
+      senator_vote_info.each do |bill_id|
+        bill_title = Bill.find_by(bill_id: bill_id.keys.first).short_title
+        if user_vote == bill_id.values.first.downcase && @sorted_bills[:matching].nil?
+          @sorted_bills[:matching] = [bill_title]
+        elsif user_vote == bill_id.values.first.downcase
+          @sorted_bills[:matching] << bill_title
+        elsif @sorted_bills[:not_matching].nil?
+          @sorted_bills[:not_matching] = [bill_title]
+        else
+          @sorted_bills[:not_matching] << bill_title
+        end
       end
     end
-
-    no_hash.each do |bill_id, senator_vote|
-      bill_title = Bill.find_by(bill_id: bill_id).short_title
-      if senator_vote == 'No'
-        matching_bills << bill_title
-      elsif senator_vote == 'Yes'
-        not_matching_bills << bill_title
-      end
-    end
-
-    number_compared = matching_bills.length + not_matching_bills.length.to_f
-    comparison_score = (matching_bills.length / number_compared) * 100
-
-    {comparison_score: comparison_score, matching_bills: matching_bills, not_matching_bills: not_matching_bills}
+    number_compared = @sorted_bills[:matching].length + @sorted_bills[:not_matching].length.to_f
+    comparison_score = (@sorted_bills[:matching].length / number_compared) * 100
+    { comparison_score: comparison_score, matching_bills: @sorted_bills[:matching], not_matching_bills: @sorted_bills[:not_matching] }
   end
 end

@@ -21,7 +21,7 @@ class HouseMember < ApplicationRecord
 
   def compare_with_user(user_votes)
     yes_hash = {}
-    no_hash = {}
+    no_hash = {}  
     user_votes.each do |bill_id, vote|
       bill = Bill.find_by(bill_id: bill_id)
       roll_call = bill.house_bill_vote.roll_call
