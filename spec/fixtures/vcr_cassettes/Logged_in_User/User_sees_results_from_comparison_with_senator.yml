@@ -29,13 +29,13 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Fri, 31 Jul 2020 03:49:21 GMT
+      - Fri, 31 Jul 2020 04:11:06 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"140":"Yes"}}'
-  recorded_at: Fri, 31 Jul 2020 03:49:21 GMT
+  recorded_at: Fri, 31 Jul 2020 04:11:06 GMT
 - request:
     method: get
     uri: http://represent-sinatra.herokuapp.com/api/v1/member_votes?chamber=senate&member_id=A000360&roll_call=121&session=2
@@ -65,11 +65,11 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Fri, 31 Jul 2020 03:49:22 GMT
+      - Fri, 31 Jul 2020 04:11:06 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"121":"Yes"}}'
-  recorded_at: Fri, 31 Jul 2020 03:49:22 GMT
+  recorded_at: Fri, 31 Jul 2020 04:11:07 GMT
 recorded_with: VCR 6.0.0

@@ -29,13 +29,13 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Fri, 31 Jul 2020 03:49:22 GMT
+      - Fri, 31 Jul 2020 04:11:07 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"140":"Yes"}}'
-  recorded_at: Fri, 31 Jul 2020 03:49:22 GMT
+  recorded_at: Fri, 31 Jul 2020 04:11:07 GMT
 - request:
     method: get
     uri: http://represent-sinatra.herokuapp.com/api/v1/member_votes?chamber=senate&member_id=A000360&roll_call=121&session=2
@@ -65,13 +65,13 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Fri, 31 Jul 2020 03:49:22 GMT
+      - Fri, 31 Jul 2020 04:11:07 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"121":"Yes"}}'
-  recorded_at: Fri, 31 Jul 2020 03:49:22 GMT
+  recorded_at: Fri, 31 Jul 2020 04:11:07 GMT
 - request:
     method: get
     uri: http://represent-sinatra.herokuapp.com/api/v1/articles?favorite_names=%22Lamar%20Alexander%22&language=en&num_results=6&sort=relevance
@@ -101,12 +101,48 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Fri, 31 Jul 2020 03:49:22 GMT
+      - Fri, 31 Jul 2020 04:11:07 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJkYXRhIjpbeyJzb3VyY2UiOiJHaXptb2RvLmNvbSIsInRpdGxlIjoiRmF1Y2k6IEF0IFRoaXMgUmF0ZSwgV2UncmUgSGVhZGVkIHRvIDEwMCwwMDAgTmV3IERhaWx5IENvcm9uYXZpcnVzIENhc2VzIiwiZGVzY3JpcHRpb24iOiJEci4gQW50aG9ueSBGYXVjaSBoYXMgYXNzdXJlZCB1cyB0aGF0IHRoaW5ncyBhcmUgZ29pbmcgdG8gZ2V0IGEgbG90IHdvcnNlIGZvciBldmVyeW9uZSBpZiBjZXJ0YWluIHN0YXRlcyBkb27igJl0IHN0YXJ0IHRha2luZyB0aGUgcGFuZGVtaWMgc2VyaW91c2x5LiDigJxJIHdvdWxkIG5vdCBiZSBzdXJwcmlzZWQgaWYgd2UgZ28gdXAgdG8gMTAwLDAwMCBbY2FzZXNdIGEgZGF5IGlmIHRoaXMgZG9lcyBub3QgdHVybiBhcm91bmQs4oCdIGhlIHRlc3RpZmllZCB0byB04oCmIiwidXJsIjoiaHR0cHM6Ly9naXptb2RvLmNvbS9mYXVjaS1hdC10aGlzLXJhdGUtd2VyZS1oZWFkZWQtdG8tMTAwLTAwMC1uZXctZGFpbHktYy0xODQ0MjIyOTE3IiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNi0zMFQyMToxNTowMFoifSx7InNvdXJjZSI6IkJvaW5nIEJvaW5nIiwidGl0bGUiOiJNaXRjaCBNY0Nvbm5lbGwgaXMgN3RoIHNlbmF0b3IgdG8gYmFjayBhd2F5IGZyb20gdGhlIFJlcHVibGljYW4gTmF0aW9uYWwgQ29udmVudGlvbiIsImRlc2NyaXB0aW9uIjoiU2l4IFJlcHVibGljYW4gc2VuYXRvcnMsIGluY2x1ZGluZyBQYXQgUm9iZXJ0cywgQ2h1Y2sgR3Jhc3NsZXksIExhbWFyIEFsZXhhbmRlciwgU3VzYW4gQ29sbGlucywgTGlzYSBNdXJrb3dza2ksIGFuZCBNaXR0IFJvbW5leSBoYXZlIGFscmVhZHkgZWl0aGVyIGJvd2VkIG91dCBvZiB0aGUgUmVwdWJsaWNhbiBOYXRpb25hbCBDb252ZW50aW9uIGluIEF1Z3VzdCBvciBoYXZlIHNhaWQgdGhlaXIgYXR0ZW5kYW5jZSBpcyBcInVubGlrZWx5LlwiIFRoZWlyIHB14oCmIiwidXJsIjoiaHR0cHM6Ly9ib2luZ2JvaW5nLm5ldC8yMDIwLzA3LzA5L2FmdGVyLTYtb3RoZXItc2VuYXRvcnMtbWl0Y2guaHRtbCIsInB1Ymxpc2hlZF9hdCI6IjIwMjAtMDctMDlUMjE6NDI6MDNaIn0seyJzb3VyY2UiOiJOUFIiLCJ0aXRsZSI6IlBlbmNlIFVyZ2VzIEFtZXJpY2FucyBUbyBXZWFyIE1hc2tzIFRvIFN0b3AgU3ByZWFkIE9mIENPVklELTE5IiwiZGVzY3JpcHRpb24iOiJUaGUgdmljZSBwcmVzaWRlbnQgd29yZSBhIG1hc2sgZHVyaW5nIGFuIGFwcGVhcmFuY2UgaW4gUm9ja3ZpbGxlLCBNZC4gRGVzcGl0ZSBhIHN1cmdlIGluIG5ldyBjYXNlcywgUGVuY2UgaW5zaXN0ZWQgdGhlIGNvdW50cnkgd2FzIFwiaW4gYSBtdWNoIGJldHRlciBwbGFjZSB0aGFuIGZvdXIgbW9udGhzIGFnbywgZXZlbiB0d28gbW9udGhzIGFnby5cIiIsInVybCI6Imh0dHBzOi8vd3d3Lm5wci5vcmcvc2VjdGlvbnMvY29yb25hdmlydXMtbGl2ZS11cGRhdGVzLzIwMjAvMDYvMzAvODg1ODM0NjMzL3BlbmNlLXVyZ2VzLWFtZXJpY2Fucy10by13ZWFyLW1hc2tzLXRvLXN0b3Atc3ByZWFkLW9mLWNvdmlkLTE5IiwicHVibGlzaGVkX2F0IjoiMjAyMC0wNy0wMVQwMTo1OTozN1oifSx7InNvdXJjZSI6Ikh1ZmZQb3N0IiwidGl0bGUiOiJHT1AgR292ZXJub3IgU2F5cyBUaGVyZSBXb27igJl0IEJlIFNvY2lhbCBEaXN0YW5jaW5nIEF0IE1ham9yIEV2ZW50IFdpdGggVHJ1bXAiLCJkZXNjcmlwdGlvbiI6IktyaXN0aSBOb2VtIG9mIFNvdXRoIERha290YSBzYWlkIHNoZSBoYXMgdG9sZCBwZW9wbGUgYXR0ZW5kaW5nIHRoZSBwcmVzaWRlbnQncyBzcGVlY2ggYXQgTW91bnQgUnVzaG1vcmUgdG8gZm9jdXMgb24gXCJwZXJzb25hbCByZXNwb25zaWJpbGl0eS5cIiIsInVybCI6Imh0dHBzOi8vd3d3Lmh1ZmZwb3N0LmNvbS9lbnRyeS9yZXB1YmxpY2FuLWdvdmVybm9yLXNheXMtd2Utd2lsbC1ub3QtYmUtc29jaWFsLWRpc3RhbmNpbmctZHVyaW5nLWV2ZW50LXdpdGgtdHJ1bXBfbl81ZWZiNTg3MWM1YjZjYTk3MDkxNTcwOTIiLCJwdWJsaXNoZWRfYXQiOiIyMDIwLTA2LTMwVDE2OjA2OjM2WiJ9LHsic291cmNlIjoiVGhlb25pb24uY29tIiwidGl0bGUiOiJTZWxmLUxvYXRoaW5nIEdPUCBDb25ncmVzc21hbiBDYW7igJl0IEJlbGlldmUgSGXigJlzIEJlZW4gUmVkdWNlZCBUbyBEZWZlbmRpbmcgTmVjZXNzaXR5IE9mIFB1YmxpYyBTY2hvb2xzIiwiZGVzY3JpcHRpb24iOiJXQVNISU5HVE9O4oCUQXMgdGhlIG5hdGlvbiBmYWxscyBkZWVwZXIgaW50byB0aGUgZ3JpcCBvZiBhIHBhbmRlbWljIHRoYXQgaGFzIGZvcmNlZCBjb21wcm9taXNlcyB1cG9uIGhpcyBtb3N0IGNoZXJpc2hlZCBwcmluY2lwbGVzLCBhIHNlbGYtbG9hdGhpbmcgU2VuLiBMYW1hciBBbGV4YW5kZXIgKFItVE4pIGFja25vd2xlZGdlZCBGcmlkYXkgaGUgY291bGQgbm90IGJlbGlldmUgaGUgaGFkIGJlZW4gcmVkdWNlZCB0byBkZWZlbmRpbmcgdGhlIG5lY2Vzc2nigKYiLCJ1cmwiOiJodHRwczovL3BvbGl0aWNzLnRoZW9uaW9uLmNvbS9zZWxmLWxvYXRoaW5nLWdvcC1jb25ncmVzc21hbi1jYW4tdC1iZWxpZXZlLWhlLXMtYmVlbi1yLTE4NDQzNDA2MjIiLCJwdWJsaXNoZWRfYXQiOiIyMDIwLTA3LTEwVDE5OjI3OjAwWiJ9LHsic291cmNlIjoiQ3R2bmV3cy5jYSIsInRpdGxlIjoiVS5TLiBub3RpZmllcyBVTiBvZiB3aXRoZHJhd2FsIGZyb20gV29ybGQgSGVhbHRoIE9yZ2FuaXphdGlvbiAtIENUViBOZXdzIiwiZGVzY3JpcHRpb24iOiJUaGUgVHJ1bXAgYWRtaW5pc3RyYXRpb24gaGFzIGZvcm1hbGx5IG5vdGlmaWVkIHRoZSBVbml0ZWQgTmF0aW9ucyBvZiBpdHMgd2l0aGRyYXdhbCBmcm9tIHRoZSBXb3JsZCBIZWFsdGggT3JnYW5pemF0aW9uLCBhbHRob3VnaCB0aGUgcHVsbG91dCB3b24ndCB0YWtlIGVmZmVjdCB1bnRpbCBuZXh0IHllYXIsIG1lYW5pbmcgaXQgY291bGQgYmUgcmVzY2luZGVkIHVuZGVyIGEgbmV3IGFkbWluaXN0cmF0aW9uIG9yIGlmIGNpcmN1bXN0YW5jZXMgY2hhbmdlLiIsInVybCI6Imh0dHBzOi8vd3d3LmN0dm5ld3MuY2Evd29ybGQvdS1zLW5vdGlmaWVzLXVuLW9mLXdpdGhkcmF3YWwtZnJvbS13b3JsZC1oZWFsdGgtb3JnYW5pemF0aW9uLTEuNTAxNDQxOSIsInB1Ymxpc2hlZF9hdCI6IjIwMjAtMDctMDhUMDM6MjY6MjlaIn1dfQ==
-  recorded_at: Fri, 31 Jul 2020 03:49:22 GMT
+  recorded_at: Fri, 31 Jul 2020 04:11:07 GMT
+- request:
+    method: get
+    uri: http://represent-sinatra.herokuapp.com/api/v1/images?congress_id=A000360
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '62'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Fri, 31 Jul 2020 04:11:07 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: https://theunitedstates.io/images/congress/450x550/A000360.jpg
+  recorded_at: Fri, 31 Jul 2020 04:11:07 GMT
 recorded_with: VCR 6.0.0
