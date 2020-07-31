@@ -18,10 +18,11 @@
     <p><%= link_to "#{senator.first_name} #{senator.last_name}", senator_path(senator.id)%></p>
   <% end %>
 </div>
+<% if !@senator.twitter_account.nil? %>
 <div class="right-side-nav">
-  <a class="twitter-timeline" href="https://twitter.com/<%= @senator.twitter_account %>?ref_src=twsrc%5Etfw">Tweets by RepAOC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <a class="twitter-timeline" href="https://twitter.com/<%= @senator.twitter_account %>?ref_src=twsrc%5Etfw">Twitter</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-
+<% end %>
   <body>
     <section class='sen-info' style="margin-left:225px;margin-top:25px;">
     <div class="row align-items-center my-5">
