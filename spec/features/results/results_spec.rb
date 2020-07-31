@@ -26,7 +26,7 @@ describe "Logged in User" do
       primary_subject: "Armed Forces and National Security",
       created_at: "Tue, 28 Jul 2020 19:37:05 UTC +00:00",
       updated_at: "Tue, 28 Jul 2020 19:37:05 UTC +00:00")
-      
+
     @bill_3 =   Bill.create!(
       bill_id: "s4049-116",
       summary_short:
@@ -42,9 +42,9 @@ describe "Logged in User" do
     @senate_bill_vote1 = SenateBillVote.create!(roll_call: 140, session: 2, bill: @bill_3)
     @senate_bill_vote2 = SenateBillVote.create!(roll_call: 121, session: 2, bill: @bill_2)
   end
-  
+
   it "User sees results from comparison with house member", :vcr do
-    
+
     visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
     choose "#{@bill_1.bill_id}_yes"
     choose "#{@bill_2.bill_id}_yes"
@@ -82,7 +82,7 @@ describe "Logged in User" do
     expect(page).to have_css(".comparison-score")
     expect(comparison_score).to_not be_empty
 
-    
+
     expect(page).to have_css(".agreed-votes")
     within('.agreed-votes') do
       expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
@@ -108,7 +108,7 @@ describe "Logged in User" do
     expect(page).to have_css(".comparison-score")
     expect(comparison_score).to_not be_empty
 
-    
+
     expect(page).to have_css(".agreed-votes")
     within('.agreed-votes') do
       expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
@@ -118,9 +118,9 @@ describe "Logged in User" do
     within('.disagreed-votes') do
       expect(page).to have_content("Great American Outdoors Act")
     end
-    
+
     visit dashboard_path
-    
+
     within('.compared-rep') do
       expect(page).to have_content(@lamar.full_name)
       expect(page).to have_content("50%")
@@ -141,7 +141,7 @@ describe "Logged in User" do
     expect(page).to have_css(".comparison-score")
     expect(comparison_score).to_not be_empty
 
-    
+
     expect(page).to have_css(".agreed-votes")
     within('.agreed-votes') do
       expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
@@ -151,7 +151,7 @@ describe "Logged in User" do
     within('.disagreed-votes') do
       expect(page).to have_content("Great American Outdoors Act")
     end
-    
+
     visit dashboard_path
 
     within('.compared-rep') do
