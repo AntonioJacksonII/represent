@@ -4,15 +4,30 @@ One Paragraph of project description goes here
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+* Click "Fork" in the upper right hand corner of the page
+* Follow instructions below:
+
+```
+git clone git@github.com:YOUR_USER_NAME_HERE/represent.git
+cd represent
+- bundle install
+- bundle update
+- rake db:{create, migrate}
+```
+
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+```
+ruby -v
+rails -v
+```
 
-```
-Give examples
-```
+The output should start with something like `ruby 2.5.X`
+The output of rails should start with something like `rails 5.1.X`
+
+If your ruby version is not the following, please follow the link [here](https://www.ruby-lang.org/en/documentation/installation/)
+If your rails version doesn't start with 5.1, please follow the link [here](http://railsapps.github.io/installing-rails.html)
 
 ### Installing
 
