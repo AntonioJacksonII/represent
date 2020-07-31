@@ -19,7 +19,8 @@ class SenatorFavoritesController < ApplicationController
   private
 
   def create_senator_favorite(id)
-    current_user.senator_favorites.create(
+    SenatorFavorite.create(
+      user_id: current_user.id
       senator_id: id
     )
   end
