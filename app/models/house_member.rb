@@ -1,5 +1,6 @@
 class HouseMember < ApplicationRecord
   has_many :house_favorites, dependent: :destroy
+  
   def self.by_state(state_abbrev, order = 'asc', limit = 400)
     self.where(state: "#{state_abbrev}")
         .order(last_name: "#{order}")
@@ -9,4 +10,8 @@ class HouseMember < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def self.includes?(congress_id)
+    self.exists?(congress_id: "#{congress_id}")
+  end 
 end

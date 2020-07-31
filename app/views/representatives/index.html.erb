@@ -27,7 +27,7 @@
       <div class="representatives-scrollable">
         <% @members.each do |member| %>
           <div class="card member" style="width: 12rem;">
-            <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= member.congress_id %>.jpg" alt="Card image cap">
+            <img class="card-img-top rep-image" src="<%= SinatraService.new.get_image(member.congress_id) %>" alt="Card image cap">
             <div class="card-body">
               <h6 class="card-title name"><%= member.full_name %>
               </h6>
@@ -49,7 +49,7 @@
     <div class="col-3 text-center">
       <% @senators.each do |senator| %>
         <div class="card senator" style="width: 12rem;">
-          <img class="card-img-top rep-image" src="https://theunitedstates.io/images/congress/225x275/<%= senator.congress_id %>.jpg" alt="Card image cap">
+          <img class="card-img-top rep-image" src="<%= SinatraService.new.get_image(senator.congress_id) %>" alt="Card image cap">
           <div class="card-body">
             <h6 class="card-text name"><%= senator.full_name %>
             </h6>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200729205917) do
+ActiveRecord::Schema.define(version: 20200730213643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 20200729205917) do
 
   create_table "house_bill_votes", force: :cascade do |t|
     t.bigint "bill_id"
-    t.integer "offset"
     t.integer "roll_call"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "session"
     t.index ["bill_id"], name: "index_house_bill_votes_on_bill_id"
   end
 
@@ -76,10 +76,10 @@ ActiveRecord::Schema.define(version: 20200729205917) do
 
   create_table "senate_bill_votes", force: :cascade do |t|
     t.bigint "bill_id"
-    t.integer "offset"
     t.integer "roll_call"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "session"
     t.index ["bill_id"], name: "index_senate_bill_votes_on_bill_id"
   end
 
