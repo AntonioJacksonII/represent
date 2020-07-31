@@ -25,6 +25,7 @@ RSpec.describe HouseMember, type: :model do
 
   describe 'instance methods' do
     before(:each) do
+      @user1 = create(:user)
       @member1 = create(:house_member, state: "CO")
       @member2 = create(:house_member, state: "AL")
       @member3 = create(:house_member, state: "CO")
@@ -34,6 +35,13 @@ RSpec.describe HouseMember, type: :model do
     it 'full_name' do
 
       expect(@member1.full_name).to eq("#{@member1.first_name} #{@member1.last_name}")
+    end
+
+    it "compared_house_members" do
+      HouseFavorite.create(user_id: @user1.id, house_member_id: @member1.id)
+      HouseFavorite.create(user_id: @user1.id, house_member_id: @member2.id, comparison_score: 80)
+
+      expect(HouseMember.house_favorites_for_user(@user1.id)).to eq([@member2])
     end
   end
 end
