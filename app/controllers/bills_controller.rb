@@ -5,5 +5,6 @@ class BillsController < ApplicationController
     @name = params[:name]
     @congress_id = params[:congress_id]
     @representative = HouseMember.find_by(congress_id: @congress_id) || Senator.find_by(congress_id: @congress_id)
+    @five_recent = Bill.find_recent_five(@representative)
   end
 end
