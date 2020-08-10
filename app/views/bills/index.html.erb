@@ -32,5 +32,14 @@
       </select>
     </div>
   </div>
+  <div class="row">
+    <div class="col-6">
+      <h4>Five recent bills:</h4>
+      <% @five_recent.each do |info| %>
+        <p>Bill ID: <%= link_to info.bill_id, "#{info.congress_url}"%></p>
+        <p>Bill Subject: <%= info.primary_subject %></p>
+      <% end %>
+    </div>
+  </div>
 </div>
 <input type="hidden"id="hidden-congress" value="<%= @congress_id %>">
