@@ -36,10 +36,17 @@
     <div class="col-6">
       <h4>Five recent bills:</h4>
       <% @five_recent.each do |info| %>
-        <p>Bill ID: <%= link_to info.bill_id, "#{info.congress_url}"%></p>
+        <p id="pId">Bill ID: <a href="<%= info.congress_url %>: void(0)"><%= info.bill_id %></a></p>
         <p>Bill Subject: <%= info.primary_subject %></p>
       <% end %>
     </div>
   </div>
 </div>
 <input type="hidden"id="hidden-congress" value="<%= @congress_id %>">
+<script>
+  document.getElementById("pId").addEventListener("click", someFunction)
+  function someFunction(event){
+    event.preventDefault();
+    window.open(event.target.href, 'popUpWindow', 'height=700,width=700,left=100,top=100,reizeable=yes');
+  }
+</script>
