@@ -55,7 +55,7 @@ describe 'Propublica parser' do
     expect(test_senator.dw_nominate).to eq(0.324)
     expect(test_senator.next_election).to eq(2020)
     expect(test_senator.total_votes).to be_a(Integer)
-    expect(test_senator.missed_votes).to eq(105)
+    expect(test_senator.missed_votes).to eq(107)
     # expect(test_senator.last_updated).to eq(DateTime.parse('23rd Jul 2020 16:01:39 -0400'))
     expect(test_senator.office).to eq("455 Dirksen Senate Office Building")
     expect(test_senator.phone).to eq("202-224-4944")
