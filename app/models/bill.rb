@@ -14,4 +14,12 @@ class Bill < ApplicationRecord
       Bill.joins(:senate_bill_vote).where('session = ?', 2).order('senate_bill_votes.roll_call DESC').limit(5)
     end
   end
+    
+  def self.house_topics
+    joins(:house_bill_vote).pluck(:primary_subject).uniq
+  end
+
+  def self.senate_topics
+    joins(:senate_bill_vote).pluck(:primary_subject).uniq
+  end
 end
