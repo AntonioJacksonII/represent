@@ -6,4 +6,12 @@ class Bill < ApplicationRecord
   def self.topics
     pluck(:primary_subject).uniq
   end
+
+  def self.house_topics
+    joins(:house_bill_vote).pluck(:primary_subject).uniq
+  end
+
+  def self.senate_topics
+    joins(:senate_bill_vote).pluck(:primary_subject).uniq
+  end
 end
