@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:100px;">
         <ul class="navbar-nav mr-auto">
           <% if current_user %>
@@ -31,9 +31,9 @@
           <% end %>
         </ul>
         <% if @representative.class == HouseMember %>
-          <h3 class ="text-center;" style="margin-right:250px;">Your chosen representative is <%= link_to @name, house_member_path(@representative.id)%></h3>
+          <h3 class ="text-center;" style="margin-right:100px;">Your chosen representative is <%= link_to @name, house_member_path(@representative.id)%></h3>
         <% else %>
-          <h3 class ="text-center;" style="margin-right:250px;">Your chosen representative is <%= link_to @name, senator_path(@representative.id)%></h3>
+          <h3 class ="text-center;" style="margin-right:100px;">Your chosen representative is <%= link_to @name, senator_path(@representative.id)%></h3>
         <% end %>
         <form class="form-inline my-2 my-lg-0">
           <%= render "/layouts/search" %>
