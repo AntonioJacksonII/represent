@@ -9,21 +9,92 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-6 text-center">
       <h3>House Members</h3><br>
     </div>
-    <div class="col-sm-3">
-
-    </div>
-    <div class="col-sm-4" style="margin-left:75px;">
-      <h3 class="text-right">Senators</h3>
+    <div class="col-sm-4">
+      <h3 class="text-right" style="margin-right:20px;">Senators</h3>
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-3 text-center">
+    <div class="col-8">
+      <% @members.each do |member| %>
+      <div class="col-3 d-flex d-inline-flex" style="margin-top:10px;">
+        <div class="card representative compared-rep" style="width: 20rem;">
+          <img class="card-img-top rep-image" src="<%= SinatraService.new.get_image(member.congress_id) %>" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title name"><%= member.full_name %>
+            </h6>
+            <p class='card-district'><% if member.at_large %>
+            At-Large District
+            <% else %>
+            <%= member.district.ordinalize %> District
+            <% end %></p>
+            <a href="/house_members/<%= member.id %>" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div><br>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-4" style="margin-top:10px;">
+      <% @senators.each do |senator| %>
+        <div class="card senator" style="width: 10rem;">
+          <img class="card-img-top rep-image" src="<%= SinatraService.new.get_image(senator.congress_id) %>" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-text name"><%= senator.full_name %>
+            </h6>
+            <p class='card-rank'><%= senator.state_rank.capitalize %> Senator</p>
+            <a href="/senators/<%= senator.id %>" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div><br>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col">
+      <% @members.each do |member| %>
+      <div class="d-flex home-scroll col-md-2" style="margin-left:40px;">
+        <div class="card member" style="width: 80rem;">
+          <img class="card-img-top rep-image" src="<%= SinatraService.new.get_image(member.congress_id) %>" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title name"><%= member.full_name %>
+            </h6>
+            <p class='card-district'><% if member.at_large %>
+            At-Large District
+            <% else %>
+            <%= member.district.ordinalize %> District
+            <% end %></p>
+            <a href="/house_members/<%= member.id %>" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div><br>
+      <% end %>
+      </div>
+    </div>
+    <div class="col">
+      <% @senators.each do |senator| %>
+      <div class="d-flex" style="margin-left:40px;">
+        <div class="card senator" style="width: 12rem;">
+          <img class="card-img-top rep-image" src="<%= SinatraService.new.get_image(senator.congress_id) %>" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-text name"><%= senator.full_name %>
+            </h6>
+            <p class='card-rank'><%= senator.state_rank.capitalize %> Senator</p>
+            <a href="/senators/<%= senator.id %>" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div><br>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-6 text-center">
       <div class="representatives-scrollable">
         <% @members.each do |member| %>
           <div class="card member" style="width: 12rem;">
@@ -42,11 +113,8 @@
         <% end %>
       </div>
     </div>
-    <div class="col-6">
 
-    </div>
-
-    <div class="col-3 text-center">
+    <div class="col-6 text-center">
       <% @senators.each do |senator| %>
         <div class="card senator" style="width: 12rem;">
           <img class="card-img-top rep-image" src="<%= SinatraService.new.get_image(senator.congress_id) %>" alt="Card image cap">
@@ -60,4 +128,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</div> -->
