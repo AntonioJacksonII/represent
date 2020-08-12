@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col">
       <% if @rep.class == HouseMember %>
-      <h1 class="text-center">Your Comparison With <%= link_to @rep.full_name, house_member_path(@rep) %></h1><br>
+      <h1 class="text-center rep-name">Your Comparison With <%= link_to @rep.full_name, house_member_path(@rep) %></h1><br>
       <% else %>
-      <h1 class="text-center">Your Comparison With <%= link_to @rep.full_name, senator_path(@rep) %></h1><br>
+      <h1 class="text-center rep-name">Your Comparison With <%= link_to @rep.full_name, senator_path(@rep) %></h1><br>
       <% end %>
       <img src="<%= SinatraService.new.get_image(@rep.congress_id) %>" class="rounded mx-auto d-block rep-img"
         alt="Responsive image" style="height:60%;"><br><br>
