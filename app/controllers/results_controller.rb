@@ -3,8 +3,8 @@ class ResultsController < ApplicationController
   def show
     @rep = Senator.find_by(congress_id: params[:congress_id]) || HouseMember.find_by(congress_id: params[:congress_id])
     @comparison_score = (params[:comparison_score])
-    @matching_bills = params[:matching_bills]
-    @not_matching_bills = params[:not_matching_bills]
+    @matching_bills = find_matching_bills
+    @not_matching_bills = find_not_matching_bills
   end
 
   def create
@@ -27,4 +27,20 @@ class ResultsController < ApplicationController
   def results_params
     params.permit!.to_h
   end
+
+  def find_matching_bills
+    matching_bills = []
+    params[:matching_bills].each do |bill|
+      matching_bills << Bill.find_by(short_title: bill)
+    end
+    matching_bills 
+  end 
+
+  def find_not_matching_bills
+    not_matching_bills = []
+    params[:not_matching_bills].each do |bill|
+      not_matching_bills << Bill.find_by(short_title: bill)
+    end
+    not_matching_bills 
+  end 
 end
