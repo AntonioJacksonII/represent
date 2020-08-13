@@ -160,9 +160,9 @@ describe "Logged in User" do
     end
   end
 
-  xit "User sees aggregate results from comparison with senator who is a favorite", :vcr do
+  it "User sees aggregate results from comparison with house member who is a favorite", :vcr do
 
-    SenatorFavorite.create(senator_id: @lamar.id, user_id: @user1.id)
+    HouseFavorite.create!(house_member_id: @aoc.id, user_id: @user1.id)
 
     visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
     choose "#{@bill_1.bill_id}_yes"
