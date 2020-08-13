@@ -28,6 +28,8 @@ class User < ApplicationRecord
     elsif type =='senate' && senator_favorites.find_by(senator_id: member_id)
       favorite = senator_favorites.find_by(senator_id: member_id)
       favorite.update(comparison_score: results[:comparison_score])
+      favorite.update_aggregate_comparison(results)
+      favorite.update_bills_compared(results)
       favorite.save
     end
   end
