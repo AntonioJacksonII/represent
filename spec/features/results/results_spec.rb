@@ -43,7 +43,7 @@ describe "Logged in User" do
     @senate_bill_vote2 = SenateBillVote.create!(roll_call: 121, session: 2, bill: @bill_2)
   end
 
-  xit "User sees results from comparison with house member", :vcr do
+  it "User sees results from comparison with house member", :vcr do
 
     visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
     choose "#{@bill_1.bill_id}_yes"
@@ -70,7 +70,7 @@ describe "Logged in User" do
     end
   end
 
-  xit "User sees results from comparison with senator", :vcr do
+  it "User sees results from comparison with senator", :vcr do
 
     visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@lamar.congress_id}"
     choose "#{@bill_3.bill_id}_yes"
@@ -94,7 +94,7 @@ describe "Logged in User" do
     end
   end
 
-  xit "User sees results from comparison with senator who is a favorite", :vcr do
+  it "User sees results from comparison with senator who is a favorite", :vcr do
 
     SenatorFavorite.create(senator_id: @lamar.id, user_id: @user1.id)
 
@@ -127,7 +127,7 @@ describe "Logged in User" do
     end
   end
 
-  xit "User sees results from comparison with house member who is a favorite", :vcr do
+  it "User sees results from comparison with house member who is a favorite", :vcr do
 
     HouseFavorite.create!(house_member_id: @aoc.id, user_id: @user1.id)
 
@@ -220,6 +220,60 @@ describe "Logged in User" do
     expect(page).to have_css(".comparison-score")
     expect(comparison_score).to_not be_empty
     expect(comparison_score).to eq("Current Score: 0%")
+
+    expect(page).to_not have_css(".aggregate-score")
+  end
+
+  it "User sees aggregate results from comparison with senator who is a favorite", :vcr do
+
+    SenatorFavorite.create(senator_id: @lamar.id, user_id: @user1.id)
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@lamar.congress_id}"
+    choose "#{@bill_3.bill_id}_yes"
+    choose "#{@bill_2.bill_id}_no"
+    click_button('Submit Your Votes and Get Your Comparison Score')
+
+    comparison_score = find(".comparison-score").text
+    aggregate_score = find(".aggregate-score").text
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+    expect(comparison_score).to eq("Current Score: 50%")
+
+    expect(page).to have_css(".aggregate-score")
+    expect(aggregate_score).to_not be_empty
+    expect(aggregate_score).to eq("Overall Comparison Score: 50%")
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@lamar.congress_id}"
+    choose "#{@bill_3.bill_id}_yes"
+    choose "#{@bill_2.bill_id}_yes"
+    click_button('Submit Your Votes and Get Your Comparison Score')
+
+    comparison_score = find(".comparison-score").text
+    aggregate_score = find(".aggregate-score").text
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+    expect(comparison_score).to eq("Current Score: 100%")
+
+    expect(page).to have_css(".aggregate-score")
+    expect(aggregate_score).to_not be_empty
+    expect(aggregate_score).to eq("Overall Comparison Score: 75%")
+  end
+
+  it "User cannot see aggregate results from comparison with a non-favorite senator", :vcr do
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@lamar.congress_id}"
+    choose "#{@bill_3.bill_id}_yes"
+    choose "#{@bill_2.bill_id}_no"
+    click_button('Submit Your Votes and Get Your Comparison Score')
+
+    expect(page).to_not have_css(".aggregate-score")
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@lamar.congress_id}"
+    choose "#{@bill_3.bill_id}_yes"
+    choose "#{@bill_2.bill_id}_yes"
+    click_button('Submit Your Votes and Get Your Comparison Score')
 
     expect(page).to_not have_css(".aggregate-score")
   end
