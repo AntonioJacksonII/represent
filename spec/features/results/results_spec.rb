@@ -70,6 +70,55 @@ describe "Logged in User" do
     end
   end
 
+  it "User sees aggregate results from comparison with house member", :vcr do
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
+    choose "#{@bill_1.bill_id}_yes"
+    choose "#{@bill_2.bill_id}_yes"
+    click_button('Submit Your Votes and Get Your Comparison Score')
+
+    comparison_score = find(".comparison-score").text
+    aggregate_score = find(".aggregate-score").text
+
+    within('.rep-name') do
+      expect(page).to have_content(@aoc.full_name)
+    end
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+    expect(comparison_score).to eq("50 %")
+
+    expect(page).to have_css(".aggregate-score")
+    expect(aggregate_score).to_not be_empty
+    expect(aggregate_score).to eq(comparison_score)
+
+    expect(page).to have_css(".agreed-votes")
+    within('.agreed-votes') do
+      expect(page).to have_content("William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021")
+    end
+
+    expect(page).to have_css(".disagreed-votes")
+    within('.disagreed-votes') do
+      expect(page).to have_content("Great American Outdoors Act")
+    end
+
+    visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@aoc.congress_id}"
+    choose "#{@bill_1.bill_id}_no"
+    choose "#{@bill_2.bill_id}_yes"
+    click_button('Submit Your Votes and Get Your Comparison Score')
+    comparison_score = find(".comparison-score").text
+    aggregate_score = find(".aggregate-score").text
+
+    expect(page).to have_css(".comparison-score")
+    expect(comparison_score).to_not be_empty
+    expect(comparison_score).to eq("0 %")
+
+    expect(page).to have_css(".aggregate-score")
+    expect(aggregate_score).to_not be_empty
+    expect(aggregate_score).to_not eq(comparison_score)
+    expect(comparison_score).to eq("25 %")
+  end
+
   it "User sees results from comparison with senator", :vcr do
 
     visit "/comparison?topic=Armed%20Forces%20and%20National%20Security&id=#{@lamar.congress_id}"
