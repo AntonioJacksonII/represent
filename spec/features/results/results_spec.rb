@@ -86,11 +86,11 @@ describe "Logged in User" do
 
     expect(page).to have_css(".comparison-score")
     expect(comparison_score).to_not be_empty
-    expect(comparison_score).to eq("50 %")
+    expect(comparison_score).to eq("Current Score: 50%")
 
     expect(page).to have_css(".aggregate-score")
     expect(aggregate_score).to_not be_empty
-    expect(aggregate_score).to eq(comparison_score)
+    expect(aggregate_score).to eq("Overall Comparison Score: 50%")
 
     expect(page).to have_css(".agreed-votes")
     within('.agreed-votes') do
@@ -111,12 +111,12 @@ describe "Logged in User" do
 
     expect(page).to have_css(".comparison-score")
     expect(comparison_score).to_not be_empty
-    expect(comparison_score).to eq("0 %")
+    expect(comparison_score).to eq("Current Score: 0%")
 
     expect(page).to have_css(".aggregate-score")
     expect(aggregate_score).to_not be_empty
     expect(aggregate_score).to_not eq(comparison_score)
-    expect(comparison_score).to eq("25 %")
+    expect(comparison_score).to eq("Overall Comparison Score: 25%")
   end
 
   it "User sees results from comparison with senator", :vcr do
