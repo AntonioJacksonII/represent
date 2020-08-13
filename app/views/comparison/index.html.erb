@@ -17,7 +17,7 @@
   </tr>
   <% if @bill %>
   <tr>
-    <td><h4><%= link_to(@bill.short_title, @bill.congress_url, target: 'new') %></h4>
+    <td><h4 id="pId"><a href="<%= @bill.congress_url %>"> <%= @bill.short_title %></a></h4>
       <%= @bill.summary_short %></td>
       <td><%= radio_button_tag @bill.bill_id, "yes" %> YES</td>
       <td><%= radio_button_tag @bill.bill_id, "no" %> NO</td>
@@ -25,7 +25,7 @@
   <% else %>
     <% @bills.each do |bill| %>
     <tr>
-      <td><h4><%= link_to(bill.short_title, bill.congress_url, target: 'new') %></h4>
+      <td><h4 id="pId"><a href="<%= bill.congress_url %>"> <%= bill.short_title %></a></h4>
         <%= bill.summary_short %></td>
         <td><%= radio_button_tag bill.bill_id, "yes" %> YES</td>
         <td><%= radio_button_tag bill.bill_id, "no" %> NO</td>
@@ -40,3 +40,11 @@
   <% end %>
 </body>
 </html>
+<script>
+  document.querySelectorAll('#pId').forEach(item => {
+  item.addEventListener('click', event => {
+    event.preventDefault();
+    window.open(event.target.href, 'popUpWindow', 'height=700,width=700,left=100,top=100,reizeable=yes');
+  })
+})
+</script>

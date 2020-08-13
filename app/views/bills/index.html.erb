@@ -32,5 +32,23 @@
       </select>
     </div>
   </div>
+  <div class="row">
+    <div class="col-6" style="margin-left:37px;margin-top:10px;">
+      <h6><strong>Five most recent bills:</strong></h6>
+      <% @five_recent.each do |info| %>
+        <dt>Bill Title: <%= info.short_title %></dt>
+        <dd style="margin-left:10px;" id="pId">Bill Number: <a href="<%= info.congress_url %>: void(0)"><%= info.bill_id.upcase %></a></dd>
+        <dd style="margin-top:-.5em;margin-left:10px;">Bill Subject: <%= info.primary_subject %></dd>
+      <% end %>
+    </div>
+  </div>
 </div>
 <input type="hidden"id="hidden-congress" value="<%= @congress_id %>">
+<script>
+  document.querySelectorAll('#pId').forEach(item => {
+  item.addEventListener('click', event => {
+    event.preventDefault();
+    window.open(event.target.href, 'popUpWindow', 'height=700,width=700,left=100,top=100,reizeable=yes');
+  })
+})
+</script>
