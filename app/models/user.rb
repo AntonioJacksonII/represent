@@ -22,11 +22,21 @@ class User < ApplicationRecord
     if type == 'house' && house_favorites.find_by(house_member_id: member_id)
       favorite = house_favorites.find_by(house_member_id: member_id)
       favorite.update(comparison_score: results[:comparison_score])
+      favorite.update_aggregate_comparison(results)
+      favorite.update_bills_compared(results)
       favorite.save
     elsif type =='senate' && senator_favorites.find_by(senator_id: member_id)
       favorite = senator_favorites.find_by(senator_id: member_id)
       favorite.update(comparison_score: results[:comparison_score])
       favorite.save
     end
+  end
+
+  def calculate_aggregate_score(results, favorite)
+    weighted_current_score = (results[:comparison_score] / 100) / (results[:matching_bills].size + results[:not_matching_bills].size)
+    weighted_aggregate_score = favorite.aggregate_comparison / favorite.bills_compared if favorite.bills_compared
+    aggregate_score = weighted_current_score
+    aggregate_score += weighted_aggregate_score if weighted_aggregate_score
+    aggregate_score
   end
 end
