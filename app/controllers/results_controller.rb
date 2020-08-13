@@ -3,6 +3,11 @@ class ResultsController < ApplicationController
   def show
     @rep = Senator.find_by(congress_id: params[:congress_id]) || HouseMember.find_by(congress_id: params[:congress_id])
     @comparison_score = (params[:comparison_score])
+    if current_user && current_user.house_favorites.find_by(house_member_id: @rep.id)
+      @aggregate_score = current_user.house_favorites.find_by(house_member_id: @rep.id).aggregate_comparison
+    elsif current_user && current_user.senator_favorites.find_by(senator_id: @rep.id)
+      @aggregate_score = current_user.senator_favorites.find_by(senator_id: @rep.id).aggregate_comparison
+    end
     @matching_bills = find_matching_bills if params[:matching_bills]
     @not_matching_bills = find_not_matching_bills if params[:not_matching_bills]
   end
@@ -33,14 +38,14 @@ class ResultsController < ApplicationController
     params[:matching_bills].each do |bill|
       matching_bills << Bill.find_by(short_title: bill)
     end
-    matching_bills 
-  end 
+    matching_bills
+  end
 
   def find_not_matching_bills
     not_matching_bills = []
     params[:not_matching_bills].each do |bill|
       not_matching_bills << Bill.find_by(short_title: bill)
     end
-    not_matching_bills 
-  end 
+    not_matching_bills
+  end
 end
