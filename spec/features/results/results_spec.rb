@@ -52,7 +52,7 @@ describe "Logged in User" do
 
     comparison_score = find(".comparison-score").text
 
-    within('.comparison-score') do
+    within('.rep-name') do
       expect(page).to have_content(@aoc.full_name)
     end
 
