@@ -9,7 +9,9 @@
       <img src="<%= SinatraService.new.get_image(@rep.congress_id) %>" class="rounded mx-auto d-block rep-img"
         alt="Responsive image" style="height:60%;"><br><br>
       <h1 class="text-center comparison-score">Current Score: <%= number_to_percentage(@comparison_score, precision: 0) %></h1>
+      <% if @aggregate_score %>
       <h1 class="text-center aggregate-score">Overall Comparison Score: <%= number_to_percentage(@aggregate_score, precision: 0) %></h1>
+      <% end %>
     </div>
   </div>
 </div>
