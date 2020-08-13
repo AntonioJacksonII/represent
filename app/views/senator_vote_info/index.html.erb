@@ -1,0 +1,56 @@
+<div class="container text-center">
+  <canvas id="pieChart"></canvas>
+</div>
+<script>
+  var ctxP = document.getElementById('pieChart').getContext('2d');
+  var myPieChart = new Chart(ctxP, {
+    type: 'pie',
+    data: {
+      labels: ["On the Motion to Proceed",
+               "On the Nomination",
+               "On the Cloture Motion",
+               "On Passage of the Bill",
+               "On the Amendment",
+               "On the Motion to Table",
+               "On Cloture on the Motion to Proceed",
+               "On the Motion",
+               "On Overriding the Veto",
+               "On the Joint Resolution",
+               "Guilty or Not Guilty",
+               "On the Resolution",
+               "On the Conference Report",
+               "On the Resolution of Ratification",
+               "On the Motion to Discharge",
+               "On the Decision of the Chair",
+               "On the Motion for Attendance"],
+      datasets: [{
+        data: [9, 202, 227, 19, 32, 27, 16, 9, 6, 11, 2, 8, 2, 5, 2, 2, 1],
+        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "#6495ED", "#DC143C", "#00008B", "#8B008B", "#FF8C00", "#00CED1", "#B22222", "#008000", "#4B0082", "#90EE90", "#800000", "#191970", "#FFDEAD", "#FF4500", "#AFEEEE"],
+        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+      }]
+    },
+    options:{
+      responsive:true,
+      legend:{
+        display: true,
+        position: 'right',
+        align: "center"
+      },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data){
+            let sum = data['datasets'][0]['data'].reduce((a, b) => a + b, 0)
+            return data['labels'][tooltipItem['index']] + ': ' + Math.round(((data['datasets'][0]['data'][tooltipItem['index']]/sum)*100)) + '%';
+          }
+        }
+      },
+      title: {
+        display: true,
+        text: 'Total Senate Votes Broken Into Categories',
+        fontSize: 24,
+        fontFamily: "sans-serif",
+        fontStyle: 'bold'
+      }
+    }
+  });
+</script>

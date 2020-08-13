@@ -1,0 +1,58 @@
+<div class="container">
+  <canvas id="pieChart"></canvas>
+</div>
+<script>
+  var ctxP = document.getElementById('pieChart').getContext('2d');
+  var myPieChart = new Chart(ctxP, {
+    type: 'pie',
+    data: {
+      labels: ["On Passage",
+               "On Motion to Commit/Recommit with Instructions",
+               "On Agreeing to the Amendment",
+               "On Agreeing to the Resolution",
+               "On Ordering the Previous Question",
+               "On Motion to Concur in the Senate Amendment(s)",
+               "On Motion to Disagree to the Senate Amendments and Request a Conference",
+               "On Approving the Journal",
+               "On Motion to Table",
+               "Call to Order",
+               "On Motion to Adjourn",
+               "On Agreeing to the Conference Report",
+               "On Motion to Suspend the Rules and Agree",
+               "On Closing Portions of the Conference",
+               "On Motion to Instruct Conferees",
+               "On Motion to Proceed in Order",
+               "On Motion to Strike Words from the Record",
+               "On Motion that the Committee Rise",
+               "Election of the Speaker"],
+      datasets: [{
+        data: [237, 73, 354, 90, 66, 11, 1, 14, 13, 2, 4, 2, 6, 1, 1, 1, 1, 1, 1],
+        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360", "#6495ED", "#DC143C", "#00008B", "#8B008B", "#FF8C00", "#00CED1", "#B22222", "#008000", "#4B0082", "#90EE90", "#800000", "#191970", "#FFDEAD", "#FF4500", "#AFEEEE"],
+        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+      }]
+    },
+    options:{
+      responsive:true,
+      legend:{
+        display: true,
+        position: 'right',
+        align: "center"
+      },
+      tooltips: {
+        callbacks: {
+          label: function(tooltipItem, data){
+            let sum = data['datasets'][0]['data'].reduce((a, b) => a + b, 0)
+            return data['labels'][tooltipItem['index']] + ': ' + Math.round(((data['datasets'][0]['data'][tooltipItem['index']]/sum)*100)) + '%';
+          }
+        }
+      },
+      title: {
+        display: true,
+        text: 'Total House Votes Broken Into Categories',
+        fontSize: 16,
+        fontFamily: "sans-serif",
+        fontStyle: 'bold'
+      }
+    }
+  });
+</script>

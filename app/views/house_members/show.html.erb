@@ -76,6 +76,7 @@
         <% end %>
         <% if @rep.total_votes %>
           <br class='rep-total_votes'>Total Votes: <%= @rep.total_votes %>
+          <br><a class="btn btn-sm btn-primary" href="/house_members/vote_info" role="button">Click to see more</a>
         <% end %>
         <% if @rep.missed_votes %>
           <br class='rep-missed_votes'>Missed Votes: <%= @rep.missed_votes %>
