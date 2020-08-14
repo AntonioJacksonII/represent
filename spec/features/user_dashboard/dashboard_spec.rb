@@ -10,7 +10,7 @@ describe "Logged in User" do
     @member2 = create(:house_member, first_name: "Mitt", last_name: "Romney")
     @member3 = create(:house_member)
 
-    HouseFavorite.create(user_id: @user1.id, house_member_id: @member1.id, comparison_score: 80)
+    HouseFavorite.create(user_id: @user1.id, house_member_id: @member1.id, comparison_score: 80, aggregate_comparison: 50)
     HouseFavorite.create(user_id: @user1.id, house_member_id: @member2.id)
 
     @senator1 = create(:senator, first_name: "Amy", last_name: "Klobuchar")
@@ -18,7 +18,7 @@ describe "Logged in User" do
     @senator3 = create(:senator)
 
     SenatorFavorite.create(user_id: @user1.id, senator_id: @senator1.id)
-    SenatorFavorite.create(user_id: @user1.id, senator_id: @senator2.id, comparison_score: 80)
+    SenatorFavorite.create(user_id: @user1.id, senator_id: @senator2.id, comparison_score: 80, aggregate_comparison: 50)
   end
 
   it "User sees news articles from favorited represntatives on dashboard", :vcr do
@@ -44,6 +44,7 @@ describe "Logged in User" do
       expect(page).to have_css(".name")
       expect(page).to have_css(".rep-image")
       expect(page).to have_css(".rep-score")
+      expect(page).to have_css(".rep-aggregate_score")
     end
   end
 end

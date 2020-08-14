@@ -1,6 +1,7 @@
-# REPresent
+# REPresent  
+[![Build Status](https://travis-ci.org/AntonioJacksonII/represent.svg?branch=master)](https://travis-ci.org/AntonioJacksonII/represent)  
 
-As participants in democracy, it is difficult for voters to know whether or not the representatives they send to Congress on their behalf are pursuing the policy goals the voters sent them there to pursue. This problem makes it difficult for voters to know whether or not they should return their representatives to Congress. REPresent is a solution to this problem. REPresent is a platform to hold representatives accountable by allowing a user to compare their votes on bills with how the representatives voted. A user can favorite representatives, compare votes on bills, and receive a comparison score that is saved on their user dashboard. When this representative is up for reelection, a user can easily review their comparison score with that representative to determine whether or not they want to send them back to Congress. This provides a way for citizens to easily stay informed on the actions of their representatives and cast their votes with confidence. 
+As participants in democracy, it is difficult for voters to know whether or not the representatives they send to Congress on their behalf are pursuing the policy goals the voters sent them there to pursue. This problem makes it difficult for voters to know whether or not they should return their representatives to Congress. REPresent is a solution to this problem. REPresent is a platform to hold representatives accountable by allowing a user to compare their votes on bills with how the representatives voted. A user can favorite representatives, compare votes on bills, and receive a comparison score that is saved on their user dashboard. When this representative is up for reelection, a user can easily review their comparison score with that representative to determine whether or not they want to send them back to Congress. This provides a way for citizens to easily stay informed on the actions of their representatives and cast their votes with confidence.
 
 Deployed Application: [https://represent-application.herokuapp.com/](https://represent-application.herokuapp.com/)
 
@@ -51,7 +52,7 @@ To run the tests, simply execute:
 bundle exec rspec
 ```
 
-There should be 66 passing tests.
+There should be 70 passing tests.
 
 ## Built With
 
@@ -65,7 +66,7 @@ There should be 66 passing tests.
 
 ## Authors
 
-- **Antonio Jackson** (https://github.com/AntonioJacksonII) 
-- **Rostam Mahabadi** (https://github.com/Rostammahabadi) 
-- **Derek Borski** (https://github.com/dborski) 
+- **Antonio Jackson** (https://github.com/AntonioJacksonII)
+- **Rostam Mahabadi** (https://github.com/Rostammahabadi)
+- **Derek Borski** (https://github.com/dborski)
 - **Alex Pariseau** (https://github.com/arpariseau)
