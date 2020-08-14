@@ -70,6 +70,7 @@
         <% end %>
         <% if @senator.total_votes %>
           <br class='sen-total_votes'>Total Votes: <%= @senator.total_votes %>
+          <br><a class="btn btn-sm btn-primary" href="/senators/vote_info" role="button">Click to see more</a>
         <% end %>
         <% if @senator.missed_votes %>
           <br class='sen-missed_votes'>Missed Votes: <%= @senator.missed_votes %>
