@@ -40,18 +40,25 @@ class PropublicaParser
     end
   end
 
-  def parse_bills
-    # bills = @service.get_bills[:data] - will replace next two lines when working
-    json_response = File.read('spec/fixtures/bills.json')
-    bills = JSON.parse(json_response, symbolize_names: true)[:data]
+  def seed_and_update_bills
+    bills = @service.get_bills[:data]
+    # json_response = File.read('spec/fixtures/bills.json')
+    # bills = JSON.parse(json_response, symbolize_names: true)[:data]
     bills.each do |bill_info|
       separated_info = separate_bills(bill_info)
-      bill = Bill.create(separated_info[0])
+      bill = Bill.find_or_create_by(bill_id: separated_info[0][:bill_id]) do |bill|
+        bill.bill_id = separated_info[0][:bill_id]
+        bill.short_title = separated_info[0][:short_title]
+        bill.primary_subject = separated_info[0][:primary_subject]
+        bill.summary_short = separated_info[0][:summary_short]
+        bill.congress_url = separated_info[0][:congress_url]
+      end
+      
       bill.create_house_bill_vote(separated_info[1]) unless
-        separated_info[1][:roll_call].nil?
+        separated_info[1][:roll_call].nil? || !bill.saved_changes?
       bill.create_senate_bill_vote(separated_info[2]) unless
-        separated_info[2][:roll_call].nil?
-    end
+        separated_info[2][:roll_call].nil? || !bill.saved_changes?
+      end
   end
 
   private
