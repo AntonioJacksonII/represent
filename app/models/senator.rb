@@ -35,19 +35,19 @@ class Senator < ApplicationRecord
     matching_bills = []
     not_matching_bills = []
     yes_hash.each do |bill_id, senator_vote|
-      bill = Bill.find_by(bill_id: bill_id).id
+      bill_id = Bill.find_by(bill_id: bill_id).id
       if senator_vote == 'Yes'
-        matching_bills << bill
+        matching_bills << bill_id
       elsif senator_vote == 'No'
-        not_matching_bills << bill
+        not_matching_bills << bill_id
       end
     end
     no_hash.each do |bill_id, senator_vote|
-      bill = Bill.find_by(bill_id: bill_id).id
+      bill_id = Bill.find_by(bill_id: bill_id).id
       if senator_vote == 'No'
-        matching_bills << bill
+        matching_bills << bill_id
       elsif senator_vote == 'Yes'
-        not_matching_bills << bill
+        not_matching_bills << bill_id
       end
     end
     number_compared = matching_bills.length + not_matching_bills.length.to_f
