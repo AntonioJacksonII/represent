@@ -19,7 +19,7 @@ describe 'Propublica parser' do
     expect(test_member.url).to eq("https://abraham.house.gov")
     expect(test_member.contact_form).to be_nil
     expect(test_member.cook_pvi).to eq("R+15")
-    expect(test_member.dw_nominate).to eq(0.54)
+    expect(test_member.dw_nominate).to eq(0.541)
     expect(test_member.total_votes).to be_a(Integer)
     expect(test_member.missed_votes).to be_a(Integer)
     expect(test_member.office).to eq("417 Cannon House Office Building")
