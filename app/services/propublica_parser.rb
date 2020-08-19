@@ -42,8 +42,6 @@ class PropublicaParser
 
   def seed_and_update_bills
     bills = @service.get_bills[:data]
-    # json_response = File.read('spec/fixtures/bills.json')
-    # bills = JSON.parse(json_response, symbolize_names: true)[:data]
     bills.each do |bill_info|
       separated_info = separate_bills(bill_info)
       bill = Bill.find_or_create_by(bill_id: separated_info[0][:bill_id]) do |bill|
