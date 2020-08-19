@@ -5,7 +5,7 @@ RSpec.describe 'on the comparison page' do
     aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
 
     parser = PropublicaParser.new
-    parser.parse_bills
+    parser.seed_and_update_bills
 
     bill = Bill.first
 
@@ -31,7 +31,7 @@ RSpec.describe 'on the comparison page' do
   it 'lists bills selected by topic', :vcr do
     aoc = HouseMember.create!(first_name: 'Alexandria', last_name: 'Ocasio-Cortez', congress_id: "O000172")
     parser = PropublicaParser.new
-    parser.parse_bills
+    parser.seed_and_update_bills
 
     bill_1 = Bill.last
     bill_2 = Bill.where(bill_id: "hr1957-116").first

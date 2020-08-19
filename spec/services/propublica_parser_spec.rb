@@ -68,9 +68,9 @@ describe 'Propublica parser' do
     expect(Senator.count).to eq(100)
   end
 
-  it 'can parse bills' do
+  it 'can seed and update bills', :vcr do
     parser = PropublicaParser.new
-    parser.parse_bills
+    parser.seed_and_update_bills
 
     test_bill = Bill.last
 
@@ -84,8 +84,8 @@ describe 'Propublica parser' do
     expect(test_bill.senate_bill_vote.session).to eq(1)
     expect(test_bill.senate_bill_vote.roll_call).to eq(22)
 
-    expect(Bill.count).to eq(168)
-    expect(HouseBillVote.count).to eq(159)
+    expect(Bill.count).to eq(236)
+    expect(HouseBillVote.count).to eq(231)
     expect(SenateBillVote.count).to eq(18)
   end
 end
