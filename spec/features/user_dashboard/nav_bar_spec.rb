@@ -37,7 +37,9 @@ RSpec.describe "as a logged in user" do
       expect(page).to have_content("#{@senator1.last_name}")
       expect(page).to have_content("#{@member1.first_name}")
       expect(page).to have_content("#{@member1.last_name}")
-      click_on "#{@member1.first_name}"
+      within("#dashboard-rep-sidenav") do
+        click_on "#{@member1.first_name}"
+      end
       expect(current_path).to eq("/house_members/#{@member1.id}")
     end
   end
