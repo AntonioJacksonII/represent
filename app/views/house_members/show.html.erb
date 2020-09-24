@@ -21,6 +21,12 @@
 <div class="right-side-nav">
   <a class="twitter-timeline" href="https://twitter.com/<%= @rep.twitter_account %>?ref_src=twsrc%5Etfw">Twitter</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+<div class="col-lg-3 fixed-image">
+  <%= image_tag(@image, class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
+  <br>
+  <br>
+  <a class="btn btn-primary" href="/bills?name=<%= @rep.full_name %>&congress_id=<%= @rep.congress_id %>">Compare Positions</a>
+</div>
 <% end %>
   <body>
     <section class='rep-info' style="margin-left:225px;margin-top:25px;">
@@ -38,7 +44,7 @@
         <% elsif current_user && !current_user.house_members.include?(@rep)%>
           <%= button_to "Add to Favorites" , "/house_members/#{@rep.id}/favorites", method: :post%>
         <% else %>
-           <p>Click on Register to favorite</p>
+           <p>Log in to add this representative to your dashboard</p>
         <% end %>
         <br class='rep-dob'>Date of Birth: <%= Date.parse(@rep.dob).strftime('%B %-d, %Y') %>
         <br class='rep-gender'>Gender: <%= @rep.gender %>
@@ -91,12 +97,6 @@
           <br class='rep-votes_without_party_percentage'>Votes Against Party Percentage: <%= @rep.votes_without_party_percentage %> %
         <% end %>
       </div>
-      <div class="col-lg-3">
-        <%= image_tag(@image, class:'img-fluid rounded mb-4 mb-lg-0', id: 'rep-image') %>
-        <br>
-        <br>
-        <a class="btn btn-primary" href="/bills?name=<%= @rep.full_name %>&congress_id=<%= @rep.congress_id %>">Compare Positions</a>
-      </div>
       <!-- /.col-md-4 -->
     </div>
     </section>
@@ -106,16 +106,18 @@
 <script>
 var e = document.querySelector('.tooltip-data');
 e.onmouseover = function() {
-  document.getElementById('popup').style.display = 'block';
+  document.getElementById('popup').style.display = 'flex';
 }
 e.onmouseout = function() {
   document.getElementById('popup').style.display = 'none';
 }
 var q = document.querySelector('.dw-data');
-q.onmouseover = function() {
-  document.querySelector('.dw-popup').style.display = 'block';
-}
-q.onmouseout = function() {
-  document.querySelector('.dw-popup').style.display = 'none';
+if(q !== null){
+  q.onmouseover = function() {
+    document.querySelector('.dw-popup').style.display = 'block';
+  }
+  q.onmouseout = function() {
+    document.querySelector('.dw-popup').style.display = 'none';
+  }
 }
 </script>
