@@ -24,11 +24,11 @@
   padding-top: 5px;
   padding-left: 5px;
 }
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+// @media screen and (max-height: 450px) {
+//   .senate-sidenav {padding-top: 15px;}
+//   .senate-sidenav a {font-size: 18px;}
+//   .fixed-image {margin-left:500px;}
+// }
 
 .senate-sidenav {
   height: 19%;
@@ -49,11 +49,6 @@
   padding: 0px 10px;
 }
 
-
-@media screen and (max-height: 450px) {
-  .senate-sidenav {padding-top: 15px;}
-  .senate-sidenav a {font-size: 18px;}
-}
 .scrollable{
   overflow-y:auto;
   height: 150px;
@@ -155,7 +150,7 @@
   color: white;
 }
 .right-side-nav{
-  margin-top:47px;
+  margin-top:50px;
   height:575px;
   width:285px;
   margin-left:78.5%;
@@ -236,4 +231,79 @@
   margin-left:780px;
   margin-top:100px;
   width:350px;
+}
+.sen-info{
+  margin-left:225px;
+  margin-top:25px;
+}
+body{
+  background-image:url('https://mk0dcphotoguide69e7p.kinstacdn.com/wp-content/uploads/2017/04/us-capitol-building-at-night-panorama-10-copyright-havecamerawilltravel-com.jpg');
+}
+// <style type='text/css' >body{background-color:rgb(0,0,0);background-image:url(https://mk0dcphotoguide69e7p.kinstacdn.com/wp-content/uploads/2017/04/us-capitol-building-at-night-panorama-10-copyright-havecamerawilltravel-com.jpg);background-position:top right;background-repeat:no-repeat;background-attachment:local;}</style>
+// style="margin-left:225px;margin-top:25px;"
+@media only screen and (min-width:1200px) and (max-width: 1600px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .fixed-image{
+    position:fixed;
+    margin-left:650px;
+    margin-top:100px;
+    width:350px;
+  }
+  .right-side-nav{
+    margin-left:78%;
+    margin-top:27px;
+  }
+  .sen-info{
+    margin-left:225px;
+    margin-top:-2em;
+  }
+  .bills-nav{
+    margin-right:160px;
+    font-size:20px;
+  }
+  .rep-info{
+    margin-left:225px;
+    margin-top:-2em;
+  }
+  body{
+    background-color:rgb(0,0,0);
+    background-size:132% 180%;
+    background-position: 80% 0%;
+    background-repeat:no-repeat;
+    background-attachment:local;
+  }
+  #submit-button{
+    margin-bottom:10px;
+  }
+  .dashboard{
+    height:500px;
+    width:900px;
+    margin-left:220px;
+  }
+  .compared-rep{
+    margin-left:59px;
+  }
+}
+@media only screen and (min-width:1600px){
+  body{
+    background-color:rgb(0,0,0);
+    background-size:132% 207%;
+    background-position: 80% 0%;
+    background-repeat:no-repeat;
+    background-attachment:local;
+  }
+  .sen-info{
+    margin-left:225px;
+  }
+  .rep-info{
+    margin-left:225px;
+  }
+  .compared-rep{
+    margin-left:-.5em;
+  }
+  .bills-nav{
+    margin-right:400px;
+    font-size:20px;
+  }
 }

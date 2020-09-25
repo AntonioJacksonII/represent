@@ -18,7 +18,7 @@
     <h2 class="jumbotron-heading smaller">News from Your Favorite Representatives</h2>
   </div>
 </section>
-<div>
+<div class="dashboard">
   <div class="container">
     <div class="row">
       <% @articles.each do |article| %>
@@ -43,7 +43,7 @@
 <br><br>
 <h2 class='text-center'>Compared Representatives</h2><br><br>
 <div class="container">
-  <div class="row">
+  <div class="row compared-rep">
     <% @compared_reps.each do |representative| %>
     <div class="col-3">
       <div class="card representative compared-rep" style="width: 12rem;">

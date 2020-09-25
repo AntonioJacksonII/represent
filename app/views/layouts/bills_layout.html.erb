@@ -21,20 +21,19 @@
           <li class="nav-item">
             <a class="nav-link" href="/logout">Logout</a>
           </li>
-          <li class="navbar-text font-weight-bold">
-            Welcome, <%= current_user.name %>
-          </li>
           <% else %>
           <li class="nav-item">
             <a class="nav-link" href="/auth/google_oauth2">Register/Login with Google</a>
           </li>
           <% end %>
         </ul>
-        <% if @representative.class == HouseMember %>
-          <h3 class ="text-center;" style="margin-right:250px;">Your chosen representative is <%= link_to @name, house_member_path(@representative.id)%></h3>
-        <% else %>
-          <h3 class ="text-center;" style="margin-right:250px;">Your chosen representative is <%= link_to @name, senator_path(@representative.id)%></h3>
-        <% end %>
+      <% if @representative.class == HouseMember %>
+      <h3 class="text-center bills-nav">Your chosen representative is
+        <%= link_to @name, house_member_path(@representative.id)%></h3>
+      <% else %>
+      <h3 class="bills-nav">Your chosen representative is
+        <%= link_to @name, senator_path(@representative.id)%></h3>
+      <% end %>
         <form class="form-inline my-2 my-lg-0">
           <%= render "/layouts/search" %>
         </form>
