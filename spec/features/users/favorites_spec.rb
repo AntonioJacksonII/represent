@@ -67,9 +67,9 @@ RSpec.describe "on the rep or senator show page" do
     end
     it "shows a message for a non logged in user to sign up", :vcr do
       visit "/senators/#{@senator1.id}"
-      expect(page).to have_content("Click on Register to favorite")
+      expect(page).to have_content("Log in to add this representative to your dashboard")
       visit "/house_members/#{@member1.id}"
-      expect(page).to have_content("Click on Register to favorite")
+      expect(page).to have_content("Log in to add this representative to your dashboard")
     end
   end
 end

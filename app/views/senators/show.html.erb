@@ -22,6 +22,12 @@
 <div class="right-side-nav">
   <a class="twitter-timeline" href="https://twitter.com/<%= @senator.twitter_account %>?ref_src=twsrc%5Etfw">Twitter</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+<div class="col-lg-3 fixed-image">
+  <%= image_tag(@image, class:'img-fluid rounded mb-4 mb-lg-0', id: 'sen-image') %>
+  <br>
+  <br>
+  <a class="btn btn-primary" href="/bills?name=<%= @senator.full_name %>&congress_id=<%= @senator.congress_id %>">Compare Positions</a>
+</div>
 <% end %>
   <body>
     <section class='sen-info' style="margin-left:225px;margin-top:25px;">
@@ -35,7 +41,7 @@
         <% elsif current_user && !current_user.house_members.include?(@rep) %>
           <%= button_to "Add to Favorites" , "/senators/#{@senator.id}/favorites", method: :post%>
         <% else %>
-          <p> Click on Register to favorites</p>
+          <p> Log in to add this representative to your dashboard</p>
         <% end %>
         <br class='sen-dob'>Date of Birth: <%= Date.parse(@senator.dob).strftime('%B %-d, %Y') %>
         <br class='sen-gender'>Gender: <%= @senator.gender %>
@@ -84,12 +90,6 @@
         <% if @senator.votes_without_party_percentage %>
           <br class='sen-votes_without_party_percentage'>Votes Against Party Percentage: <%= @senator.votes_without_party_percentage %> %
         <% end %>
-      </div>
-      <div class="col-lg-3">
-        <%= image_tag(@image, class:'img-fluid rounded mb-4 mb-lg-0', id: 'sen-image') %>
-        <br>
-        <br>
-        <a class="btn btn-primary" href="/bills?name=<%= @senator.full_name %>&congress_id=<%= @senator.congress_id %>">Compare Positions</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
