@@ -548,4 +548,11 @@ const REPRESENTATIVES = [{"value":"h1", "label":"Abraham, Ralph"},
      } else
      window.location = "/senators/" + value.substr(1);
    },
-})});
+})
+  $.ui.autocomplete.filter = function (array, term){
+    var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(term), "i");
+    return $.grep(array, function(value){
+      return matcher.test(value.label);
+    });
+  };
+});
