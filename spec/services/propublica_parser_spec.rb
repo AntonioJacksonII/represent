@@ -19,7 +19,7 @@ describe 'Propublica parser' do
     expect(test_member.url).to eq("https://abraham.house.gov")
     expect(test_member.contact_form).to be_nil
     expect(test_member.cook_pvi).to eq("R+15")
-    expect(test_member.dw_nominate).to eq(0.54)
+    expect(test_member.dw_nominate).to eq(0.541)
     expect(test_member.total_votes).to be_a(Integer)
     expect(test_member.missed_votes).to be_a(Integer)
     expect(test_member.office).to eq("417 Cannon House Office Building")
@@ -68,9 +68,9 @@ describe 'Propublica parser' do
     expect(Senator.count).to eq(100)
   end
 
-  it 'can parse bills' do
+  it 'can seed and update bills', :vcr do
     parser = PropublicaParser.new
-    parser.parse_bills
+    parser.seed_and_update_bills
 
     test_bill = Bill.last
 
@@ -84,8 +84,8 @@ describe 'Propublica parser' do
     expect(test_bill.senate_bill_vote.session).to eq(1)
     expect(test_bill.senate_bill_vote.roll_call).to eq(22)
 
-    expect(Bill.count).to eq(168)
-    expect(HouseBillVote.count).to eq(159)
+    expect(Bill.count).to eq(236)
+    expect(HouseBillVote.count).to eq(231)
     expect(SenateBillVote.count).to eq(18)
   end
 end

@@ -34,18 +34,14 @@ class ResultsController < ApplicationController
   end
 
   def find_matching_bills
-    matching_bills = []
-    params[:matching_bills].each do |bill|
-      matching_bills << Bill.find_by(short_title: bill)
+    params[:matching_bills].map do |bill|
+      Bill.find(bill)
     end
-    matching_bills
   end
 
   def find_not_matching_bills
-    not_matching_bills = []
-    params[:not_matching_bills].each do |bill|
-      not_matching_bills << Bill.find_by(short_title: bill)
+    params[:not_matching_bills].map do |bill|
+      Bill.find(bill)
     end
-    not_matching_bills
   end
 end
