@@ -121,7 +121,7 @@ describe "Logged in User" do
 
     visit dashboard_path
 
-    within('.compared-rep') do
+    within first('.compared-rep') do
       expect(page).to have_content(@lamar.full_name)
       expect(page).to have_content("50%")
     end
@@ -154,7 +154,7 @@ describe "Logged in User" do
 
     visit dashboard_path
 
-    within('.compared-rep') do
+    within first('.compared-rep') do
       expect(page).to have_content(@aoc.full_name)
       expect(page).to have_content("50%")
     end
