@@ -41,7 +41,7 @@
         <% elsif current_user && !current_user.house_members.include?(@rep) %>
           <%= button_to "Add to Favorites" , "/senators/#{@senator.id}/favorites", method: :post%>
         <% else %>
-          <p> Log in to add this representative to your dashboard</p>
+          <p class="login-message"> Log in to add this representative to your dashboard</p>
         <% end %>
         <br class='sen-dob'>Date of Birth: <%= Date.parse(@senator.dob).strftime('%B %-d, %Y') %>
         <br class='sen-gender'>Gender: <%= @senator.gender %>
