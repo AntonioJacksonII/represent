@@ -307,3 +307,58 @@ body{
     font-size:20px;
   }
 }
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){
+  body{
+    background-color:rgb(0,0,0);
+    background-size:132% 185%;
+    background-position: 80% 0%;
+    background-repeat:no-repeat;
+    background-attachment:local;
+  }
+  .sen-info{
+    margin-left:220px;
+    margin-top:-1em;
+  }
+  .rep-info{
+    margin-left:220px;
+    margin-top:-1em;
+  }
+  .fixed-image{
+    position:fixed;
+    margin-left:560px;
+    margin-top:100px;
+    width:250px;
+  }
+  .right-side-nav{
+    margin-left:74%;
+    margin-top:35px;
+  }
+  .rep-name{
+    font-size:28px;
+  }
+  .rep-district{
+    font-size:20px;
+  }
+  .login-message{
+    font-size:13px;
+  }
+  .sen-name{
+    font-size:28px;
+  }
+  .sen-state{
+    font-size:20px;
+  }
+  .bills-nav{
+    margin-right:100px;
+    font-size:17px;
+  }
+  .side-nav{
+    margin-top:20px;
+  }
+  .senate-sidenav{
+    margin-top:10px;
+  }
+  .search_by_name{
+    width:160px !important;
+  }
+}
