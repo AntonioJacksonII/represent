@@ -12145,3 +12145,73 @@ body {
     font-size: 20px;
   }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* line 311, app/assets/stylesheets/application.scss */
+  body {
+    background-color: black;
+    background-size: 132% 185%;
+    background-position: 80% 0%;
+    background-repeat: no-repeat;
+    background-attachment: local;
+  }
+  /* line 318, app/assets/stylesheets/application.scss */
+  .sen-info {
+    margin-left: 220px;
+    margin-top: -1em;
+  }
+  /* line 322, app/assets/stylesheets/application.scss */
+  .rep-info {
+    margin-left: 220px;
+    margin-top: -1em;
+  }
+  /* line 326, app/assets/stylesheets/application.scss */
+  .fixed-image {
+    position: fixed;
+    margin-left: 560px;
+    margin-top: 100px;
+    width: 250px;
+  }
+  /* line 332, app/assets/stylesheets/application.scss */
+  .right-side-nav {
+    margin-left: 74%;
+    margin-top: 35px;
+  }
+  /* line 336, app/assets/stylesheets/application.scss */
+  .rep-name {
+    font-size: 28px;
+  }
+  /* line 339, app/assets/stylesheets/application.scss */
+  .rep-district {
+    font-size: 20px;
+  }
+  /* line 342, app/assets/stylesheets/application.scss */
+  .login-message {
+    font-size: 13px;
+  }
+  /* line 345, app/assets/stylesheets/application.scss */
+  .sen-name {
+    font-size: 28px;
+  }
+  /* line 348, app/assets/stylesheets/application.scss */
+  .sen-state {
+    font-size: 20px;
+  }
+  /* line 351, app/assets/stylesheets/application.scss */
+  .bills-nav {
+    margin-right: 100px;
+    font-size: 17px;
+  }
+  /* line 355, app/assets/stylesheets/application.scss */
+  .side-nav {
+    margin-top: 20px;
+  }
+  /* line 358, app/assets/stylesheets/application.scss */
+  .senate-sidenav {
+    margin-top: 10px;
+  }
+  /* line 361, app/assets/stylesheets/application.scss */
+  .search_by_name {
+    width: 160px !important;
+  }
+}
