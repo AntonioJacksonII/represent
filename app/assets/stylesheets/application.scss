@@ -24,11 +24,6 @@
   padding-top: 5px;
   padding-left: 5px;
 }
-// @media screen and (max-height: 450px) {
-//   .senate-sidenav {padding-top: 15px;}
-//   .senate-sidenav a {font-size: 18px;}
-//   .fixed-image {margin-left:500px;}
-// }
 
 .senate-sidenav {
   height: 19%;
@@ -239,11 +234,8 @@
 body{
   background-image:url('https://mk0dcphotoguide69e7p.kinstacdn.com/wp-content/uploads/2017/04/us-capitol-building-at-night-panorama-10-copyright-havecamerawilltravel-com.jpg');
 }
-// <style type='text/css' >body{background-color:rgb(0,0,0);background-image:url(https://mk0dcphotoguide69e7p.kinstacdn.com/wp-content/uploads/2017/04/us-capitol-building-at-night-panorama-10-copyright-havecamerawilltravel-com.jpg);background-position:top right;background-repeat:no-repeat;background-attachment:local;}</style>
-// style="margin-left:225px;margin-top:25px;"
 @media only screen and (min-width:1200px) and (max-width: 1600px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
   .fixed-image{
     position:fixed;
     margin-left:650px;
@@ -282,7 +274,7 @@ body{
     margin-left:220px;
   }
   .compared-rep{
-    margin-left:59px;
+    margin-left:0px;
   }
 }
 @media only screen and (min-width:1600px){
