@@ -51,7 +51,7 @@ describe 'Propublica parser' do
     expect(test_senator.govtrack_id).to eq(300002)
     expect(test_senator.url).to eq("https://www.alexander.senate.gov/public")
     expect(test_senator.contact_form).to eq("http://www.alexander.senate.gov/public/index.cfm?p=Email")
-    expect(test_senator.dw_nominate).to eq(0.324)
+    expect(test_senator.dw_nominate).to eq(0.323)
     expect(test_senator.next_election).to eq(2020)
     expect(test_senator.total_votes).to be_a(Integer)
     expect(test_senator.missed_votes).to be_a(Integer)
@@ -84,8 +84,8 @@ describe 'Propublica parser' do
     expect(test_bill.senate_bill_vote.session).to eq(1)
     expect(test_bill.senate_bill_vote.roll_call).to eq(22)
 
-    expect(Bill.count).to eq(236)
-    expect(HouseBillVote.count).to eq(231)
-    expect(SenateBillVote.count).to eq(18)
+    expect(Bill.count).to eq(250)
+    expect(HouseBillVote.count).to eq(245)
+    expect(SenateBillVote.count).to eq(19)
   end
 end

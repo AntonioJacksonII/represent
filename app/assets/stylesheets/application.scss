@@ -25,11 +25,6 @@
   padding-left: 5px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
 .senate-sidenav {
   height: 19%;
   width: 200px;
@@ -49,11 +44,6 @@
   padding: 0px 10px;
 }
 
-
-@media screen and (max-height: 450px) {
-  .senate-sidenav {padding-top: 15px;}
-  .senate-sidenav a {font-size: 18px;}
-}
 .scrollable{
   overflow-y:auto;
   height: 150px;
@@ -155,7 +145,7 @@
   color: white;
 }
 .right-side-nav{
-  margin-top:47px;
+  margin-top:50px;
   height:575px;
   width:285px;
   margin-left:78.5%;
@@ -230,4 +220,137 @@
 .tweet-button:active {
 	position:relative;
 	top:1px;
+}
+.fixed-image{
+  position:fixed;
+  margin-left:780px;
+  margin-top:100px;
+  width:350px;
+}
+.sen-info{
+  margin-left:225px;
+  margin-top:25px;
+}
+body{
+  background-image:url('https://mk0dcphotoguide69e7p.kinstacdn.com/wp-content/uploads/2017/04/us-capitol-building-at-night-panorama-10-copyright-havecamerawilltravel-com.jpg');
+}
+@media only screen and (min-width:1200px) and (max-width: 1600px) {
+  .sidenav {padding-top: 15px;}
+  .fixed-image{
+    position:fixed;
+    margin-left:650px;
+    margin-top:100px;
+    width:350px;
+  }
+  .right-side-nav{
+    margin-left:78%;
+    margin-top:27px;
+  }
+  .sen-info{
+    margin-left:225px;
+    margin-top:-2em;
+  }
+  .bills-nav{
+    margin-right:160px;
+    font-size:20px;
+  }
+  .rep-info{
+    margin-left:225px;
+    margin-top:-2em;
+  }
+  body{
+    background-color:rgb(0,0,0);
+    background-size:132% 180%;
+    background-position: 80% 0%;
+    background-repeat:no-repeat;
+    background-attachment:local;
+  }
+  #submit-button{
+    margin-bottom:10px;
+  }
+  .dashboard{
+    height:500px;
+    width:900px;
+    margin-left:220px;
+  }
+  .compared-rep{
+    margin-left:0px;
+  }
+}
+@media only screen and (min-width:1600px){
+  body{
+    background-color:rgb(0,0,0);
+    background-size:132% 207%;
+    background-position: 80% 0%;
+    background-repeat:no-repeat;
+    background-attachment:local;
+  }
+  .sen-info{
+    margin-left:225px;
+  }
+  .rep-info{
+    margin-left:225px;
+  }
+  .compared-rep{
+    margin-left:-.5em;
+  }
+  .bills-nav{
+    margin-right:400px;
+    font-size:20px;
+  }
+}
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){
+  body{
+    background-color:rgb(0,0,0);
+    background-size:132% 185%;
+    background-position: 80% 0%;
+    background-repeat:no-repeat;
+    background-attachment:local;
+  }
+  .sen-info{
+    margin-left:220px;
+    margin-top:-1em;
+  }
+  .rep-info{
+    margin-left:220px;
+    margin-top:-1em;
+  }
+  .fixed-image{
+    position:fixed;
+    margin-left:560px;
+    margin-top:100px;
+    width:250px;
+  }
+  .right-side-nav{
+    margin-left:74%;
+    margin-top:35px;
+  }
+  .rep-name{
+    font-size:28px;
+  }
+  .rep-district{
+    font-size:20px;
+  }
+  .login-message{
+    font-size:13px;
+  }
+  .sen-name{
+    font-size:28px;
+  }
+  .sen-state{
+    font-size:20px;
+  }
+  .bills-nav{
+    margin-right:100px;
+    font-size:17px;
+  }
+  .side-nav{
+    margin-top:20px;
+  }
+  .senate-sidenav{
+    margin-top:10px;
+  }
+  .search_by_name{
+    width:130px !important;
+  }
 }

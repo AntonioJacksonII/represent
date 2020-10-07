@@ -10,7 +10,6 @@ describe 'Representative Show Pages' do
 
     expect(page).to have_css('.rep-info')
     within('.rep-info') do
-      expect(page).to have_css('#rep-image')
       expect(page).to have_css('.rep-name')
       within ('.rep-name') do
         expect(page).to have_content('Alexandria Ocasio-Cortez')
@@ -47,7 +46,6 @@ describe 'Representative Show Pages' do
 
     expect(page).to have_css('.sen-info')
     within('.sen-info') do
-      expect(page).to have_css('#sen-image')
       expect(page).to have_css('.sen-name')
       within ('.sen-name') do
         expect(page).to have_content('Michael Bennet')
@@ -71,7 +69,7 @@ describe 'Representative Show Pages' do
       expect(page).to have_css('.sen-missed_votes_percentage')
       expect(page).to have_css('.sen-votes_with_percentage')
       expect(page).to have_css('.sen-votes_without_party_percentage')
-      expect(page).to have_link('Compare Positions')
     end
+    expect(page).to have_link('Compare Positions')
   end
 end

@@ -38,7 +38,7 @@ describe "Logged in User" do
 
     visit dashboard_path
 
-    expect(page).to have_css(".compared-rep", count: 2)
+    expect(page).to have_css(".compared-rep", count: 3)
 
     within(first('.compared-rep')) do
       expect(page).to have_css(".name")
