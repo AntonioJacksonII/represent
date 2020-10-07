@@ -31,7 +31,7 @@ describe 'Propublica parser' do
     expect(test_member.votes_with_percentage).to be_a(Float)
     expect(test_member.votes_without_party_percentage).to be_a(Float)
 
-    expect(HouseMember.count).to eq(437)
+    expect(HouseMember.count).to eq(436)
   end
 
   it 'can parse a senator', :vcr do
