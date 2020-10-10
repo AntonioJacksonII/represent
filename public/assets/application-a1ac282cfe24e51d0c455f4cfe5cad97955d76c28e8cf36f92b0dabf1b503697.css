@@ -11797,7 +11797,7 @@ h3 {
   padding-left: 5px;
 }
 
-/* line 33, app/assets/stylesheets/application.scss */
+/* line 28, app/assets/stylesheets/application.scss */
 .senate-sidenav {
   height: 19%;
   width: 200px;
@@ -11811,13 +11811,13 @@ h3 {
   padding-left: 5px;
 }
 
-/* line 47, app/assets/stylesheets/application.scss */
+/* line 42, app/assets/stylesheets/application.scss */
 .main {
   margin-left: 160px;
   padding: 0px 10px;
 }
 
-/* line 52, app/assets/stylesheets/application.scss */
+/* line 47, app/assets/stylesheets/application.scss */
 .scrollable {
   overflow-y: auto;
   height: 150px;
@@ -11826,25 +11826,25 @@ h3 {
   overflow-x: hidden;
 }
 
-/* line 61, app/assets/stylesheets/application.scss */
+/* line 56, app/assets/stylesheets/application.scss */
 .home-scroll {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* line 66, app/assets/stylesheets/application.scss */
+/* line 61, app/assets/stylesheets/application.scss */
 .search-scroll {
   overflow-y: auto;
   position: fixed;
 }
 
-/* line 71, app/assets/stylesheets/application.scss */
+/* line 66, app/assets/stylesheets/application.scss */
 .hoverable:hover {
   background-color: blue;
   color: white;
 }
 
-/* line 76, app/assets/stylesheets/application.scss */
+/* line 71, app/assets/stylesheets/application.scss */
 .representatives-scrollable {
   overflow-y: auto;
   height: 780px;
@@ -11852,7 +11852,7 @@ h3 {
   margin: auto;
 }
 
-/* line 82, app/assets/stylesheets/application.scss */
+/* line 77, app/assets/stylesheets/application.scss */
 .sized-button {
   border-radius: 4px;
   border: 2px solid green;
@@ -11861,20 +11861,20 @@ h3 {
   width: 80px;
 }
 
-/* line 89, app/assets/stylesheets/application.scss */
+/* line 84, app/assets/stylesheets/application.scss */
 #small-select {
   width: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 94, app/assets/stylesheets/application.scss */
+/* line 89, app/assets/stylesheets/application.scss */
 .error-message {
   display: inline-block;
   margin-top: -5px;
 }
 
-/* line 98, app/assets/stylesheets/application.scss */
+/* line 93, app/assets/stylesheets/application.scss */
 .footer {
   position: fixed;
   height: 80px;
@@ -11882,13 +11882,13 @@ h3 {
   width: 100%;
 }
 
-/* line 105, app/assets/stylesheets/application.scss */
+/* line 100, app/assets/stylesheets/application.scss */
 .nav-scrollable {
   overflow-y: auto;
   height: 200px;
 }
 
-/* line 110, app/assets/stylesheets/application.scss */
+/* line 105, app/assets/stylesheets/application.scss */
 .tool-format {
   background-color: white;
   color: blue;
@@ -11898,7 +11898,7 @@ h3 {
   border-radius: 50%;
 }
 
-/* line 118, app/assets/stylesheets/application.scss */
+/* line 113, app/assets/stylesheets/application.scss */
 #popup {
   display: none;
   width: 300px;
@@ -11907,7 +11907,7 @@ h3 {
   border: 1px solid blue;
 }
 
-/* line 125, app/assets/stylesheets/application.scss */
+/* line 120, app/assets/stylesheets/application.scss */
 .ui-autocomplete {
   overflow-y: auto !important;
   max-height: 150px;
@@ -11915,29 +11915,29 @@ h3 {
   width: 50px;
 }
 
-/* line 131, app/assets/stylesheets/application.scss */
+/* line 126, app/assets/stylesheets/application.scss */
 #bills-table {
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 136, app/assets/stylesheets/application.scss */
+/* line 131, app/assets/stylesheets/application.scss */
 #bills-table td, #bills th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-/* line 141, app/assets/stylesheets/application.scss */
+/* line 136, app/assets/stylesheets/application.scss */
 #bills-table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* line 143, app/assets/stylesheets/application.scss */
+/* line 138, app/assets/stylesheets/application.scss */
 #bills-table tr:hover {
   background-color: #ddd;
 }
 
-/* line 145, app/assets/stylesheets/application.scss */
+/* line 140, app/assets/stylesheets/application.scss */
 #bills-table th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -11946,7 +11946,7 @@ h3 {
   color: white;
 }
 
-/* line 152, app/assets/stylesheets/application.scss */
+/* line 147, app/assets/stylesheets/application.scss */
 .right-side-nav {
   margin-top: 50px;
   height: 575px;
@@ -11956,20 +11956,20 @@ h3 {
   overflow-y: auto;
 }
 
-/* line 160, app/assets/stylesheets/application.scss */
+/* line 155, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
 }
 
-/* line 165, app/assets/stylesheets/application.scss */
+/* line 160, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
-/* line 170, app/assets/stylesheets/application.scss */
+/* line 165, app/assets/stylesheets/application.scss */
 #dashboard-senate-sidenav {
   height: 25%;
   width: 200px;
@@ -11984,7 +11984,7 @@ h3 {
   overflow-y: atuo;
 }
 
-/* line 183, app/assets/stylesheets/application.scss */
+/* line 178, app/assets/stylesheets/application.scss */
 #dashboard-rep-sidenav {
   height: 50%;
   width: 200px;
@@ -11998,7 +11998,7 @@ h3 {
   overflow-y: auto;
 }
 
-/* line 195, app/assets/stylesheets/application.scss */
+/* line 190, app/assets/stylesheets/application.scss */
 .logo {
   position: absolute;
   top: -1.3em;
@@ -12008,7 +12008,7 @@ h3 {
   margin-left: 15px;
 }
 
-/* line 204, app/assets/stylesheets/application.scss */
+/* line 199, app/assets/stylesheets/application.scss */
 .tweet-button {
   box-shadow: 0px 1px 0px 0px #f0f7fa;
   background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
@@ -12026,20 +12026,20 @@ h3 {
   text-shadow: 0px -1px 0px #5b6178;
 }
 
-/* line 220, app/assets/stylesheets/application.scss */
+/* line 215, app/assets/stylesheets/application.scss */
 .tweet-button:hover {
   background: linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
   background-color: #019ad2;
   text-decoration: none;
 }
 
-/* line 225, app/assets/stylesheets/application.scss */
+/* line 220, app/assets/stylesheets/application.scss */
 .tweet-button:active {
   position: relative;
   top: 1px;
 }
 
-/* line 229, app/assets/stylesheets/application.scss */
+/* line 224, app/assets/stylesheets/application.scss */
 .fixed-image {
   position: fixed;
   margin-left: 780px;
@@ -12047,54 +12047,50 @@ h3 {
   width: 350px;
 }
 
-/* line 235, app/assets/stylesheets/application.scss */
+/* line 230, app/assets/stylesheets/application.scss */
 .sen-info {
   margin-left: 225px;
   margin-top: 25px;
 }
 
-/* line 239, app/assets/stylesheets/application.scss */
+/* line 234, app/assets/stylesheets/application.scss */
 body {
   background-image: url("https://mk0dcphotoguide69e7p.kinstacdn.com/wp-content/uploads/2017/04/us-capitol-building-at-night-panorama-10-copyright-havecamerawilltravel-com.jpg");
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  /* line 245, app/assets/stylesheets/application.scss */
+  /* line 238, app/assets/stylesheets/application.scss */
   .sidenav {
     padding-top: 15px;
   }
-  /* line 246, app/assets/stylesheets/application.scss */
-  .sidenav a {
-    font-size: 18px;
-  }
-  /* line 247, app/assets/stylesheets/application.scss */
+  /* line 239, app/assets/stylesheets/application.scss */
   .fixed-image {
     position: fixed;
     margin-left: 650px;
     margin-top: 100px;
     width: 350px;
   }
-  /* line 253, app/assets/stylesheets/application.scss */
+  /* line 245, app/assets/stylesheets/application.scss */
   .right-side-nav {
     margin-left: 78%;
     margin-top: 27px;
   }
-  /* line 257, app/assets/stylesheets/application.scss */
+  /* line 249, app/assets/stylesheets/application.scss */
   .sen-info {
     margin-left: 225px;
     margin-top: -2em;
   }
-  /* line 261, app/assets/stylesheets/application.scss */
+  /* line 253, app/assets/stylesheets/application.scss */
   .bills-nav {
     margin-right: 160px;
     font-size: 20px;
   }
-  /* line 265, app/assets/stylesheets/application.scss */
+  /* line 257, app/assets/stylesheets/application.scss */
   .rep-info {
     margin-left: 225px;
     margin-top: -2em;
   }
-  /* line 269, app/assets/stylesheets/application.scss */
+  /* line 261, app/assets/stylesheets/application.scss */
   body {
     background-color: black;
     background-size: 132% 180%;
@@ -12102,24 +12098,24 @@ body {
     background-repeat: no-repeat;
     background-attachment: local;
   }
-  /* line 276, app/assets/stylesheets/application.scss */
+  /* line 268, app/assets/stylesheets/application.scss */
   #submit-button {
     margin-bottom: 10px;
   }
-  /* line 279, app/assets/stylesheets/application.scss */
+  /* line 271, app/assets/stylesheets/application.scss */
   .dashboard {
     height: 500px;
     width: 900px;
     margin-left: 220px;
   }
-  /* line 284, app/assets/stylesheets/application.scss */
+  /* line 276, app/assets/stylesheets/application.scss */
   .compared-rep {
-    margin-left: 59px;
+    margin-left: 0px;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  /* line 289, app/assets/stylesheets/application.scss */
+  /* line 281, app/assets/stylesheets/application.scss */
   body {
     background-color: black;
     background-size: 132% 207%;
@@ -12127,19 +12123,19 @@ body {
     background-repeat: no-repeat;
     background-attachment: local;
   }
-  /* line 296, app/assets/stylesheets/application.scss */
+  /* line 288, app/assets/stylesheets/application.scss */
   .sen-info {
     margin-left: 225px;
   }
-  /* line 299, app/assets/stylesheets/application.scss */
+  /* line 291, app/assets/stylesheets/application.scss */
   .rep-info {
     margin-left: 225px;
   }
-  /* line 302, app/assets/stylesheets/application.scss */
+  /* line 294, app/assets/stylesheets/application.scss */
   .compared-rep {
     margin-left: -.5em;
   }
-  /* line 305, app/assets/stylesheets/application.scss */
+  /* line 297, app/assets/stylesheets/application.scss */
   .bills-nav {
     margin-right: 400px;
     font-size: 20px;
@@ -12147,7 +12143,7 @@ body {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 311, app/assets/stylesheets/application.scss */
+  /* line 303, app/assets/stylesheets/application.scss */
   body {
     background-color: black;
     background-size: 132% 185%;
@@ -12155,63 +12151,137 @@ body {
     background-repeat: no-repeat;
     background-attachment: local;
   }
-  /* line 318, app/assets/stylesheets/application.scss */
+  /* line 310, app/assets/stylesheets/application.scss */
   .sen-info {
     margin-left: 220px;
     margin-top: -1em;
   }
-  /* line 322, app/assets/stylesheets/application.scss */
+  /* line 314, app/assets/stylesheets/application.scss */
   .rep-info {
     margin-left: 220px;
     margin-top: -1em;
   }
-  /* line 326, app/assets/stylesheets/application.scss */
+  /* line 318, app/assets/stylesheets/application.scss */
   .fixed-image {
     position: fixed;
     margin-left: 560px;
     margin-top: 100px;
     width: 250px;
   }
-  /* line 332, app/assets/stylesheets/application.scss */
+  /* line 324, app/assets/stylesheets/application.scss */
   .right-side-nav {
     margin-left: 74%;
     margin-top: 35px;
   }
-  /* line 336, app/assets/stylesheets/application.scss */
+  /* line 328, app/assets/stylesheets/application.scss */
   .rep-name {
     font-size: 28px;
   }
-  /* line 339, app/assets/stylesheets/application.scss */
+  /* line 331, app/assets/stylesheets/application.scss */
   .rep-district {
     font-size: 20px;
   }
-  /* line 342, app/assets/stylesheets/application.scss */
+  /* line 334, app/assets/stylesheets/application.scss */
   .login-message {
     font-size: 13px;
   }
-  /* line 345, app/assets/stylesheets/application.scss */
+  /* line 337, app/assets/stylesheets/application.scss */
   .sen-name {
     font-size: 28px;
   }
-  /* line 348, app/assets/stylesheets/application.scss */
+  /* line 340, app/assets/stylesheets/application.scss */
   .sen-state {
     font-size: 20px;
   }
-  /* line 351, app/assets/stylesheets/application.scss */
+  /* line 343, app/assets/stylesheets/application.scss */
   .bills-nav {
     margin-right: 100px;
     font-size: 17px;
   }
-  /* line 355, app/assets/stylesheets/application.scss */
+  /* line 347, app/assets/stylesheets/application.scss */
   .side-nav {
     margin-top: 20px;
   }
-  /* line 358, app/assets/stylesheets/application.scss */
+  /* line 350, app/assets/stylesheets/application.scss */
   .senate-sidenav {
     margin-top: 10px;
   }
-  /* line 361, app/assets/stylesheets/application.scss */
+  /* line 353, app/assets/stylesheets/application.scss */
   .search_by_name {
     width: 160px !important;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* line 358, app/assets/stylesheets/application.scss */
+  body {
+    background-color: black;
+    background-size: 130% 275%;
+    background-position: 80% 0%;
+    background-repeat: no-repeat;
+    background-attachment: local;
+  }
+  /* line 365, app/assets/stylesheets/application.scss */
+  .sen-info {
+    margin-left: 220px;
+    margin-top: -1em;
+  }
+  /* line 369, app/assets/stylesheets/application.scss */
+  .rep-info {
+    margin-left: 220px;
+    margin-top: -1em;
+  }
+  /* line 373, app/assets/stylesheets/application.scss */
+  .fixed-image {
+    position: fixed;
+    margin-left: 550px;
+    margin-top: 100px;
+    width: 200px;
+  }
+  /* line 379, app/assets/stylesheets/application.scss */
+  .right-side-nav {
+    margin-left: 746px;
+    margin-top: 35px;
+  }
+  /* line 383, app/assets/stylesheets/application.scss */
+  .rep-name {
+    font-size: 28px;
+  }
+  /* line 386, app/assets/stylesheets/application.scss */
+  .rep-district {
+    font-size: 20px;
+  }
+  /* line 389, app/assets/stylesheets/application.scss */
+  .login-message {
+    font-size: 13px;
+  }
+  /* line 392, app/assets/stylesheets/application.scss */
+  .sen-name {
+    font-size: 28px;
+  }
+  /* line 395, app/assets/stylesheets/application.scss */
+  .sen-state {
+    font-size: 20px;
+  }
+  /* line 398, app/assets/stylesheets/application.scss */
+  .bills-nav {
+    margin-right: 100px;
+    font-size: 17px;
+  }
+  /* line 402, app/assets/stylesheets/application.scss */
+  .side-nav {
+    margin-top: 20px;
+  }
+  /* line 405, app/assets/stylesheets/application.scss */
+  .senate-sidenav {
+    margin-top: 10px;
+  }
+  /* line 408, app/assets/stylesheets/application.scss */
+  .search_by_name {
+    width: 160px !important;
+  }
+  /* line 411, app/assets/stylesheets/application.scss */
+  .compared-rep {
+    width: 130px;
   }
 }
